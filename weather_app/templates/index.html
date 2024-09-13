@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự báo thời tiết</title>
+
+</head>
+<body>
+    <h1>Dự báo thời tiết</h1>
+    <form id="weather-form">
+        <label for="precipitation">Precipitation:</label>
+        <input type="number" id="precipitation" name="precipitation"><br>
+
+        <label for="temp_max">Temp Max:</label>
+        <input type="number" id="temp_max" name="temp_max"><br>
+
+        <label for="temp_min">Temp Min:</label>
+        <input type="number" id="temp_min" name="temp_min"><br>
+
+        <label for="wind">Wind:</label>
+        <input type="number" id="wind" name="wind"><br>
+
+        <button type="submit">Dự đoán</button>
+    </form>
+
+    <h2>Kết quả:</h2>
+    <p id="result"></p>
+    <script src="../static/FormControl.js"></script>
+</body>
+</html>
