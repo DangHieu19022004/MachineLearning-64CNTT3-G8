@@ -1,0 +1,4 @@
+precipitation (Lượng mưa): đo bằng mm.
+temp_max (Nhiệt độ cao nhất):
+temp_min (Nhiệt độ thấp nhất):
+wind (Tốc độ gió): m/s
