@@ -6,19 +6,19 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import precision_score, recall_score, f1_score
 
 # Đọc dữ liệu
-df = pd.read_csv('./raiden-ei.csv')
+df = pd.read_csv('./badminton_dataset.csv')
 
 # Mã hóa các thuộc tính categorical
 le = LabelEncoder()
-precipitation = le.fit_transform(df['precipitation'].values)
-temp = le.fit_transform(df['temp'].values)
-humidity = le.fit_transform(df['humidity'].values)
-wind = le.fit_transform(df['wind'].values)
-weather = le.fit_transform(df['weather'].values)
+outlook = le.fit_transform(df['Outlook'].values)
+temperature = le.fit_transform(df['Temperature'].values)
+humidity = le.fit_transform(df['Humidity'].values)
+wind = le.fit_transform(df['Wind'].values)
+play_badminton = le.fit_transform(df['Play_Badminton'].values)
 
 # Chuẩn bị dữ liệu đầu vào
-X_data = np.array([precipitation, temp, humidity, wind]).T
-y_data = weather
+X_data = np.array([outlook, temperature, humidity, wind]).T
+y_data = play_badminton
 
 # Chia tập dữ liệu thành tập huấn luyện và kiểm tra
 X_train, X_test, y_train, y_test = train_test_split(X_data, y_data, test_size=0.3, shuffle=False)
