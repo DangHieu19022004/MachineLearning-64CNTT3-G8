@@ -1,35 +1,35 @@
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import precision_score, recall_score, f1_score
+from sklearn.metrics import classification_report, accuracy_score
 
-# Đọc dữ liệu từ seattle-weather.csv
+# Đọc dữ liệu từ file CSV
 df = pd.read_csv('./seattle-weather.csv')
 
-# Xem xét các giá trị của các cột
-print(df.head())
+# Xử lý dữ liệu thiếu (nếu có) bằng cách loại bỏ các hàng có giá trị null
+df = df.dropna()
 
-# Mã hóa các thuộc tính categorical
+# Mã hóa thuộc tính weather (categorical) thành số
 le = LabelEncoder()
+df['weather_encoded'] = le.fit_transform(df['weather'])
 
-# Mã hóa các thuộc tính thời tiết và các đặc tính liên quan
-precipitation = le.fit_transform(df['precipitation'].values)
-temp_max = le.fit_transform(df['temp_max'].values)
-temp_min = le.fit_transform(df['temp_min'].values)
-wind = le.fit_transform(df['wind'].values)
-weather = le.fit_transform(df['weather'].values)  # Cột nhãn (target)
+# Sử dụng các cột numerical như precipitation, temp_max, temp_min, wind làm dữ liệu đầu vào
+X_data = df[['precipitation', 'temp_max', 'temp_min', 'wind']].values
 
-# Chuẩn bị dữ liệu đầu vào
-X_data = np.array([precipitation, temp_max, temp_min, wind]).T
-y_data = weather
+# Chuẩn hóa (scale) các thuộc tính numerical để phù hợp với MLP
+scaler = StandardScaler()
+X_data = scaler.fit_transform(X_data)
 
-# Chia tập dữ liệu thành tập huấn luyện và kiểm tra
-X_train, X_test, y_train, y_test = train_test_split(X_data, y_data, test_size=0.3, shuffle=False)
+# Nhãn (target)
+y_data = df['weather_encoded'].values
+
+# Chia tập dữ liệu thành tập huấn luyện và kiểm tra (shuffle=True để trộn ngẫu nhiên dữ liệu)
+X_train, X_test, y_train, y_test = train_test_split(X_data, y_data, test_size=0.3, shuffle=True, random_state=42)
 
 # Xây dựng mô hình MLP (Multilayer Perceptron - Neural Network)
-clf = MLPClassifier(hidden_layer_sizes=(100, 50), max_iter=1000, activation='relu', solver='adam')
+clf = MLPClassifier(hidden_layer_sizes=(100, 50), max_iter=1000, activation='relu', solver='adam', random_state=42)
 
 # Huấn luyện mô hình
 clf.fit(X_train, y_train)
@@ -37,17 +37,15 @@ clf.fit(X_train, y_train)
 # Dự đoán trên tập kiểm tra
 y_pred = clf.predict(X_test)
 
-# In kết quả dự đoán so với thực tế
+# In kết quả dự đoán so với thực tế (in 10 dòng để dễ đọc)
 print("Thực tế \t Dự đoán")
-for i in range(len(y_test)):
-    print(y_test[i], "\t\t", y_pred[i])
+for i in range(10):
+    print(le.inverse_transform([y_test[i]])[0], "\t\t", le.inverse_transform([y_pred[i]])[0])
 
-# Đánh giá mô hình
-print("Độ đo precision:", precision_score(y_test, y_pred, average='micro'))
-print("Độ đo recall:", recall_score(y_test, y_pred, average='micro'))
-print("Độ đo F1:", f1_score(y_test, y_pred, average='micro'))
+# Đánh giá mô hình và in bảng phân loại chi tiết
+print("\nBáo cáo phân loại chi tiết:\n")
+print(classification_report(y_test, y_pred, target_names=le.classes_))
 
-# Tỷ lệ dự đoán đúng
-accuracy = clf.score(X_test, y_test)
-print('Tỷ lệ dự đoán đúng:', np.around(accuracy * 100, 2), '%')
-
+# In độ chính xác (accuracy)
+accuracy = accuracy_score(y_test, y_pred)
+print('Tỷ lệ dự đoán đúng (accuracy):', np.around(accuracy * 100, 2), '%')
