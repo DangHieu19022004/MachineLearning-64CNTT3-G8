@@ -1,13 +1,14 @@
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 from sklearn.linear_model import Perceptron
-from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix, precision_score, recall_score, f1_score
+from sklearn.metrics import (ConfusionMatrixDisplay, confusion_matrix,
+                             f1_score, precision_score, recall_score)
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
 # Đọc tệp dữ liệu
-data = pd.read_csv(r'C:\Users\LENOVO\Downloads\Học máy\seattle-weather.csv', index_col=0)  
+data = pd.read_csv("../../../seattle-weather.csv", index_col=0)
 
 # Sử dụng các cột: precipitation, temp_max, temp_min, wind
 features = ["precipitation", "temp_max", "temp_min", "wind"]
