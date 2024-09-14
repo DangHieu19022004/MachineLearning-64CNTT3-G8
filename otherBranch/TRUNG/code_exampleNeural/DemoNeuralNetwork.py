@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
-from sklearn.metrics import f1_score, precision_score, recall_score
+from sklearn.discriminant_analysis import StandardScaler
+from sklearn.metrics import (accuracy_score, classification_report, f1_score,
+                             precision_score, recall_score)
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import LabelEncoder
@@ -44,7 +46,7 @@ for i in range(10):
 
 # Đánh giá mô hình và in bảng phân loại chi tiết
 print("\nBáo cáo phân loại chi tiết:\n")
-print(classification_report(y_test, y_pred, target_names=le.classes_))
+print(classification_report(y_test, y_pred, target_names=le.classes_, zero_division=0))
 
 # In độ chính xác (accuracy)
 accuracy = accuracy_score(y_test, y_pred)

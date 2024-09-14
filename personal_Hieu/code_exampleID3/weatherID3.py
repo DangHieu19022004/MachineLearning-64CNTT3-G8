@@ -68,18 +68,53 @@ def entropy(column):
 
 print(f"entropy: {entropy(data['weather'])}")
 
+# Function to calculate entropy at each node
+def calculate_entropy(tree, feature_names):
+    entropy_values = []
+
+    def entropy(node_id):
+        if node_id == tree.tree_.node_count:
+            return
+
+        # Compute entropy for the current node
+        if tree.tree_.feature[node_id] != -2:  # -2 indicates leaf nodes
+            feature = feature_names[tree.tree_.feature[node_id]]
+            samples = tree.tree_.weighted_n_node_samples[node_id]
+            impurity = tree.tree_.impurity[node_id]
+            entropy_value = -np.sum((impurity / samples) * np.log2(impurity / samples + 1e-10))  # Added small value to avoid log(0)
+            entropy_values.append(entropy_value)
+
+            # Traverse to child nodes
+            entropy(tree.tree_.children_left[node_id])
+            entropy(tree.tree_.children_right[node_id])
+
+    entropy(0)  # Start from the root node
+    return entropy_values
+
+# Get entropy values
+entropy_values = calculate_entropy(dt_model, features)
+
+# Plot the entropy values
+plt.figure(figsize=(10, 6))
+plt.plot(entropy_values, marker='o')
+plt.title("Entropy Values Across Tree Nodes")
+plt.xlabel("Node")
+plt.ylabel("Entropy")
+plt.grid(True)
+plt.show()
+
 #Model Evaluation
 # 1. Tính toán độ chính xác của mô hình
 accuracy = accuracy_score(y_valid, y_preds) * 100
 print (accuracy)
 print(f"Accuracy: {accuracy * 100:.2f}%")
 
-# 2. In ra ma trận nhầm lẫn
-cm = confusion_matrix(y_valid, y_preds)
-disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=dt_model.classes_)
-disp.plot(cmap=plt.cm.Blues)
-plt.title("Confusion Matrix")
-plt.show()
+# # 2. In ra ma trận nhầm lẫn
+# cm = confusion_matrix(y_valid, y_preds)
+# disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=dt_model.classes_)
+# disp.plot(cmap=plt.cm.Blues)
+# plt.title("Confusion Matrix")
+# plt.show()
 
 # 3. In báo cáo phân loại (precision, recall, F1-score cho từng lớp)
 report = classification_report(y_valid, y_preds, target_names=dt_model.classes_)
