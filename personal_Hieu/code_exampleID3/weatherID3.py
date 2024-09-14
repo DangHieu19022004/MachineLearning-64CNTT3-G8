@@ -60,6 +60,13 @@ print(cm)
 # # tree.plot_tree(dt_model, feature_names = ['precipitation', 'temp_max', 'temp_min', 'wind'], class_names = dt_model.classes_)
 # # plt.show()
 
+#test entropy
+def entropy(column):
+    probabilities = column.value_counts(normalize=True)
+    entropy_value = -np.sum(probabilities * np.log2(probabilities))
+    return entropy_value
+
+print(f"entropy: {entropy(data['weather'])}")
 
 #Model Evaluation
 # 1. Tính toán độ chính xác của mô hình
