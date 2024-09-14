@@ -4,49 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dự báo thời tiết</title>
-
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
-    <h1>Dự báo thời tiết</h1>
+    <div class="container">
+        <div class="header">
+            <h1>Dự báo thời tiết</h1>
+        </div>
 
-    <h3> Chọn thuật toán: </h3>
-    <select id="algorithm">
-        <option value="perceptron">Perceptron Learning Agorithm</option>
-        <option value="decision_tree">ID3</option>
-        <option value="neral_network">Neural Network </option>
-    </select>
+        <div class="content">
+            <div class="formWeather">
+                <form id="weather-form">
+                    <label for="precipitation">Precipitation:</label>
+                    <input type="number" id="precipitation" name="precipitation" step="any"><br>
 
-    <h3>Chọn dữ liệu:</h3>
+                    <label for="temp_max">Temp Max:</label>
+                    <input type="number" id="temp_max" name="temp_max" step="any"><br>
 
-    <form id="weather-form">
-        <label for="precipitation">Precipitation:</label>
-        <input type="number" id="precipitation" name="precipitation" step="any"><br>
+                    <label for="temp_min">Temp Min:</label>
+                    <input type="number" id="temp_min" name="temp_min" step="any"><br>
 
-        <label for="temp_max">Temp Max:</label>
-        <input type="number" id="temp_max" name="temp_max" step="any"><br>
-
-        <label for="temp_min">Temp Min:</label>
-        <input type="number" id="temp_min" name="temp_min" step="any"><br>
-
-        <label for="wind">Wind:</label>
-        <input type="number" id="wind" name="wind" step="any"><br>
+                    <label for="wind">Wind:</label>
+                    <input type="number" id="wind" name="wind" step="any"><br>
 
 
-        <button type="submit">Dự đoán</button>
-    </form>
+                    <button class="btn-submit" type="submit">Dự đoán</button>
+                </form>
+            </div>
+            <div class="resultAlgorithm">
+                <h3> Chọn thuật toán: </h3>
+                <select id="algorithm">
+                    <option value="decision_tree">ID3</option>
+                </select>
 
-    <h2>Kết quả:</h2>
+                <h3>Kết quả:</h3>
 
-    <p id="result"></p>
+                <p id="result"></p>
 
-    <h3>Báo cáo phân loại:</h3>
+                <div id="classification-report"></div>
 
-    <div id="classification-report"></div>
+                <p class="text-result" id="classificationrp"></p>
 
-    <h3>Ma trận nhầm lẫn:</h3>
+                <img class="image" id="confusion-matrix" src="../assets/imgs/merchineLearning.jpg" alt="Confusion Matrix" />
 
-    <img id="confusion-matrix" src="" alt="Confusion Matrix" />
+                <p class="text-result" id="diagram"></p>
 
+                <img class="image" id="entropy-diagram" src="../assets/imgs/merchineLearning.jpg" alt="Entropy diagram" />
+            </div>
+
+        </div>
+
+
+    </div>
     <script src="../static/FormControl.js"></script>
 </body>
 </html>

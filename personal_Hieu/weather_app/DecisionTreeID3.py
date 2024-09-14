@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
 #get the dataset
-data = pd.read_csv("../seattle-weather.csv", index_col=0)
+data = pd.read_csv("../../seattle-weather.csv", index_col=0)
 
 #features columns to train the model
 features = ["precipitation", "temp_max", "temp_min", "wind"]
@@ -56,11 +56,54 @@ plot_url = base64.b64encode(img.getvalue()).decode()
 # 3. In báo cáo phân loại (precision, recall, F1-score cho từng lớp)
 report = classification_report(y_valid, y_preds, target_names=dt_model.classes_)
 
+# 4. Vẽ sơ đồ entropy
+# Function to calculate entropy at each node
+def calculate_entropy(tree, feature_names):
+    entropy_values = []
+
+    def entropy(node_id):
+        if node_id == tree.tree_.node_count:
+            return
+
+        # Compute entropy for the current node
+        if tree.tree_.feature[node_id] != -2:  # -2 indicates leaf nodes
+            feature = feature_names[tree.tree_.feature[node_id]]
+            samples = tree.tree_.weighted_n_node_samples[node_id]
+            impurity = tree.tree_.impurity[node_id]
+            entropy_value = -np.sum((impurity / samples) * np.log2(impurity / samples + 1e-10))  # Added small value to avoid log(0)
+            entropy_values.append(entropy_value)
+
+            # Traverse to child nodes
+            entropy(tree.tree_.children_left[node_id])
+            entropy(tree.tree_.children_right[node_id])
+
+    entropy(0)  # Start from the root node
+    return entropy_values
+
+# Get entropy values
+entropy_values = calculate_entropy(dt_model, features)
+
+# Plot the entropy values
+plt.figure(figsize=(10, 6))
+plt.plot(entropy_values, marker='o')
+plt.title("Entropy Values Across Tree Nodes")
+plt.xlabel("Node")
+plt.ylabel("Entropy")
+plt.grid(True)
+    #Save the plot to a BytesIO object
+imgEntropy = io.BytesIO()
+plt.savefig(imgEntropy, format='png')
+imgEntropy.seek(0)
+    #Encode image to base64
+entropy_url = base64.b64encode(imgEntropy.getvalue()).decode()
+
+
 valueSend = {
     'model': dt_model,
     'accuracy': accuracy,
     'report': report,
-    'plot_url': plot_url
+    'plot_url': plot_url,
+    'entropy_url': entropy_url
 }
 
 # Save the model
