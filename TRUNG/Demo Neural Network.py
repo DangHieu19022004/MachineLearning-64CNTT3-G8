@@ -41,7 +41,7 @@ y_pred = clf.predict(X_test)
 
 # Đánh giá mô hình và in bảng phân loại chi tiết
 print("\nBáo cáo phân loại chi tiết:\n")
-print(classification_report(y_test, y_pred, target_names=le.classes_))
+print(classification_report(y_test, y_pred, target_names=le.classes_, zero_division=1))
 
 # In độ chính xác (accuracy)
 accuracy = accuracy_score(y_test, y_pred)
@@ -63,9 +63,10 @@ plt.xlabel('Predicted label')  # Nhãn dự đoán
 plt.title('Confusion Matrix')  # Tiêu đề: Ma trận nhầm lẫn
 plt.show()
 
+'''
 # 2. Vẽ biểu đồ heatmap của báo cáo phân loại (Classification Report)
-# Tạo báo cáo phân loại và chuyển đổi thành DataFrame
-report_dict = classification_report(y_test, y_pred, target_names=le.classes_, output_dict=True)
+# Tạo báo cáo phân loại và chuyển đổi thành DataFrame (thêm zero_division=1)
+report_dict = classification_report(y_test, y_pred, target_names=le.classes_, output_dict=True, zero_division=1)
 report_df = pd.DataFrame(report_dict).transpose()
 
 # Vẽ heatmap của các chỉ số báo cáo phân loại
@@ -94,3 +95,4 @@ plt.ylabel('True Positive Rate')  # Trục Y: Tỷ lệ dương tính thực
 plt.title('ROC Curve for Multi-Class Classification')  # Tiêu đề: Đường cong ROC cho phân loại đa lớp
 plt.legend(loc='lower right')  # Hiển thị chú thích ở góc phải dưới
 plt.show()
+'''
