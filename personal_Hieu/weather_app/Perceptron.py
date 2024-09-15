@@ -1,3 +1,7 @@
+import base64
+import io
+
+import joblib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -42,7 +46,7 @@ Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
 Z = Z.reshape(xx.shape)
 
 # Vẽ decision boundary với dữ liệu đã giảm chiều
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(10, 6))
 
 plt.subplot(1, 1, 1)
 plt.contourf(xx, yy, Z, alpha=0.3, cmap=ListedColormap(['#FFAAAA', '#AAAAFF']))
@@ -50,31 +54,43 @@ plt.scatter(X_train_pca[:, 0], X_train_pca[:, 1], c=y_train_pca, edgecolor='k', 
 plt.xlabel('PC 1')
 plt.ylabel('PC 2')
 plt.title('Decision Boundary với PCA')
-
 plt.tight_layout()
-plt.show()
+    #Save the plot to a BytesIO object
+imgPCA = io.BytesIO()
+plt.savefig(imgPCA, format='png')
+imgPCA.seek(0)
+    #Encode image to base64
+plot_url_PCA = base64.b64encode(imgPCA.getvalue()).decode()
+
 
 # Dự đoán trên tập kiểm tra đã giảm chiều
 y_pred_pca = clf.predict(X_valid_pca)
 
+
 # Tính toán tỷ lệ dự đoán chính xác
 accuracy_pca = np.mean(y_valid_pca == y_pred_pca) * 100
-print(f'Tỷ lệ dự đoán đúng (PCA): {accuracy_pca:.2f} %')
 
 # Tính toán precision, recall và F1-score
-print("Độ đo precision (PCA):", precision_score(y_valid_pca, y_pred_pca, average='micro', zero_division=1))
-print("Độ đo recall (PCA):", recall_score(y_valid_pca, y_pred_pca, average='micro'))
-print("Độ đo F1 (PCA):", f1_score(y_valid_pca, y_pred_pca, average='micro'))
+# print("Độ đo precision (PCA):", precision_score(y_valid_pca, y_pred_pca, average='micro', zero_division=1))
+# print("Độ đo recall (PCA):", recall_score(y_valid_pca, y_pred_pca, average='micro'))
+# print("Độ đo F1 (PCA):", f1_score(y_valid_pca, y_pred_pca, average='micro'))
 
 # In báo cáo phân loại (Classification Report)
 report_pca = classification_report(y_valid_pca, y_pred_pca, target_names=le.classes_, zero_division=1)
-print("Báo cáo phân loại (PCA):\n", report_pca)
 
 # Hiển thị ma trận nhầm lẫn (Confusion Matrix) cho dữ liệu đã giảm chiều
 cm_pca = confusion_matrix(y_valid_pca, y_pred_pca)
 disp_pca = ConfusionMatrixDisplay(confusion_matrix=cm_pca, display_labels=le.classes_)
-disp_pca.plot(cmap=plt.cm.Blues)
-plt.show()
+fig, ax = plt.subplots(figsize=(10, 7))
+disp_pca.plot(cmap=plt.cm.Blues, ax=ax)
+plt.title("Confusion Matrix (PCA)")
+    #Save the plot to a BytesIO object
+img = io.BytesIO()
+plt.savefig(img, format='png')
+img.seek(0)
+    #Encode image to base64
+plot_url = base64.b64encode(img.getvalue()).decode()
+
 
 # Dự đoán với dữ liệu mới
 new_input = pd.DataFrame({
@@ -84,8 +100,27 @@ new_input = pd.DataFrame({
     'wind': [2.8]
 })
 
-# Áp dụng PCA cho dữ liệu mới trước khi dự đoán
-new_input_pca = pca.transform(new_input)
-new_prediction = clf.predict(new_input_pca)
-predicted_weather = new_prediction
-print("Dự đoán thời tiết cho dữ liệu mới:", predicted_weather[0])
+
+def predict_weather(new_input):
+    new_input_pca = pca.transform(new_input)
+    predicted_encoded = clf.predict(new_input_pca)
+    predicted_labels = le.inverse_transform(predicted_encoded)
+    return predicted_labels
+
+
+# # Áp dụng PCA cho dữ liệu mới trước khi dự đoán
+# predicted_weather = predict_weather(new_input)
+# print("Dự đoán thời tiết cho dữ liệu mới:", predicted_weather.tolist())
+
+
+
+valueSend = {
+    'model': clf,
+    'accuracy': accuracy_pca,
+    'report': report_pca,
+    'plot_url': plot_url,
+    'entropy_url': plot_url_PCA
+}
+
+# Save the model
+joblib.dump(valueSend, 'perceptron_model.pkl')

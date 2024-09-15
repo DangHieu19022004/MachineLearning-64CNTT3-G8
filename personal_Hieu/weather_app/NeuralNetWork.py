@@ -6,8 +6,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from sklearn.metrics import (accuracy_score, auc, classification_report,
-                             confusion_matrix, roc_curve)
+from sklearn.metrics import (ConfusionMatrixDisplay, accuracy_score, auc,
+                             classification_report, confusion_matrix,
+                             roc_curve)
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import LabelEncoder, StandardScaler, label_binarize
@@ -50,9 +51,11 @@ new_input = pd.DataFrame({
     'temp_min': [10],
     'wind': [2.8]
 })
-print("start")
-print(clf.predict(new_input))
-print("start")
+
+def encode_input(new_input):
+    predicted_encoded = clf.predict(new_input)
+    predicted_labels = le.inverse_transform(predicted_encoded)
+    return predicted_labels
 
 # Đánh giá mô hình và in bảng phân loại chi tiết
 # # In độ chính xác (accuracy)
@@ -62,8 +65,9 @@ accuracy = accuracy_score(y_test, y_pred) * 100
 conf_matrix = confusion_matrix(y_test, y_pred)
 
 # 1. Vẽ ma trận nhầm lẫn (Confusion Matrix)
-plt.figure(figsize=(10, 7))
-sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=le.classes_, yticklabels=le.classes_)
+fig, ax = plt.subplots(figsize=(10, 7))
+disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=clf.classes_)
+disp.plot(cmap=plt.cm.Blues, ax=ax)
 plt.ylabel('True label')  # Nhãn thực tế
 plt.xlabel('Predicted label')  # Nhãn dự đoán
 plt.title('Confusion Matrix')  # Tiêu đề: Ma trận nhầm lẫn
@@ -113,4 +117,4 @@ valueSend = {
 }
 
 # Save the model
-# joblib.dump(valueSend, 'neural_network_model.pkl')
+joblib.dump(valueSend, 'neural_network_model.pkl')

@@ -3,15 +3,15 @@ document.getElementById('weather-form').addEventListener('submit', function(e) {
 
     const algorithm = document.getElementById('algorithm').value;
 
-    document.getElementById('algorithm').addEventListener('change', function() {
+//     document.getElementById('algorithm').addEventListener('change', function() {
 
-    // Xóa kết quả dự đoán và báo cáo cũ (nếu có)
-    document.getElementById('result').innerHTML = '';
-    document.getElementById('classification-report').innerHTML = '';
-    document.getElementById('confusion-matrix').src = '';
-    document.getElementById('entropy-diagram').src = '';
+//     // Xóa kết quả dự đoán và báo cáo cũ (nếu có)
+//     document.getElementById('result').innerHTML = '';
+//     document.getElementById('classification-report').innerHTML = '';
+//     document.getElementById('confusion-matrix').src = '';
+//     document.getElementById('entropy-diagram').src = '';
 
-});
+// });
 
     const data = {
         precipitation: document.getElementById('precipitation').value,
@@ -20,6 +20,7 @@ document.getElementById('weather-form').addEventListener('submit', function(e) {
         wind: document.getElementById('wind').value,
         algorithm: algorithm
     };
+    console.log(data);
 
     fetch('/predict', {
         method: 'POST',
@@ -30,7 +31,6 @@ document.getElementById('weather-form').addEventListener('submit', function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         document.getElementById('result').innerHTML = ` <p class="text-result"> Dự báo thời tiết: ${data.prediction} </br> Độ tin cậy của thuật toán: ${data.confidence}% </p> `;
 
         // Display classification report as HTML table
