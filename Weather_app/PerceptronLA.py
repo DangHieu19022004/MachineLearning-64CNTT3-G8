@@ -18,14 +18,6 @@ X = data[features]
 # Mã hóa cột 'weather' thành số
 le = LabelEncoder()
 y = le.fit_transform(data["weather"])
-
-# Chia dữ liệu thành tập huấn luyện và kiểm tra
-X_train, X_valid, y_train, y_valid = train_test_split(X, y, train_size=0.7, test_size=0.3, shuffle=False)
-
-# Khởi tạo và huấn luyện mô hình Perceptron
-clf = Perceptron()
-clf.fit(X_train, y_train)
-
 # Giảm chiều dữ liệu từ 4 chiều xuống 2 chiều với PCA
 pca = PCA(n_components=2)
 X_pca = pca.fit_transform(X)
@@ -33,7 +25,8 @@ X_pca = pca.fit_transform(X)
 # Chia dữ liệu đã giảm chiều
 X_train_pca, X_valid_pca, y_train_pca, y_valid_pca = train_test_split(X_pca, y, train_size=0.7, test_size=0.3, shuffle=False)
 
-# Huấn luyện lại mô hình với dữ liệu đã giảm chiều
+# Huấn luyện mô hình Perceptron với dữ liệu đã giảm chiều
+clf = Perceptron()
 clf.fit(X_train_pca, y_train_pca)
 
 # Tạo lưới điểm cho 2D
