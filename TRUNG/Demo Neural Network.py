@@ -47,6 +47,9 @@ print(classification_report(y_test, y_pred, target_names=le.classes_))
 accuracy = accuracy_score(y_test, y_pred)
 print('Tỷ lệ dự đoán đúng (accuracy):', np.around(accuracy * 100, 2), '%')
 
+# In hàm mất mát (Loss Function)
+print("\nGiá trị hàm mất mát (Loss Function):", round(clf.loss_, 2))
+
 # In ma trận nhầm lẫn (Confusion Matrix)
 conf_matrix = confusion_matrix(y_test, y_pred)
 print("\nMa trận nhầm lẫn (Confusion Matrix):\n")
