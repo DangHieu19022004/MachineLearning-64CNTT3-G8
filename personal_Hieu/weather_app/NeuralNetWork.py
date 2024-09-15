@@ -1,3 +1,7 @@
+import base64
+import io
+
+import joblib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -9,7 +13,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import LabelEncoder, StandardScaler, label_binarize
 
 # Đọc dữ liệu từ file CSV
-df = pd.read_csv('../seattle-weather.csv')
+df = pd.read_csv("../../seattle-weather.csv")
 
 # Xử lý dữ liệu thiếu (nếu có) bằng cách loại bỏ các hàng có giá trị null
 df = df.dropna()
@@ -40,21 +44,22 @@ clf.fit(X_train, y_train)
 # Dự đoán trên tập kiểm tra
 y_pred = clf.predict(X_test)
 
+new_input = pd.DataFrame({
+    'precipitation': [4.3],
+    'temp_max': [13.9],
+    'temp_min': [10],
+    'wind': [2.8]
+})
+print("start")
+print(clf.predict(new_input))
+print("start")
+
 # Đánh giá mô hình và in bảng phân loại chi tiết
-print("\nBáo cáo phân loại chi tiết:\n")
-print(classification_report(y_test, y_pred, target_names=le.classes_))
-
-# In độ chính xác (accuracy)
-accuracy = accuracy_score(y_test, y_pred)
-print('Tỷ lệ dự đoán đúng (accuracy):', np.around(accuracy * 100, 2), '%')
-
-# In hàm mất mát (Loss Function)
-print("\nGiá trị hàm mất mát (Loss Function):", round(clf.loss_, 2))
-
+# # In độ chính xác (accuracy)
+accuracy = accuracy_score(y_test, y_pred) * 100
+#
 # In ma trận nhầm lẫn (Confusion Matrix)
 conf_matrix = confusion_matrix(y_test, y_pred)
-print("\nMa trận nhầm lẫn (Confusion Matrix):\n")
-print(conf_matrix)
 
 # 1. Vẽ ma trận nhầm lẫn (Confusion Matrix)
 plt.figure(figsize=(10, 7))
@@ -62,18 +67,16 @@ sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=le.class
 plt.ylabel('True label')  # Nhãn thực tế
 plt.xlabel('Predicted label')  # Nhãn dự đoán
 plt.title('Confusion Matrix')  # Tiêu đề: Ma trận nhầm lẫn
-plt.show()
 
-# 2. Vẽ biểu đồ heatmap của báo cáo phân loại (Classification Report)
-# Tạo báo cáo phân loại và chuyển đổi thành DataFrame
-report_dict = classification_report(y_test, y_pred, target_names=le.classes_, output_dict=True)
-report_df = pd.DataFrame(report_dict).transpose()
+    #Save the plot to a BytesIO object
+img = io.BytesIO()
+plt.savefig(img, format='png')
+img.seek(0)
+    #Encode image to base64
+plot_url = base64.b64encode(img.getvalue()).decode()
 
-# Vẽ heatmap của các chỉ số báo cáo phân loại
-plt.figure(figsize=(8, 6))
-sns.heatmap(report_df.iloc[:-1, :-1], annot=True, cmap='Blues', fmt='.2f')
-plt.title('Classification Report Heatmap')  # Tiêu đề: Báo cáo phân loại dưới dạng heatmap
-plt.show()
+#báo cáo phân loại
+report = classification_report(y_test, y_pred, target_names=le.classes_,zero_division=0)
 
 # 3. Vẽ đường cong ROC cho từng lớp (ROC Curve)
 # Binarize (mã hóa nhị phân) nhãn đầu ra cho phân loại đa lớp ROC
@@ -94,4 +97,20 @@ plt.xlabel('False Positive Rate')  # Trục X: Tỷ lệ dương tính giả
 plt.ylabel('True Positive Rate')  # Trục Y: Tỷ lệ dương tính thực
 plt.title('ROC Curve for Multi-Class Classification')  # Tiêu đề: Đường cong ROC cho phân loại đa lớp
 plt.legend(loc='lower right')  # Hiển thị chú thích ở góc phải dưới
-plt.show()
+    #Save the plot to a BytesIO object
+imgROC = io.BytesIO()
+plt.savefig(imgROC, format='png')
+imgROC.seek(0)
+    #Encode image to base64
+ROC_url = base64.b64encode(imgROC.getvalue()).decode()
+
+valueSend = {
+    'model': clf,
+    'accuracy': accuracy,
+    'report': report,
+    'plot_url': plot_url,
+    'entropy_url': ROC_url
+}
+
+# Save the model
+# joblib.dump(valueSend, 'neural_network_model.pkl')

@@ -3,6 +3,16 @@ document.getElementById('weather-form').addEventListener('submit', function(e) {
 
     const algorithm = document.getElementById('algorithm').value;
 
+    document.getElementById('algorithm').addEventListener('change', function() {
+
+    // Xóa kết quả dự đoán và báo cáo cũ (nếu có)
+    document.getElementById('result').innerHTML = '';
+    document.getElementById('classification-report').innerHTML = '';
+    document.getElementById('confusion-matrix').src = '';
+    document.getElementById('entropy-diagram').src = '';
+
+});
+
     const data = {
         precipitation: document.getElementById('precipitation').value,
         temp_max: document.getElementById('temp_max').value,
@@ -20,7 +30,8 @@ document.getElementById('weather-form').addEventListener('submit', function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('result').innerHTML = ` <p class="text-result"> Dự báo thời tiết: ${data.prediction} </br> Độ tin cậy của thuật toán: ${parseFloat(data.confidence.toFixed(2))}% </p> `;
+        console.log(data);
+        document.getElementById('result').innerHTML = ` <p class="text-result"> Dự báo thời tiết: ${data.prediction} </br> Độ tin cậy của thuật toán: ${data.confidence}% </p> `;
 
         // Display classification report as HTML table
         document.getElementById('classification-report').innerHTML = `<p class="text-result">Báo cáo phân loại:</p> </br> ${data.report}` ;
