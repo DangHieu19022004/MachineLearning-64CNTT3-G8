@@ -5,11 +5,11 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
 import tkinter as tk
-from tkinter import ttk  # Import ttk để sử dụng Treeview
+from tkinter import ttk
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Đọc dữ liệu và xử lý như trước
+# Đọc dữ liệu và xử lý
 df = pd.read_csv('./seattle-weather.csv')
 df = df.dropna()
 
@@ -29,7 +29,7 @@ clf.fit(X_train, y_train)
 # Dự đoán trên tập kiểm tra
 y_pred = clf.predict(X_test)
 
-# Hàm hiển thị kết quả
+# Hàm để hiển thị báo cáo chi tiết
 def show_metrics():
     # Đánh giá mô hình
     accuracy = accuracy_score(y_test, y_pred)
@@ -67,7 +67,7 @@ def show_metrics():
     frame_bottom.pack(pady=10)
 
     # Tạo layout với 2 cột: một cột cho ma trận nhầm lẫn và một cột cho biểu đồ loss
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))  # Tạo layout với 2 cột
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))
 
     # Hiển thị ma trận nhầm lẫn ở cột đầu tiên
     sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', ax=ax1, xticklabels=le.classes_, yticklabels=le.classes_)
@@ -86,6 +86,27 @@ def show_metrics():
     canvas = FigureCanvasTkAgg(fig, master=frame_bottom)
     canvas.draw()
     canvas.get_tk_widget().pack()
+
+# Hàm dự đoán thời tiết dựa trên thông tin đầu vào từ người dùng
+def make_prediction():
+    # Lấy giá trị từ các ô nhập liệu
+    precipitation = float(entry_precipitation.get())
+    temp_max = float(entry_temp_max.get())
+    temp_min = float(entry_temp_min.get())
+    wind = float(entry_wind.get())
+    
+    # Chuẩn hóa dữ liệu đầu vào
+    input_data = np.array([[precipitation, temp_max, temp_min, wind]])
+    input_data = scaler.transform(input_data)
+    
+    # Dự đoán nhãn thời tiết
+    prediction = clf.predict(input_data)
+    
+    # Giải mã nhãn dự đoán thành tên thời tiết
+    predicted_weather = le.inverse_transform(prediction)[0]
+    
+    # Hiển thị kết quả dự đoán
+    result_label.config(text=f"Dự đoán thời tiết: {predicted_weather}")
 
 # Xây dựng giao diện tkinter
 root = tk.Tk()
@@ -117,8 +138,16 @@ entry_wind = tk.Entry(root)
 entry_wind.grid(row=3, column=1, padx=10, pady=5)
 
 # Nút dự đoán
-predict_button = tk.Button(root, text="Dự đoán", command=show_metrics)
+predict_button = tk.Button(root, text="Dự đoán", command=make_prediction)
 predict_button.grid(row=4, columnspan=2, pady=10)
+
+# Thêm một label để hiển thị kết quả dự đoán
+result_label = tk.Label(root, text="Dự đoán thời tiết: ")
+result_label.grid(row=5, columnspan=2, pady=10)
+
+# Nút để hiển thị báo cáo chi tiết của mô hình
+metrics_button = tk.Button(root, text="Hiển thị kết quả mô hình", command=show_metrics)
+metrics_button.grid(row=6, columnspan=2, pady=10)
 
 # Chạy ứng dụng
 root.mainloop()
