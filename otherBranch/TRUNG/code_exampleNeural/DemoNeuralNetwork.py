@@ -35,8 +35,8 @@ joblib.dump(scaler, 'scaler.pkl')  # Lưu StandardScaler để dùng lại sau
 # Nhãn (target) là cột weather đã được mã hóa
 y_data = df['weather_encoded'].values
 
-# Chia tập dữ liệu thành 3 tập: training (60%), validation (20%), test (20%)
-X_train, X_temp, y_train, y_temp = train_test_split(X_data, y_data, test_size=0.4, shuffle=True, random_state=42)
+# Chia tập dữ liệu thành 3 tập: training (70%), validation (15%), test (15%)
+X_train, X_temp, y_train, y_temp = train_test_split(X_data, y_data, test_size=0.3, shuffle=True, random_state=42)
 X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, shuffle=True, random_state=42)
 
 # Show data của các tập
@@ -85,14 +85,14 @@ def plot_confusion_matrix(y_true, y_pred, title):
     plt.show()
 
 # 1. Vẽ ma trận nhầm lẫn (Confusion Matrix)
-plt.figure(figsize=(10, 7))
-sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=le.classes_, yticklabels=le.classes_)
-plt.ylabel('True label')  # Nhãn thực tế
-plt.xlabel('Predicted label')  # Nhãn dự đoán
-plt.title('Confusion Matrix')  # Tiêu đề: Ma trận nhầm lẫn
-plot_confusion_matrix(y_train, y_train_pred, 'Confusion Matrix - Training Set')
-plot_confusion_matrix(y_val, y_val_pred, 'Confusion Matrix - Validation Set')
-plot_confusion_matrix(y_test, y_test_pred, 'Confusion Matrix - Test Set')
+# plt.figure(figsize=(10, 7))
+# sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=le.classes_, yticklabels=le.classes_)
+# plt.ylabel('True label')  # Nhãn thực tế
+# plt.xlabel('Predicted label')  # Nhãn dự đoán
+# plt.title('Confusion Matrix')  # Tiêu đề: Ma trận nhầm lẫn
+# plot_confusion_matrix(y_train, y_train_pred, 'Confusion Matrix - Training Set')
+# plot_confusion_matrix(y_val, y_val_pred, 'Confusion Matrix - Validation Set')
+# plot_confusion_matrix(y_test, y_test_pred, 'Confusion Matrix - Test Set')
 
 # 2. Vẽ biểu đồ thể hiện sự tuyến tính của dữ liệu (tạm thời dùng biểu đồ tuyến tính của dữ liệu đầu vào)
 plt.figure(figsize=(8, 6))

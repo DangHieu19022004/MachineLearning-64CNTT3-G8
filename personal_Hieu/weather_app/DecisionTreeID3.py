@@ -104,6 +104,13 @@ imgEntropy.seek(0)
     #Encode image to base64
 entropy_url = base64.b64encode(imgEntropy.getvalue()).decode()
 
+#1. model
+#2. report validation
+#3. report training set
+#4. report test set
+#5. ma trận nhầm lẫn (plot_url)
+#6. ma trận learning curve
+
 
 valueSend = {
     'model': dt_model,

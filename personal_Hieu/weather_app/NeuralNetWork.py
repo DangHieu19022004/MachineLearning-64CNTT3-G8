@@ -33,8 +33,9 @@ X_data = scaler.fit_transform(X_data)
 # Nhãn (target) là cột weather đã được mã hóa
 y_data = df['weather_encoded'].values
 
-# Chia tập dữ liệu thành tập huấn luyện và kiểm tra (shuffle=True để trộn ngẫu nhiên dữ liệu)
-X_train, X_test, y_train, y_test = train_test_split(X_data, y_data, test_size=0.3, shuffle=True, random_state=42)
+# Chia tập dữ liệu thành 3 tập: training (70%), validation (15%), test (15%)
+X_train, X_temp, y_train, y_temp = train_test_split(X_data, y_data, test_size=0.3, shuffle=True, random_state=42)
+X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, shuffle=True, random_state=42)
 
 # Xây dựng mô hình MLP (Multilayer Perceptron - Neural Network)
 clf = MLPClassifier(hidden_layer_sizes=(100, 50), max_iter=1000, activation='relu', solver='adam', random_state=42)

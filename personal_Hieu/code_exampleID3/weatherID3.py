@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
 #get the dataset
-data = pd.read_csv("../../seattle-weather.csv", index_col=0)
+data = pd.read_csv("../seattle-weather.csv")
 
 #features columns to train the model
 features = ["precipitation", "temp_max", "temp_min", "wind"]
