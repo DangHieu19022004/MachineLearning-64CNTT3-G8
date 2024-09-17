@@ -171,3 +171,37 @@ plt.legend(loc="best")
 plt.grid(True)
 plt.show()
 
+
+
+
+from sklearn.metrics import accuracy_score
+
+# Đánh giá mô hình trên tập huấn luyện
+y_train_preds = dt_model.predict(X_train)
+train_accuracy = accuracy_score(y_train, y_train_preds)
+print(f"Training Accuracy: {train_accuracy:.4f}")
+
+# Đánh giá mô hình trên tập validation
+validation_accuracy = accuracy_score(y_valid, y_preds)
+print(f"Validation Accuracy: {validation_accuracy:.4f}")
+
+
+from sklearn.metrics import classification_report
+
+# Báo cáo phân loại cho tập validation
+report = classification_report(y_valid, y_preds, target_names=dt_model.classes_)
+print("Classification Report:\n", report)
+
+
+# create test dataset
+# Giả sử bạn có tập dữ liệu test
+# X_test, y_test = ...  # Tải tập dữ liệu test
+
+# # Dự đoán và đánh giá trên tập test
+# y_test_preds = dt_model.predict(X_test)
+# test_accuracy = accuracy_score(y_test, y_test_preds)
+# print(f"Test Accuracy: {test_accuracy:.4f}")
+
+# # Báo cáo phân loại cho tập test
+# test_report = classification_report(y_test, y_test_preds, target_names=dt_model.classes_)
+# print("Test Classification Report:\n", test_report)
