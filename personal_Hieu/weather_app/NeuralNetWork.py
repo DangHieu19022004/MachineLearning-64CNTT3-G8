@@ -13,8 +13,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import LabelEncoder, StandardScaler, label_binarize
 
+#1. model
+#2. report validation
+#3. report training set
+#4. report test set
+#5. ma trận nhầm lẫn (plot_url)
+#6. ma trận learning curve
+
 # Đọc dữ liệu từ file CSV
-df = pd.read_csv("../../seattle-weather.csv")
+df = pd.read_csv("./seattle-weather.csv")
 
 # Xử lý dữ liệu thiếu (nếu có) bằng cách loại bỏ các hàng có giá trị null
 df = df.dropna()
@@ -111,10 +118,7 @@ ROC_url = base64.b64encode(imgROC.getvalue()).decode()
 
 valueSend = {
     'model': clf,
-    'accuracy': accuracy,
-    'report': report,
-    'plot_url': plot_url,
-    'entropy_url': ROC_url
+
 }
 
 # Save the model

@@ -31,18 +31,19 @@ document.getElementById('weather-form').addEventListener('submit', function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('result').innerHTML = ` <p class="text-result"> Dự báo thời tiết: ${data.prediction} </br> Độ tin cậy của thuật toán: ${data.confidence}% </p> `;
+        document.getElementById('result').innerHTML = ` <p class="text-result"> Dự báo thời tiết: ${data.prediction}</p> `;
 
         // Display classification report as HTML table
-        document.getElementById('classification-report').innerHTML = `<p class="text-result">Báo cáo phân loại:</p> </br> ${data.report}` ;
+        document.getElementById('report_validation').innerHTML = `<p class="text-result">Validation:</p> </br> ${data.report_validation}` ;
+        document.getElementById('report_trainning_set').innerHTML = `<p class="text-result">Trainning:</p> </br> ${data.report_trainning_set}` ;
+        document.getElementById('report_test_set').innerHTML = `<p class="text-result">Testing:</p> </br> ${data.report_test_set}` ;
+
 
         // Display confusion matrix image
-        document.getElementById('classificationrp').innerText = "Báo cáo phân loại: ";
         document.getElementById('confusion-matrix').src = 'data:image/png;base64,' + data.plot_url;
 
         // Display entropy diagram image
-        document.getElementById('diagram').innerText = "Đồ thị entropy: ";
-        document.getElementById('entropy-diagram').src = 'data:image/png;base64,' + data.entropy_url;
+        document.getElementById('learning_curve_url').src = 'data:image/png;base64,' + data.learning_curve_url;
     })
     .catch(error => console.error('Error:', error));
 });

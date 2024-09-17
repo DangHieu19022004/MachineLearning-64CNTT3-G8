@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
 # Đọc tệp dữ liệu
-data = pd.read_csv("../../seattle-weather.csv", index_col=0)
+data = pd.read_csv("./seattle-weather.csv", index_col=0)
 
 # Sử dụng tất cả bốn thuộc tính
 features = ["precipitation", "temp_max", "temp_min", "wind"]

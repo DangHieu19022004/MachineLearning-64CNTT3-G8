@@ -12,9 +12,9 @@ app = Flask(__name__)
 
 # Load the model
 models = {
-    'perceptron': joblib.load('perceptron_model.pkl'),
+    # 'perceptron': joblib.load('perceptron_model.pkl'),
     'decision_tree': joblib.load('decision_tree.pkl'),
-    'neural_network': joblib.load('neural_network_model.pkl')
+    # 'neural_network': joblib.load('neural_network_model.pkl')
 }
 
 # Control routes
@@ -30,10 +30,11 @@ def predict():
         model_data = models[algorithm]
 
         clf = model_data['model']
-        accuracy = model_data['accuracy']
-        report_after = model_data['report']
+        report_validation = model_data['report_validation']
+        report_trainning_set = model_data['report_trainning_set']
+        report_test_set = model_data['report_test_set']
         plot_url = model_data['plot_url']
-        entropy_url = model_data['entropy_url']
+        learning_curve_url = model_data['learning_curve_url']
 
         #get data from input
         precipitation = float(data['precipitation'])
@@ -46,20 +47,19 @@ def predict():
             if algorithm == 'perceptron':
                 prediction = predict_weather(np.array([[precipitation, temp_max, temp_min, wind]]))
                 print(f"Prediction: {prediction}")
-                print(f"accuracy: {accuracy}")
             elif algorithm == 'neural_network':
                 prediction = encode_input(np.array([[precipitation, temp_max, temp_min, wind]]))
                 print(f"Prediction: {prediction}")
-                print(f"accuracy: {accuracy}")
             else:
                 prediction = clf.predict(np.array([[precipitation, temp_max, temp_min, wind]]))
 
             return jsonify({
                 'prediction': prediction.tolist(),
-                'confidence': accuracy,
-                'report': f"<pre>{report_after}</pre>",
+                'report_validation': f"<pre>{report_validation}</pre>",
+                'report_trainning_set': f"<pre>{report_trainning_set}</pre>",
+                'report_test_set': f"<pre>{report_test_set}</pre>",
                 'plot_url': plot_url,
-                'entropy_url': entropy_url
+                'learning_curve_url': learning_curve_url
             })
         except Exception as e:
             print(f"Error during prediction: {e}")
