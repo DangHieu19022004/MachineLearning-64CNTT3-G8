@@ -69,7 +69,7 @@ report = {
     'test': test_report
 }
 
-# Vẽ ma trận nhầm lẫn (Confusion Matrix) cho tập validation
+# Vẽ ma trận nhầm lẫn (Confusion Matrix) cho tập test
 def plot_confusion_matrix(y_true, y_pred, title):
     cm = confusion_matrix(y_true, y_pred)
     plt.figure(figsize=(10, 7))
@@ -86,8 +86,8 @@ def plot_confusion_matrix(y_true, y_pred, title):
     plt.close()
     return img_base64
 
-# Lấy ảnh base64 của Confusion Matrix cho Validation Set
-confusion_matrix_base64 = plot_confusion_matrix(y_val, y_val_pred, 'Confusion Matrix - Validation Set')
+# Lấy ảnh base64 của Confusion Matrix cho Test Set
+confusion_matrix_base64 = plot_confusion_matrix(y_test, y_test_pred, 'Confusion Matrix - Test Set')
 
 # Vẽ biểu đồ Learning Curve
 def plot_learning_curve(estimator, X, y, title, cv=None, n_jobs=None, train_sizes=np.linspace(0.1, 1.0, 3)):
