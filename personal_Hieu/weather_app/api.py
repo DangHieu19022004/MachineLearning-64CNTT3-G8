@@ -12,9 +12,9 @@ app = Flask(__name__)
 
 # Load the model
 models = {
-    # 'perceptron': joblib.load('perceptron_model.pkl'),
+    'perceptron': joblib.load('perceptron_model.pkl'),
     'decision_tree': joblib.load('decision_tree.pkl'),
-    # 'neural_network': joblib.load('neural_network_model.pkl')
+    'neural_network': joblib.load('neural_network_model.pkl')
 }
 
 # Control routes
