@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import io
 import base64
-import json 
 
 # Đọc dữ liệu từ file CSV
 df = pd.read_csv('./seattle-weather.csv')
@@ -41,8 +40,8 @@ y_data = df['weather_encoded'].values
 X_train, X_temp, y_train, y_temp = train_test_split(X_data, y_data, test_size=0.3, shuffle=True, random_state=42)
 X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, shuffle=True, random_state=42)
 
-# Xây dựng mô hình MLP (Multilayer Perceptron - Neural Network)
-clf = MLPClassifier(hidden_layer_sizes=(100, 50), max_iter=2000, activation='relu', solver='adam', random_state=42)
+# Xây dựng mô hình MLP (Multilayer Perceptron - Neural Network) với Early Stopping
+clf = MLPClassifier(hidden_layer_sizes=(50, 25), max_iter=500, activation='relu', solver='adam', random_state=42, early_stopping=True)
 
 # Huấn luyện mô hình
 clf.fit(X_train, y_train)
