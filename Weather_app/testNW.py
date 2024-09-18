@@ -40,11 +40,14 @@ y_data = df['weather_encoded'].values
 X_train, X_temp, y_train, y_temp = train_test_split(X_data, y_data, test_size=0.3, shuffle=True, random_state=42)
 X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, shuffle=True, random_state=42)
 
+# Lấy một phần dữ liệu huấn luyện (giảm kích thước)
+X_train_sample, _, y_train_sample, _ = train_test_split(X_train, y_train, test_size=0.5, random_state=42)
+
 # Xây dựng mô hình MLP (Multilayer Perceptron - Neural Network) với Early Stopping
-clf = MLPClassifier(hidden_layer_sizes=(50, 25), max_iter=500, activation='relu', solver='adam', random_state=42, early_stopping=True)
+clf = MLPClassifier(hidden_layer_sizes=(30, 15), max_iter=500, activation='relu', solver='adam', random_state=42, early_stopping=True, learning_rate_init=0.01)
 
 # Huấn luyện mô hình
-clf.fit(X_train, y_train)
+clf.fit(X_train_sample, y_train_sample)
 
 # Lưu mô hình để triển khai sau này
 joblib.dump(clf, 'neural_network_model.pkl')
@@ -88,7 +91,7 @@ def plot_confusion_matrix(y_true, y_pred, title):
 confusion_matrix_base64 = plot_confusion_matrix(y_val, y_val_pred, 'Confusion Matrix - Validation Set')
 
 # Vẽ biểu đồ Learning Curve
-def plot_learning_curve(estimator, X, y, title, cv=None, n_jobs=None, train_sizes=np.linspace(0.1, 1.0, 5)):
+def plot_learning_curve(estimator, X, y, title, cv=None, n_jobs=None, train_sizes=np.linspace(0.1, 1.0, 3)):
     plt.figure(figsize=(8, 6))
     plt.title(title)
     plt.xlabel("Training Examples")
@@ -126,7 +129,7 @@ def plot_learning_curve(estimator, X, y, title, cv=None, n_jobs=None, train_size
     
 
 # Lấy ảnh base64 của Learning Curve
-learning_curve_base64 = plot_learning_curve(clf, X_train, y_train, "Learning Curve - MLP Classifier", cv=5)
+learning_curve_base64 = plot_learning_curve(clf, X_train_sample, y_train_sample, "Learning Curve - MLP Classifier", cv=5)
 
 # Giá trị gửi đi bao gồm các đường dẫn ảnh base64 của ma trận nhầm lẫn và Learning Curve
 valueSend = {
@@ -135,7 +138,7 @@ valueSend = {
     'confusion_matrix_base64': confusion_matrix_base64,
     'learning_curve_base64': learning_curve_base64
 }
-
+print(valueSend)
 
 
 '''
