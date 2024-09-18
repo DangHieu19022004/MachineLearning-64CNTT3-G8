@@ -46,7 +46,6 @@ X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, s
 
 # Xây dựng mô hình MLP (Multilayer Perceptron - Neural Network)
 clf = MLPClassifier(hidden_layer_sizes=(100, 50), max_iter=2000, activation='relu', solver='adam', random_state=42)
-
 # Huấn luyện mô hình
 clf.fit(X_train, y_train)
 
