@@ -43,7 +43,7 @@ dt_model = DecisionTreeClassifier(criterion='entropy', max_depth=6, random_state
 dt_model.fit(X_train, y_train)
 
 #predict the model on test data
-y_train__pred = dt_model.predict(X_train)
+y_train_pred = dt_model.predict(X_train)
 y_valid_pred = dt_model.predict(X_valid)
 y_test_pred = dt_model.predict(X_test)
 
@@ -67,11 +67,11 @@ img.seek(0)
 plot_url = base64.b64encode(img.getvalue()).decode()
 
 # In báo cáo phân loại (precision, recall, F1-score cho từng lớp)
-#3.1. report validation
-report_validation = classification_report(y_train, y_train__pred, target_names=dt_model.classes_, zero_division=0)
-#3.2. report training set
-report_trainning_set = classification_report(y_valid, y_valid_pred, target_names=dt_model.classes_, zero_division=0)
-#3.3. report test set
+# 3.1. report training set
+report_trainning_set = classification_report(y_train, y_train_pred, target_names=dt_model.classes_, zero_division=0)
+# 3.2. report validation set
+report_validation = classification_report(y_valid, y_valid_pred, target_names=dt_model.classes_, zero_division=0)
+# 3.3. report test set
 report_test_set = classification_report(y_test, y_test_pred, target_names=dt_model.classes_, zero_division=0)
 
 print(report_validation)

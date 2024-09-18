@@ -45,7 +45,7 @@ X_train, X_temp, y_train, y_temp = train_test_split(X_data, y_data, test_size=0.
 X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, shuffle=True, random_state=42)
 
 # Xây dựng mô hình MLP (Multilayer Perceptron - Neural Network)
-clf = MLPClassifier(hidden_layer_sizes=(100, 50), max_iter=1000, activation='relu', solver='adam', random_state=42)
+clf = MLPClassifier(hidden_layer_sizes=(100, 50), max_iter=2000, activation='relu', solver='adam', random_state=42)
 
 # Huấn luyện mô hình
 clf.fit(X_train, y_train)
