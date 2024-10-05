@@ -108,6 +108,53 @@ imgLearningCurve.seek(0)
     #Encode image to base64
 learning_curve_url = base64.b64encode(imgLearningCurve.getvalue()).decode()
 
+# Vẽ sơ đồ entropy
+# Function to calculate entropy at each node
+def calculate_entropy(tree_model):
+    entropy_values = []
+    node_samples = []
+
+    # Lấy thông tin từ cây quyết định
+    tree_structure = tree_model.tree_
+
+    for node_id in range(tree_structure.node_count):
+        if tree_structure.children_left[node_id] != tree_structure.children_right[node_id]:
+            # Lấy impurity (tức là entropy) của node
+            entropy_value = tree_structure.impurity[node_id]
+            samples = tree_structure.n_node_samples[node_id]
+            entropy_values.append(entropy_value)
+            node_samples.append(samples)
+
+    return entropy_values, node_samples
+
+# Lấy giá trị entropy cho các node
+entropy_values, node_samples = calculate_entropy(dt_model)
+
+# Vẽ biểu đồ entropy theo số lượng mẫu tại mỗi node
+plt.figure(figsize=(10, 6))
+plt.plot(entropy_values, marker='o', label='Entropy')
+plt.title("Entropy Values Across Tree Nodes")
+plt.xlabel("Node")
+plt.ylabel("Entropy")
+plt.grid(True)
+plt.legend()
+plt.show()
+
+# Hiển thị số lượng mẫu tại mỗi node trên biểu đồ
+for i, sample in enumerate(node_samples):
+    plt.text(i, entropy_values[i], f'{sample}', ha='center', va='bottom')
+
+# # Lưu sơ đồ entropy
+# imgEntropy = io.BytesIO()
+# plt.savefig(imgEntropy, format='png')
+# imgEntropy.seek(0)
+
+# # Mã hóa ảnh thành base64
+# entropy_url = base64.b64encode(imgEntropy.getvalue()).decode()
+
+# Xuất kết quả
+print("Entropy URL:", entropy_url)
+
 # # 4. Vẽ sơ đồ entropy
 # # Function to calculate entropy at each node
 # def calculate_entropy(tree, feature_names):
@@ -166,5 +213,5 @@ valueSend = {
     'learning_curve_url': learning_curve_url
 }
 
-# Save the model
-joblib.dump(valueSend, 'decision_tree.pkl')
+# # Save the model
+# joblib.dump(valueSend, 'decision_tree.pkl')

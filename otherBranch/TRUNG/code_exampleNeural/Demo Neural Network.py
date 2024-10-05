@@ -89,12 +89,28 @@ def plot_confusion_matrix(y_true, y_pred, title):
 # Lấy ảnh base64 của Confusion Matrix cho Test Set
 confusion_matrix_base64 = plot_confusion_matrix(y_test, y_test_pred, 'Confusion Matrix - Test Set')
 
-# Vẽ biểu đồ Learning Curve
-def plot_learning_curve(estimator, X, y, title, cv=None, n_jobs=None, train_sizes=np.linspace(0.1, 1.0, 3)):
+# Vẽ lại hàm mất mát (Loss Function) với chi tiết bổ sung
+plt.figure(figsize=(8, 6))
+plt.plot(clf.loss_curve_, label='Training Loss', color='blue')
+plt.title('Training Loss Curve', fontsize=14)
+plt.xlabel('Iterations', fontsize=12)
+plt.ylabel('Loss', fontsize=12)
+plt.grid(True)
+plt.legend(loc='best')
+
+# Lưu loss vào bộ nhớ dưới dạng ảnh base64 để đưa vào valueSend
+img_buffer = io.BytesIO()
+plt.savefig(img_buffer, format='png')
+img_buffer.seek(0)
+loss_curve_base64 = base64.b64encode(img_buffer.getvalue()).decode('utf-8')
+plt.close()
+
+# Hàm vẽ biểu đồ Learning Curve với các chi tiết bổ sung
+def plot_learning_curve_v2(estimator, X, y, title, cv=None, n_jobs=None, train_sizes=np.linspace(0.1, 1.0, 5)):
     plt.figure(figsize=(8, 6))
-    plt.title(title)
-    plt.xlabel("Training Examples")
-    plt.ylabel("Score")
+    plt.title(title, fontsize=14)
+    plt.xlabel("Training Examples", fontsize=12)
+    plt.ylabel("Score", fontsize=12)
 
     # Lấy giá trị training và validation scores cho từng kích thước tập huấn luyện
     train_sizes, train_scores, val_scores = learning_curve(
@@ -107,34 +123,40 @@ def plot_learning_curve(estimator, X, y, title, cv=None, n_jobs=None, train_size
     val_scores_mean = np.mean(val_scores, axis=1)
     val_scores_std = np.std(val_scores, axis=1)
 
-    # Vẽ biểu đồ training và validation scores
-    plt.grid()
-    plt.fill_between(train_sizes, train_scores_mean - train_scores_std, train_scores_mean + train_scores_std, alpha=0.1, color="r")
-    plt.fill_between(train_sizes, val_scores_mean - val_scores_std, val_scores_mean + val_scores_std, alpha=0.1, color="g")
+    # Vẽ biểu đồ training và validation scores với các chi tiết bổ sung
+    plt.grid(True)
+    plt.fill_between(train_sizes, train_scores_mean - train_scores_std,
+                     train_scores_mean + train_scores_std, alpha=0.1, color="r")
+    plt.fill_between(train_sizes, val_scores_mean - val_scores_std,
+                     val_scores_mean + val_scores_std, alpha=0.1, color="g")
     plt.plot(train_sizes, train_scores_mean, 'o-', color="r", label="Training score")
     plt.plot(train_sizes, val_scores_mean, 'o-', color="g", label="Validation score")
 
     plt.legend(loc="best")
-    
+
     # Lưu Learning Curve vào bộ nhớ dưới dạng ảnh base64
     img_buffer = io.BytesIO()
     plt.savefig(img_buffer, format='png')
     img_buffer.seek(0)
-    img_base64 = base64.b64encode(img_buffer.getvalue()).decode('utf-8')
+    learning_curve_base64 = base64.b64encode(img_buffer.getvalue()).decode('utf-8')
     plt.close()
-    return img_base64
+    return learning_curve_base64
 
-# Lấy ảnh base64 của Learning Curve
-learning_curve_base64 = plot_learning_curve(clf, X_train_sample, y_train_sample, "Learning Curve - MLP Classifier", cv=5)
+# Lấy lại Learning Curve base64
+learning_curve_base64 = plot_learning_curve_v2(clf, X_train_sample, y_train_sample, "Learning Curve - MLP Classifier", cv=5)
 
-# Giá trị gửi đi bao gồm các đường dẫn ảnh base64 của ma trận nhầm lẫn và Learning Curve
+# Giá trị gửi đi bao gồm các đường dẫn ảnh base64 của ma trận nhầm lẫn, Learning Curve và Loss Curve
 valueSend = {
     'model': 'neural_network_model.pkl',
     'report': report,
     'confusion_matrix_base64': confusion_matrix_base64,
-    'learning_curve_base64': learning_curve_base64
+    'learning_curve_base64': learning_curve_base64,
+    'loss_curve_base64': loss_curve_base64
 }
+
+# In ra giá trị valueSend để kiểm tra
 print(valueSend)
+
 
 
 '''

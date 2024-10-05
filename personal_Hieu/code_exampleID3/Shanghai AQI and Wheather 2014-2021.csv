@@ -1,0 +1,2503 @@
+maxtempC,mintempC,totalSnow_cm,sunHour,AQI_Explained
+15,5,0,8.7,Hazardous
+14,7,0,8.7,Hazardous
+16,9,0,8.7,Hazardous
+10,4,0,5.5,Hazardous
+10,3,0,8.7,Hazardous
+11,5,0,8.7,Very unhealthy
+12,9,0,5.5,Unhealthy
+9,4,0,4,Very unhealthy
+5,2,0,8.7,Very unhealthy
+7,1,0,8.7,Very unhealthy
+7,5,0,4,Very unhealthy
+9,4,0,5.5,Hazardous
+6,3,0,7.1,Hazardous
+7,2,0,7.1,Very unhealthy
+7,1,0,8.7,Unhealthy
+10,2,0,8.7,Very unhealthy
+11,4,0,8.7,Hazardous
+8,3,0,8.7,Hazardous
+9,1,0,8.7,Hazardous
+11,3,0,8.7,Hazardous
+6,0,0,8.7,Hazardous
+5,-1,0,8.7,Hazardous
+10,2,0,8.7,Hazardous
+15,5,0,8.7,Very unhealthy
+16,8,0,8.7,Very unhealthy
+9,5,0,5.6,Hazardous
+12,4,0,8.7,Unhealthy
+14,6,0,8.7,Unhealthy
+12,7,0,5.6,Hazardous
+17,8,0,8.7,Hazardous
+17,8,0,8.7,Hazardous
+24,13,0,8.7,Hazardous
+17,11,0,8.7,Hazardous
+10,4,0,4.1,Hazardous
+6,3,0,8.7,Hazardous
+6,4,0,4.1,Unhealthy for sensitive groups
+9,8,0,4.1,Unhealthy for sensitive groups
+7,3,0,4.1,Unhealthy for sensitive groups
+6,1,0,5.6,Unhealthy for sensitive groups
+3,0,0.3,4.1,Hazardous
+3,-1,0.1,8.7,Hazardous
+5,-2,0,7.2,Very unhealthy
+6,1,0,4.1,Very unhealthy
+7,4,0,4.1,Very unhealthy
+8,2,0,7.2,Unhealthy
+9,0,0,8.7,Very unhealthy
+8,5,0,4.2,Unhealthy
+9,6,0,4.2,Unhealthy
+4,2,0,4.2,Very unhealthy
+6,1,0,4.2,Unhealthy
+9,1,0,7.2,Hazardous
+9,2,0,8.7,Hazardous
+10,4,0,7.2,Hazardous
+12,5,0,8.7,Hazardous
+11,6,0,4.2,Hazardous
+10,9,0,4.2,Hazardous
+11,8,0,4.2,Unhealthy
+14,7,0,5.7,Very unhealthy
+9,7,0,4.2,Hazardous
+8,5,0,4.2,Hazardous
+11,4,0,7.2,Unhealthy
+12,6,0,8.7,Hazardous
+11,7,0,4.3,Very unhealthy
+10,4,0,8.7,Unhealthy
+7,3,0,4.3,Very unhealthy
+10,3,0,7.2,Unhealthy for sensitive groups
+7,2,0,4.3,Unhealthy
+13,2,0,8.7,Very unhealthy
+13,2,0,5.8,Hazardous
+14,7,0,11.6,Hazardous
+15,7,0,6,Hazardous
+11,3,0,11.6,Very unhealthy
+14,3,0,11.6,Very unhealthy
+18,6,0,11.6,Hazardous
+19,9,0,11.6,Hazardous
+24,13,0,11.6,Hazardous
+24,10,0,11.6,Hazardous
+13,8,0,7.5,Hazardous
+13,6,0,11.8,Hazardous
+14,3,0,12.5,Hazardous
+15,5,0,12.5,Unhealthy
+15,7,0,12.5,Very unhealthy
+13,9,0,11.8,Very unhealthy
+14,6,0,11.8,Very unhealthy
+15,6,0,11.8,Hazardous
+17,9,0,12.6,Hazardous
+18,12,0,9.2,Very unhealthy
+20,14,0,9.2,Very unhealthy
+20,10,0,12.7,Hazardous
+15,10,0,12.7,Hazardous
+17,11,0,11.9,Hazardous
+18,10,0,10.6,Hazardous
+19,9,0,12.7,Hazardous
+19,6,0,12.7,Very unhealthy
+20,7,0,12.8,Hazardous
+15,4,0,12.8,Unhealthy for sensitive groups
+17,10,0,12.8,Very unhealthy
+20,12,0,12.8,Hazardous
+20,11,0,12.8,Hazardous
+22,11,0,12.9,Hazardous
+19,12,0,12.9,Hazardous
+19,14,0,9.3,Very unhealthy
+15,10,0,9.4,Very unhealthy
+20,9,0,12.9,Hazardous
+19,10,0,13,Very unhealthy
+18,14,0,8.1,Very unhealthy
+24,13,0,10.7,Hazardous
+18,12,0,10.7,Hazardous
+15,12,0,8.1,Unhealthy
+17,11,0,9.4,Very unhealthy
+16,10,0,8.2,Hazardous
+20,10,0,12,Hazardous
+19,8,0,13.1,Hazardous
+20,12,0,10.7,Hazardous
+20,15,0,13.1,Unhealthy
+17,16,0,8.2,Unhealthy
+20,15,0,9.5,Hazardous
+18,13,0,10.7,Hazardous
+23,12,0,13.2,Hazardous
+23,9,0,13.2,Hazardous
+26,14,0,13.2,Hazardous
+30,16,0,13.2,Hazardous
+18,14,0,13.3,Very unhealthy
+19,13,0,10.8,Hazardous
+19,11,0,13.3,Very unhealthy
+20,10,0,13.3,Very unhealthy
+24,14,0,10.8,Very unhealthy
+25,15,0,12,Hazardous
+20,14,0,13.3,Hazardous
+19,16,0,8.4,Hazardous
+23,17,0,8.4,Very unhealthy
+25,15,0,12,Hazardous
+23,16,0,13.3,Hazardous
+28,18,0,12.1,Hazardous
+26,16,0,13.8,Hazardous
+25,16,0,13.8,Hazardous
+21,17,0,8.7,Hazardous
+19,16,0,8.7,Very unhealthy
+23,16,0,8.7,Hazardous
+25,18,0,12.2,Hazardous
+27,17,0,13.9,Hazardous
+26,18,0,13.9,Hazardous
+25,18,0,13.9,Unhealthy
+25,18,0,11,Unhealthy
+29,21,0,9.9,Hazardous
+30,21,0,13.3,Hazardous
+32,21,0,14,Hazardous
+35,22,0,14,Hazardous
+32,22,0,14,Hazardous
+31,22,0,13.4,Hazardous
+26,20,0,14,Hazardous
+25,20,0,8.8,Unhealthy
+27,20,0,14,Very unhealthy
+23,17,0,9.9,Hazardous
+25,18,0,11.1,Hazardous
+27,18,0,13.4,Very unhealthy
+28,19,0,14.1,Hazardous
+30,20,0,14.1,Hazardous
+27,21,0,14.1,Very unhealthy
+26,20,0,14.1,Very unhealthy
+28,20,0,13.4,Unhealthy
+28,20,0,13.4,Unhealthy
+29,19,0,13.4,Hazardous
+31,19,0,14.1,Hazardous
+34,22,0,14.1,Hazardous
+29,23,0,12.2,Hazardous
+26,22,0,9.1,Unhealthy for sensitive groups
+26,21,0,9.1,Very unhealthy
+26,20,0,12.3,Unhealthy
+27,21,0,14.5,Very unhealthy
+27,22,0,9.1,Unhealthy
+23,22,0,10.2,Very unhealthy
+24,21,0,13.4,Unhealthy for sensitive groups
+23,20,0,12.3,Very unhealthy
+28,20,0,14.5,Very unhealthy
+24,21,0,9.1,Unhealthy
+25,21,0,9.1,Unhealthy for sensitive groups
+24,20,0,10.1,Unhealthy
+29,19,0,13.4,Hazardous
+30,21,0,13.4,Hazardous
+24,20,0,13.4,Hazardous
+26,21,0,10.1,Very unhealthy
+29,23,0,10.1,Very unhealthy
+30,21,0,14.5,Hazardous
+28,21,0,11.2,Very unhealthy
+27,22,0,12.3,Unhealthy
+28,21,0,13.4,Hazardous
+29,21,0,13.4,Very unhealthy
+29,22,0,11.2,Unhealthy for sensitive groups
+31,24,0,12.3,Unhealthy
+33,23,0,13.4,Hazardous
+31,24,0,14.4,Hazardous
+34,26,0,13.4,Hazardous
+25,22,0,8.8,Very unhealthy
+29,21,0,14,Hazardous
+24,22,0,8.5,Unhealthy
+30,23,0,13.3,Hazardous
+31,24,0,13.3,Unhealthy for sensitive groups
+31,25,0,13.3,Unhealthy for sensitive groups
+30,25,0,13.6,Unhealthy for sensitive groups
+33,25,0,13.5,Unhealthy for sensitive groups
+32,25,0,13.5,Unhealthy for sensitive groups
+32,25,0,13.5,Unhealthy for sensitive groups
+31,27,0,12.1,Unhealthy for sensitive groups
+31,26,0,12.1,Unhealthy for sensitive groups
+29,26,0,10.9,Unhealthy
+31,25,0,13.5,Hazardous
+31,24,0,13.5,Very unhealthy
+31,23,0,13.4,Very unhealthy
+32,25,0,13.4,Very unhealthy
+32,26,0,13.4,Unhealthy for sensitive groups
+31,26,0,13.4,Unhealthy for sensitive groups
+27,24,0,8.4,Unhealthy for sensitive groups
+28,23,0,10.8,Unhealthy
+33,24,0,13.4,Hazardous
+34,25,0,13.3,Hazardous
+33,26,0,13.3,Very unhealthy
+32,26,0,13.3,Unhealthy for sensitive groups
+31,26,0,13.3,Unhealthy for sensitive groups
+29,25,0,12,Unhealthy for sensitive groups
+30,24,0,10.8,Unhealthy
+29,23,0,9.5,Hazardous
+29,22,0,13.2,Unhealthy
+26,24,0,10.8,Unhealthy for sensitive groups
+30,24,0,13.2,Very unhealthy
+29,22,0,8.2,Unhealthy for sensitive groups
+27,22,0,12,Unhealthy
+28,22,0,8.2,Very unhealthy
+25,21,0,8.2,Unhealthy
+26,21,0,8.2,Unhealthy
+22,21,0,8.2,Unhealthy for sensitive groups
+23,21,0,10.7,Unhealthy
+28,19,0,13.1,Very unhealthy
+29,23,0,13.1,Very unhealthy
+31,23,0,13,Very unhealthy
+32,26,0,12,Hazardous
+29,23,0,12,Very unhealthy
+28,22,0,11.9,Very unhealthy
+24,21,0,8.1,Very unhealthy
+30,22,0,13,Very unhealthy
+27,22,0,9.4,Very unhealthy
+28,21,0,12.9,Unhealthy for sensitive groups
+28,22,0,10.6,Unhealthy for sensitive groups
+30,24,0,12.9,Unhealthy
+31,23,0,12.9,Very unhealthy
+25,21,0,11.9,Very unhealthy
+28,19,0,11.9,Hazardous
+28,21,0,12.8,Hazardous
+29,23,0,12.8,Very unhealthy
+29,22,0,12.8,Unhealthy
+28,21,0,11.9,Very unhealthy
+28,23,0,10.6,Unhealthy
+27,23,0,10.6,Very unhealthy
+27,22,0,12.7,Unhealthy for sensitive groups
+26,22,0,7.9,Unhealthy for sensitive groups
+27,22,0,11.9,Unhealthy for sensitive groups
+27,22,0,9.2,Unhealthy
+27,22,0,11.9,Unhealthy for sensitive groups
+26,21,0,6.1,Unhealthy for sensitive groups
+27,22,0,7.5,Unhealthy for sensitive groups
+22,19,0,6.1,Unhealthy
+19,18,0,6.1,Very unhealthy
+25,17,0,11.6,Very unhealthy
+25,20,0,10.2,Unhealthy for sensitive groups
+24,22,0,7.4,Unhealthy for sensitive groups
+25,22,0,6,Unhealthy
+26,20,0,6,Unhealthy
+26,19,0,11.6,Hazardous
+27,20,0,8.8,Hazardous
+27,21,0,10.2,Very unhealthy
+27,22,0,11.6,Unhealthy
+29,22,0,11.6,Very unhealthy
+22,17,0,6,Unhealthy for sensitive groups
+24,16,0,11.6,Very unhealthy
+26,16,0,10.2,Very unhealthy
+24,16,0,11.6,Hazardous
+24,15,0,11.6,Unhealthy
+25,17,0,11.6,Unhealthy
+23,16,0,11.6,Very unhealthy
+23,15,0,8.8,Unhealthy
+23,15,0,7.3,Unhealthy for sensitive groups
+23,16,0,11.6,Unhealthy
+24,18,0,8.7,Very unhealthy
+25,18,0,7.3,Very unhealthy
+24,19,0,11.6,Unhealthy
+20,14,0,10.2,Very unhealthy
+19,11,0,11.6,Hazardous
+21,10,0,11.6,Hazardous
+24,12,0,11.6,Hazardous
+23,17,0,10.2,Unhealthy for sensitive groups
+23,17,0,11.6,Unhealthy for sensitive groups
+25,19,0,11.6,Unhealthy for sensitive groups
+28,19,0,11.2,Hazardous
+28,18,0,8.7,Hazardous
+23,15,0,8.7,Hazardous
+23,13,0,8.7,Very unhealthy
+23,16,0,8.7,Unhealthy
+24,17,0,8.7,Unhealthy
+21,15,0,8.7,Hazardous
+21,14,0,8.7,Hazardous
+20,18,0,4.1,Unhealthy for sensitive groups
+21,19,0,5.7,Unhealthy
+23,17,0,4.1,Very unhealthy
+21,16,0,4.1,Hazardous
+19,12,0,8.7,Hazardous
+17,9,0,8.7,Hazardous
+19,9,0,8.7,Very unhealthy
+21,13,0,8.7,Very unhealthy
+21,15,0,8.7,Very unhealthy
+18,14,0,5.6,Hazardous
+15,13,0,4.1,Very unhealthy
+17,13,0,5.6,Unhealthy
+18,13,0,8.7,Very unhealthy
+19,13,0,7.1,Hazardous
+19,13,0,8.7,Hazardous
+14,9,0,8.7,Hazardous
+16,7,0,8.7,Very unhealthy
+17,11,0,7.1,Hazardous
+17,14,0,7.1,Very unhealthy
+15,10,0,8.7,Hazardous
+15,9,0,8.7,Hazardous
+16,10,0,8.7,Hazardous
+18,13,0,8.7,Very unhealthy
+21,15,0,8.7,Very unhealthy
+22,14,0,8.7,Very unhealthy
+22,17,0,5.5,Hazardous
+20,14,0,3.8,Very unhealthy
+13,12,0,3.8,Very unhealthy
+16,10,0,8.7,Very unhealthy
+19,13,0,7.1,Hazardous
+16,13,0,8.7,Unhealthy
+17,13,0,3.8,Hazardous
+16,11,0,3.8,Very unhealthy
+9,2,0,8.7,Very unhealthy
+7,0,0,7.1,Hazardous
+11,3,0,7.1,Very unhealthy
+7,2,0,8.7,Hazardous
+7,1,0,8.7,Hazardous
+9,3,0,8.7,Hazardous
+13,7,0,8.7,Hazardous
+10,5,0,8.7,Hazardous
+11,8,0,8.7,Hazardous
+13,7,0,3.8,Very unhealthy
+9,5,0,7.1,Hazardous
+8,2,0,8.7,Hazardous
+8,2,0,8.7,Hazardous
+10,1,0,8.7,Hazardous
+13,8,0,8.7,Hazardous
+5,1,0,8.7,Hazardous
+6,0,0,8.7,Hazardous
+8,2,0,8.7,Hazardous
+11,6,0,3.8,Hazardous
+9,4,0,8.7,Hazardous
+6,2,0,8.7,Hazardous
+8,0,0,8.7,Hazardous
+12,5,0,8.7,Hazardous
+13,6,0,8.7,Hazardous
+9,5,0,8.7,Hazardous
+9,5,0,8.7,Very unhealthy
+10,6,0,8.7,Unhealthy
+10,5,0,5.5,Unhealthy
+13,6,0,8.7,Hazardous
+5,-1,0,8.7,Hazardous
+8,0,0,8.7,Hazardous
+12,1,0,8.7,Hazardous
+16,7,0,8.7,Hazardous
+18,11,0,7.1,Hazardous
+9,4,0,5.5,Hazardous
+7,2,0,8.7,Hazardous
+8,1,0,8.7,Very unhealthy
+11,2,0,8.7,Hazardous
+13,5,0,5.5,Hazardous
+15,6,0,8.7,Hazardous
+9,5,0,5.5,Hazardous
+9,6,0,4,Unhealthy
+9,7,0,4,Unhealthy for sensitive groups
+10,5,0,5.6,Unhealthy
+9,6,0,4,Hazardous
+7,3,0,8.7,Hazardous
+11,2,0,8.7,Hazardous
+11,4,0,8.7,Hazardous
+12,5,0,8.7,Hazardous
+15,7,0,8.7,Very unhealthy
+8,3,0,7.1,Hazardous
+9,1,0,8.7,Hazardous
+16,6,0,8.7,Hazardous
+14,10,0,7.1,Hazardous
+12,7,0,4,Hazardous
+7,3,0,4,Hazardous
+6,3,0,4,Hazardous
+6,4,0,4,Unhealthy
+6,1,0,7.2,Unhealthy
+5,0,0,7.2,Hazardous
+7,1,0,4.1,Very unhealthy
+8,4,0,4.1,Unhealthy
+7,4,0,4.1,Very unhealthy
+9,3,0,7.2,Very unhealthy
+6,1,0,8.7,Hazardous
+8,0,0,8.7,Hazardous
+11,3,0,8.7,Hazardous
+6,0,0,8.7,Hazardous
+5,-1,0,8.7,Very unhealthy
+8,0,0,8.7,Very unhealthy
+15,4,0,8.7,Hazardous
+14,5,0,8.7,Hazardous
+13,5,0,8.7,Hazardous
+18,6,0,8.7,Hazardous
+19,13,0,5.7,Hazardous
+14,8,0,5.7,Hazardous
+13,5,0,8.7,Hazardous
+12,3,0,8.7,Hazardous
+11,2,0,8.7,Hazardous
+13,7,0,5.7,Unhealthy
+11,9,0,4.2,Unhealthy
+9,6,0,4.2,Hazardous
+9,5,0,4.2,Hazardous
+10,7,0,4.2,Hazardous
+11,8,0,4.2,Hazardous
+11,7,0,5.7,Unhealthy
+7,5,0,4.2,Hazardous
+7,3,0,4.2,Unhealthy
+10,1,0,8.7,Unhealthy
+11,2,0,8.7,Hazardous
+15,5,0,5.7,Hazardous
+7,3,0,5.7,Hazardous
+6,1,0,4.3,Unhealthy
+8,4,0,5.8,Unhealthy for sensitive groups
+10,2,0,8.7,Very unhealthy
+10,6,0,4.3,Very unhealthy
+12,5,0,5.8,Unhealthy
+7,1,0,8.7,Very unhealthy
+13,5,0,8.7,Unhealthy
+15,7,0,8.8,Hazardous
+12,7,0,10.2,Hazardous
+14,6,0,8.8,Hazardous
+14,6,0,8.8,Hazardous
+15,7,0,8.8,Hazardous
+17,8,0,10.2,Very unhealthy
+16,10,0,10.2,Very unhealthy
+15,10,0,8.9,Hazardous
+15,10,0,7.8,Hazardous
+19,9,0,11.8,Hazardous
+20,8,0,12.5,Hazardous
+15,7,0,11.8,Hazardous
+14,6,0,12.5,Unhealthy
+14,7,0,12.6,Unhealthy for sensitive groups
+15,7,0,12.6,Unhealthy for sensitive groups
+12,7,0,9.2,Unhealthy
+19,6,0,10.5,Unhealthy
+23,10,0,12.6,Hazardous
+15,14,0,7.9,Very unhealthy
+28,16,0,12.7,Hazardous
+28,17,0,12.7,Hazardous
+31,17,0,12.7,Very unhealthy
+16,13,0,8,Hazardous
+19,12,0,11.9,Hazardous
+19,12,0,9.3,Hazardous
+14,9,0,8,Unhealthy for sensitive groups
+9,5,0,8,Unhealthy
+12,3,0,12.8,Very unhealthy
+15,5,0,12.8,Unhealthy
+17,8,0,10.6,Very unhealthy
+18,6,0,10.6,Very unhealthy
+19,11,0,12.9,Hazardous
+11,7,0,12.9,Hazardous
+19,11,0,11.9,Hazardous
+21,11,0,11.9,Hazardous
+24,13,0,11.9,Hazardous
+19,14,0,13,Very unhealthy
+26,17,0,13,Hazardous
+25,15,0,10.7,Hazardous
+18,11,0,8.1,Hazardous
+21,8,0,13.1,Very unhealthy
+24,9,0,13.1,Hazardous
+25,13,0,13.1,Hazardous
+22,14,0,9.5,Hazardous
+27,11,0,13.1,Hazardous
+26,16,0,13.1,Hazardous
+25,16,0,13.2,Hazardous
+22,13,0,12,Hazardous
+20,15,0,9.5,Hazardous
+26,14,0,13.2,Hazardous
+25,15,0,13.2,Very unhealthy
+26,17,0,13.2,Hazardous
+25,16,0,13.3,Hazardous
+25,13,0,13.3,Hazardous
+23,13,0,13.3,Unhealthy for sensitive groups
+25,16,0,12,Very unhealthy
+26,15,0,13.3,Hazardous
+25,16,0,13.3,Very unhealthy
+22,15,0,10.8,Unhealthy
+22,14,0,13.3,Very unhealthy
+25,14,0,9.6,Unhealthy
+26,12,0,13.4,Hazardous
+29,16,0,13.4,Hazardous
+26,20,0,13.3,Hazardous
+27,20,0,9.6,Very unhealthy
+24,16,0,13.8,Hazardous
+24,15,0,12.2,Very unhealthy
+22,18,0,9.8,Hazardous
+28,18,0,13.9,Hazardous
+27,17,0,13.3,Hazardous
+24,14,0,13.9,Unhealthy for sensitive groups
+25,15,0,13.9,Very unhealthy
+23,19,0,9.9,Very unhealthy
+25,18,0,11,Very unhealthy
+27,17,0,14,Very unhealthy
+27,17,0,14,Unhealthy
+27,20,0,12.2,Very unhealthy
+26,20,0,8.7,Very unhealthy
+26,20,0,8.7,Unhealthy
+25,20,0,9.9,Very unhealthy
+26,19,0,12.2,Hazardous
+28,19,0,14,Hazardous
+30,22,0,9.9,Very unhealthy
+25,20,0,13.4,Unhealthy for sensitive groups
+26,19,0,11.1,Unhealthy
+28,18,0,12.2,Hazardous
+30,20,0,14,Hazardous
+26,21,0,8.8,Unhealthy
+24,21,0,8.8,Unhealthy
+26,20,0,9.9,Very unhealthy
+29,22,0,8.8,Unhealthy
+30,24,0,11.1,Hazardous
+34,23,0,14.1,Hazardous
+32,24,0,9.9,Hazardous
+31,24,0,11.1,Very unhealthy
+26,23,0,8.8,Very unhealthy
+25,22,0,10.2,Unhealthy
+29,22,0,10.2,Unhealthy for sensitive groups
+24,20,0,11.2,Unhealthy for sensitive groups
+27,19,0,14.5,Very unhealthy
+28,21,0,14.5,Very unhealthy
+27,21,0,10.2,Very unhealthy
+27,21,0,9.1,Unhealthy
+30,23,0,10.1,Hazardous
+31,24,0,11.2,Hazardous
+34,26,0,12.3,Very unhealthy
+27,23,0,9.1,Very unhealthy
+25,22,0,9.1,Unhealthy for sensitive groups
+24,22,0,9.1,Unhealthy for sensitive groups
+28,22,0,11.2,Very unhealthy
+34,22,0,11.2,Hazardous
+26,20,0,12.3,Very unhealthy
+27,21,0,14.5,Hazardous
+28,21,0,12.3,Hazardous
+22,19,0,9,Hazardous
+21,19,0,9,Unhealthy
+20,18,0,9,Unhealthy for sensitive groups
+24,19,0,10.1,Unhealthy for sensitive groups
+25,20,0,9,Unhealthy
+27,21,0,9,Unhealthy
+29,23,0,13.4,Unhealthy for sensitive groups
+24,23,0,9,Unhealthy for sensitive groups
+29,23,0,11.2,Unhealthy
+33,23,0,14,Hazardous
+32,23,0,13.4,Hazardous
+30,23,0,14,Unhealthy
+29,23,0,9.7,Unhealthy
+28,23,0,8.5,Very unhealthy
+29,24,0,10.9,Unhealthy for sensitive groups
+30,23,0,8.5,Unhealthy for sensitive groups
+30,24,0,10.9,Unhealthy for sensitive groups
+31,23,0,10.9,Very unhealthy
+31,23,0,13.3,Very unhealthy
+32,25,0,12.1,Very unhealthy
+31,26,0,10.9,Very unhealthy
+33,26,0,13.5,Hazardous
+35,25,0,13.5,Hazardous
+35,27,0,13.5,Very unhealthy
+36,27,0,13.4,Hazardous
+36,27,0,13.4,Very unhealthy
+34,26,0,13.4,Very unhealthy
+35,26,0,13.4,Very unhealthy
+36,26,0,13.4,Hazardous
+36,27,0,13.4,Hazardous
+36,27,0,13.4,Very unhealthy
+37,26,0,13.4,Very unhealthy
+36,26,0,13.3,Very unhealthy
+32,25,0,13.3,Unhealthy for sensitive groups
+32,26,0,13.3,Unhealthy for sensitive groups
+31,26,0,10.8,Unhealthy for sensitive groups
+29,26,0,12,Unhealthy for sensitive groups
+27,25,0,10.8,Unhealthy for sensitive groups
+28,24,0,9.5,Unhealthy
+30,22,0,10.8,Unhealthy
+30,22,0,13.2,Hazardous
+31,23,0,13.2,Very unhealthy
+30,23,0,12,Unhealthy
+29,24,0,10.7,Unhealthy
+31,23,0,13.1,Very unhealthy
+30,22,0,13.1,Very unhealthy
+31,23,0,13.1,Unhealthy
+31,25,0,10.7,Very unhealthy
+28,23,0,8.2,Unhealthy
+26,23,0,8.2,Unhealthy for sensitive groups
+26,23,0,8.2,Unhealthy for sensitive groups
+27,21,0,8.1,Unhealthy
+30,20,0,13,Very unhealthy
+29,20,0,13,Very unhealthy
+30,22,0,13,Hazardous
+29,21,0,13,Hazardous
+30,22,0,12.9,Hazardous
+29,21,0,12.9,Hazardous
+29,21,0,12.9,Very unhealthy
+29,23,0,11.9,Very unhealthy
+29,23,0,12.9,Hazardous
+30,20,0,12.8,Hazardous
+29,22,0,12.8,Hazardous
+28,23,0,11.9,Very unhealthy
+28,23,0,12.8,Very unhealthy
+28,20,0,12.8,Unhealthy for sensitive groups
+28,21,0,12.8,Unhealthy for sensitive groups
+28,19,0,12.7,Unhealthy for sensitive groups
+28,18,0,12.7,Unhealthy for sensitive groups
+29,17,0,12.7,Unhealthy
+22,17,0,11.9,Very unhealthy
+26,16,0,12.7,Unhealthy
+26,18,0,11.9,Unhealthy for sensitive groups
+23,19,0,7.9,Unhealthy for sensitive groups
+26,19,0,12.6,Unhealthy for sensitive groups
+27,22,0,8.8,Unhealthy
+27,21,0,8.8,Unhealthy
+27,21,0,8.8,Unhealthy for sensitive groups
+27,21,0,8.8,Very unhealthy
+27,19,0,11.6,Very unhealthy
+27,21,0,7.4,Unhealthy
+27,20,0,7.4,Unhealthy
+27,20,0,6,Unhealthy for sensitive groups
+24,20,0,11.6,Unhealthy
+27,19,0,11.6,Unhealthy
+27,19,0,10.2,Unhealthy
+26,19,0,6,Unhealthy
+24,23,0,6,Unhealthy for sensitive groups
+29,25,0,6,Unhealthy
+23,16,0,7.4,Unhealthy
+24,14,0,11.6,Unhealthy
+27,16,0,11.6,Very unhealthy
+25,19,0,8.8,Unhealthy
+21,19,0,5.9,Unhealthy for sensitive groups
+23,19,0,5.9,Unhealthy for sensitive groups
+24,19,0,5.9,Unhealthy for sensitive groups
+21,18,0,7.3,Unhealthy
+24,16,0,10.2,Hazardous
+24,14,0,5.9,Very unhealthy
+22,12,0,11.6,Very unhealthy
+23,12,0,11.6,Hazardous
+24,12,0,11.6,Hazardous
+24,13,0,11.6,Hazardous
+25,15,0,11.6,Unhealthy
+25,15,0,11.6,Very unhealthy
+25,15,0,11.6,Unhealthy
+24,15,0,11.6,Very unhealthy
+24,15,0,11.6,Very unhealthy
+24,16,0,8.6,Very unhealthy
+25,17,0,8.7,Very unhealthy
+26,18,0,8.7,Hazardous
+25,17,0,8.7,Very unhealthy
+22,17,0,7.2,Very unhealthy
+26,18,0,8.7,Very unhealthy
+21,14,0,8.7,Very unhealthy
+20,11,0,8.7,Hazardous
+17,15,0,4.1,Hazardous
+19,14,0,7.2,Very unhealthy
+18,14,0,7.2,Very unhealthy
+14,10,0,5.6,Unhealthy
+18,9,0,8.7,Very unhealthy
+20,10,0,8.7,Hazardous
+19,15,0,4.1,Hazardous
+24,18,0,7.2,Very unhealthy
+26,19,0,8.7,Very unhealthy
+25,16,0,4.1,Unhealthy
+18,14,0,4.1,Very unhealthy
+15,11,0,5.6,Hazardous
+16,9,0,7.2,Hazardous
+18,13,0,7.1,Hazardous
+17,14,0,3.9,Very unhealthy
+17,13,0,5.5,Hazardous
+18,13,0,5.5,Hazardous
+20,12,0,8.7,Hazardous
+21,16,0,3.9,Hazardous
+17,15,0,3.9,Hazardous
+17,14,0,3.9,Very unhealthy
+14,14,0,3.9,Unhealthy
+15,14,0,3.9,Very unhealthy
+17,15,0,3.9,Very unhealthy
+19,17,0,3.9,Very unhealthy
+17,15,0,3.8,Unhealthy
+14,11,0,3.8,Very unhealthy
+8,5,0,5.5,Unhealthy
+5,0,0,8.7,Very unhealthy
+6,-1,0,7.1,Hazardous
+14,6,0,7.1,Very unhealthy
+13,9,0,3.8,Hazardous
+16,10,0,7.1,Hazardous
+17,12,0,3.8,Hazardous
+13,8,0,5.4,Hazardous
+13,6,0,8.7,Hazardous
+10,4,0,8.7,Hazardous
+7,4,0,3.8,Hazardous
+11,4,0,8.7,Hazardous
+13,6,0,8.7,Hazardous
+14,7,0,5.4,Hazardous
+16,10,0,3.8,Very unhealthy
+13,11,0,3.8,Very unhealthy
+11,6,0,5.4,Very unhealthy
+12,5,0,8.7,Hazardous
+10,7,0,3.8,Hazardous
+9,6,0,7.1,Hazardous
+10,5,0,8.7,Hazardous
+7,2,0,8.7,Hazardous
+5,0,0,8.7,Hazardous
+3,1,0,8.7,Hazardous
+11,5,0,5.4,Hazardous
+11,6,0,5.4,Very unhealthy
+9,6,0,8.7,Very unhealthy
+16,10,0,7.1,Hazardous
+12,9,0,3.8,Hazardous
+10,8,0,3.8,Hazardous
+11,6,0,8.7,Hazardous
+13,5,0,8.7,Hazardous
+11,5,0,3.9,Hazardous
+8,3,0,8.7,Hazardous
+9,5,0,7.1,Very unhealthy
+12,4,0,8.7,Hazardous
+10,4,0,8.7,Hazardous
+12,3,0,8.7,Hazardous
+8,4,0,5.5,Hazardous
+12,4,0,10.2,Hazardous
+12,3,0,10.2,Hazardous
+17,9,0,11.6,Very unhealthy
+17,9,0,7.4,Very unhealthy
+19,13,0,6,Very unhealthy
+16,9,0,10.3,Hazardous
+17,7,0,10.5,Very unhealthy
+15,7,0,12.5,Hazardous
+12,9,0,9.2,Hazardous
+14,6,0,12.5,Very unhealthy
+11,5,0,11.8,Very unhealthy
+14,5,0,11.8,Unhealthy
+15,2,0,11.8,Very unhealthy
+17,5,0,12.6,Hazardous
+19,7,0,12.6,Hazardous
+23,10,0,12.7,Hazardous
+20,13,0,9.2,Hazardous
+16,11,0,9.2,Hazardous
+20,10,0,12.7,Hazardous
+20,12,0,10.6,Hazardous
+16,12,0,8,Hazardous
+18,10,0,12.8,Unhealthy
+18,12,0,10.6,Unhealthy
+21,13,0,9.3,Very unhealthy
+18,11,0,10.6,Hazardous
+21,12,0,12.8,Hazardous
+22,13,0,11.9,Very unhealthy
+21,11,0,12.9,Hazardous
+20,11,0,9.3,Very unhealthy
+18,13,0,10.6,Hazardous
+17,11,0,12.9,Hazardous
+19,11,0,11.9,Hazardous
+21,11,0,11.9,Hazardous
+19,12,0,13,Very unhealthy
+20,12,0,11.9,Hazardous
+21,12,0,12,Unhealthy
+20,13,0,10.7,Unhealthy
+19,13,0,13.1,Unhealthy
+23,14,0,12,Very unhealthy
+25,15,0,12,Hazardous
+16,14,0,8.2,Very unhealthy
+20,14,0,10.7,Hazardous
+16,13,0,8.2,Hazardous
+18,14,0,8.2,Very unhealthy
+17,14,0,8.2,Hazardous
+23,12,0,13.2,Hazardous
+26,12,0,13.2,Hazardous
+26,15,0,13.2,Hazardous
+27,16,0,13.2,Hazardous
+26,19,0,13.3,Very unhealthy
+25,17,0,13.3,Very unhealthy
+28,16,0,13.3,Hazardous
+25,20,0,10.8,Very unhealthy
+30,19,0,13.3,Hazardous
+20,14,0,8.3,Hazardous
+17,15,0,8.3,Unhealthy
+20,14,0,8.4,Hazardous
+18,14,0,10.8,Unhealthy
+26,13,0,13.4,Hazardous
+26,15,0,13.4,Hazardous
+20,16,0,8.4,Hazardous
+23,17,0,13.4,Very unhealthy
+24,14,0,9.8,Very unhealthy
+23,12,0,13.9,Very unhealthy
+24,12,0,11,Unhealthy
+24,14,0,13.9,Very unhealthy
+24,18,0,12.2,Hazardous
+25,18,0,12.2,Unhealthy
+25,17,0,12.2,Unhealthy for sensitive groups
+24,18,0,8.7,Hazardous
+27,16,0,11,Hazardous
+23,19,0,9.9,Hazardous
+28,18,0,14,Hazardous
+27,21,0,8.7,Hazardous
+24,21,0,8.7,Very unhealthy
+22,20,0,8.7,Unhealthy
+22,19,0,8.8,Very unhealthy
+24,19,0,9.9,Hazardous
+30,19,0,11.1,Hazardous
+25,19,0,12.2,Unhealthy for sensitive groups
+23,17,0,14,Very unhealthy
+20,18,0,8.8,Unhealthy for sensitive groups
+23,18,0,9.9,Very unhealthy
+24,17,0,11.1,Unhealthy
+25,18,0,8.8,Very unhealthy
+27,21,0,12.2,Very unhealthy
+28,21,0,12.2,Very unhealthy
+24,20,0,11.1,Unhealthy
+27,20,0,14.1,Unhealthy
+30,23,0,9.9,Very unhealthy
+23,21,0,8.8,Unhealthy for sensitive groups
+28,20,0,11.1,Unhealthy
+30,20,0,14.1,Very unhealthy
+32,23,0,11.1,Hazardous
+27,22,0,13.4,Hazardous
+28,22,0,14.5,Hazardous
+30,22,0,14.5,Unhealthy
+31,24,0,13.4,Unhealthy for sensitive groups
+26,24,0,11.2,Unhealthy for sensitive groups
+33,24,0,13.4,Very unhealthy
+32,25,0,12.3,Very unhealthy
+34,25,0,14.5,Hazardous
+32,23,0,11.2,Very unhealthy
+21,19,0,9.1,Very unhealthy
+24,18,0,10.1,Very unhealthy
+25,21,0,9.1,Unhealthy
+27,22,0,9.1,Hazardous
+27,23,0,12.3,Unhealthy for sensitive groups
+31,23,0,14.5,Unhealthy
+31,25,0,13.4,Unhealthy
+28,23,0,11.2,Unhealthy
+27,24,0,9,Very unhealthy
+32,25,0,13.4,Very unhealthy
+33,25,0,14.5,Unhealthy for sensitive groups
+31,25,0,14.5,Unhealthy for sensitive groups
+31,24,0,14.4,Unhealthy for sensitive groups
+29,24,0,10.1,Unhealthy for sensitive groups
+29,25,0,10.1,Unhealthy for sensitive groups
+31,25,0,10.1,Unhealthy for sensitive groups
+28,25,0,10.1,Unhealthy for sensitive groups
+32,25,0,11.1,Very unhealthy
+32,26,0,14,Hazardous
+32,26,0,12.2,Very unhealthy
+33,25,0,13.6,Hazardous
+26,23,0,8.5,Hazardous
+30,21,0,12.1,Hazardous
+31,25,0,12.1,Unhealthy
+32,25,0,12.1,Unhealthy
+33,25,0,12.1,Very unhealthy
+33,25,0,12.1,Very unhealthy
+31,26,0,12.1,Very unhealthy
+32,26,0,10.9,Very unhealthy
+32,27,0,12.1,Very unhealthy
+33,26,0,12.1,Unhealthy for sensitive groups
+33,26,0,12.1,Very unhealthy
+32,26,0,12.1,Very unhealthy
+37,28,0,13.4,Hazardous
+36,28,0,13.4,Hazardous
+33,27,0,13.4,Very unhealthy
+33,26,0,13.3,Unhealthy for sensitive groups
+33,26,0,13.4,Unhealthy for sensitive groups
+34,26,0,13.4,Unhealthy for sensitive groups
+29,25,0,8.3,Unhealthy for sensitive groups
+32,24,0,13.3,Unhealthy
+32,25,0,12,Unhealthy for sensitive groups
+31,25,0,13.3,Unhealthy for sensitive groups
+32,25,0,13.3,Unhealthy for sensitive groups
+32,25,0,13.3,Unhealthy for sensitive groups
+32,26,0,12,Unhealthy for sensitive groups
+32,26,0,13.3,Unhealthy for sensitive groups
+32,26,0,13.2,Unhealthy for sensitive groups
+33,26,0,12,Unhealthy for sensitive groups
+33,26,0,10.8,Unhealthy for sensitive groups
+33,25,0,13.2,Unhealthy for sensitive groups
+33,25,0,13.2,Unhealthy for sensitive groups
+33,26,0,13.2,Unhealthy for sensitive groups
+33,26,0,13.1,Unhealthy for sensitive groups
+33,26,0,13.1,Unhealthy for sensitive groups
+34,27,0,13.1,Unhealthy for sensitive groups
+35,27,0,13.1,Unhealthy
+33,26,0,13.1,Unhealthy
+33,26,0,13,Unhealthy for sensitive groups
+33,25,0,13,Unhealthy
+33,23,0,13,Unhealthy for sensitive groups
+33,23,0,13,Unhealthy
+32,24,0,13,Unhealthy for sensitive groups
+29,21,0,10.7,Unhealthy
+29,19,0,12.9,Unhealthy
+28,19,0,12.9,Unhealthy
+27,19,0,12.9,Very unhealthy
+31,21,0,12.9,Very unhealthy
+31,22,0,12.9,Hazardous
+33,20,0,12.9,Hazardous
+33,19,0,12.8,Hazardous
+30,20,0,11.9,Very unhealthy
+28,23,0,11.9,Unhealthy
+28,22,0,8,Very unhealthy
+22,19,0,8,Very unhealthy
+28,18,0,12.7,Hazardous
+29,19,0,12.7,Hazardous
+27,22,0,12.7,Hazardous
+24,20,0,7.9,Hazardous
+28,18,0,12.7,Very unhealthy
+28,20,0,11.9,Unhealthy
+24,22,0,7.9,Unhealthy for sensitive groups
+25,23,0,7.9,Unhealthy for sensitive groups
+27,22,0,6.1,Unhealthy for sensitive groups
+27,21,0,6.1,Unhealthy for sensitive groups
+26,21,0,7.5,Unhealthy
+25,19,0,8.8,Unhealthy for sensitive groups
+26,18,0,11.6,Unhealthy for sensitive groups
+25,17,0,8.8,Unhealthy for sensitive groups
+26,19,0,11.6,Unhealthy for sensitive groups
+26,18,0,11.6,Unhealthy for sensitive groups
+26,19,0,11.6,Unhealthy
+28,19,0,11.6,Unhealthy
+29,20,0,8.8,Unhealthy for sensitive groups
+30,23,0,8.8,Unhealthy for sensitive groups
+27,22,0,7.4,Unhealthy for sensitive groups
+24,22,0,6,Unhealthy
+28,22,0,7.4,Unhealthy
+29,21,0,8.8,Very unhealthy
+30,23,0,11.6,Unhealthy
+26,21,0,7.4,Unhealthy for sensitive groups
+26,21,0,5.9,Unhealthy for sensitive groups
+26,21,0,5.9,Unhealthy
+25,21,0,8.8,Unhealthy for sensitive groups
+23,20,0,5.9,Unhealthy for sensitive groups
+22,16,0,7.3,Moderate
+20,15,0,8.7,Unhealthy for sensitive groups
+22,16,0,7.3,Unhealthy for sensitive groups
+24,15,0,10.2,Unhealthy for sensitive groups
+22,17,0,10.2,Unhealthy
+20,19,0,7.3,Unhealthy for sensitive groups
+22,19,0,5.8,Unhealthy
+25,20,0,8.7,Unhealthy for sensitive groups
+27,19,0,8.7,Very unhealthy
+23,17,0,10.2,Unhealthy
+24,19,0,5.8,Unhealthy for sensitive groups
+22,19,0,5.6,Unhealthy
+23,20,0,4.2,Unhealthy
+23,21,0,4.2,Unhealthy for sensitive groups
+23,21,0,4.2,Unhealthy for sensitive groups
+23,18,0,5.7,Unhealthy for sensitive groups
+25,18,0,4.2,Unhealthy
+21,17,0,4.2,Very unhealthy
+24,17,0,4.1,Unhealthy
+21,18,0,4.1,Unhealthy for sensitive groups
+19,15,0,4.1,Unhealthy
+15,12,0,7.2,Unhealthy for sensitive groups
+16,13,0,4.1,Unhealthy for sensitive groups
+16,10,0,8.7,Unhealthy for sensitive groups
+15,9,0,8.7,Unhealthy for sensitive groups
+18,9,0,8.7,Very unhealthy
+20,12,0,8.7,Hazardous
+23,13,0,8.7,Hazardous
+23,14,0,8.7,Hazardous
+23,17,0,7.2,Hazardous
+13,10,0,4.1,Very unhealthy
+13,11,0,4.1,Unhealthy for sensitive groups
+14,9,0,5.5,Unhealthy for sensitive groups
+18,8,0,8.7,Very unhealthy
+21,13,0,7.1,Hazardous
+22,17,0,3.9,Very unhealthy
+21,16,0,5.5,Hazardous
+18,12,0,7.1,Hazardous
+18,11,0,5.5,Very unhealthy
+18,15,0,3.9,Unhealthy for sensitive groups
+24,16,0,8.7,Unhealthy
+23,17,0,3.9,Hazardous
+19,17,0,3.9,Hazardous
+21,16,0,3.9,Hazardous
+13,8,0,3.9,Very unhealthy
+6,3,0,3.8,Unhealthy for sensitive groups
+8,1,0,5.5,Unhealthy
+12,5,0,3.8,Hazardous
+10,7,0,3.8,Hazardous
+13,6,0,8.7,Very unhealthy
+13,6,0,8.7,Hazardous
+12,7,0,3.8,Hazardous
+15,9,0,5.4,Unhealthy
+14,9,0,8.7,Hazardous
+14,8,0,8.7,Hazardous
+15,8,0,8.7,Very unhealthy
+17,11,0,8.7,Unhealthy
+19,9,0,8.7,Hazardous
+12,7,0,8.7,Hazardous
+15,6,0,8.7,Very unhealthy
+16,8,0,8.7,Hazardous
+14,9,0,8.7,Hazardous
+12,8,0,5.4,Hazardous
+14,8,0,7.1,Unhealthy for sensitive groups
+19,11,0,7.1,Unhealthy
+14,10,0,3.8,Very unhealthy
+8,3,0,3.8,Very unhealthy
+7,1,0,7.1,Unhealthy
+8,1,0,8.7,Hazardous
+12,2,0,8.7,Hazardous
+17,9,0,8.7,Hazardous
+19,10,0,5.4,Very unhealthy
+13,12,0,3.8,Hazardous
+18,11,0,5.4,Hazardous
+9,7,0,3.8,Very unhealthy
+11,4,0,8.7,Hazardous
+10,4,0,3.8,Hazardous
+12,8,0,3.8,Unhealthy
+11,8,0,3.8,Unhealthy
+6,2,0,3.9,Unhealthy
+7,0,0,7.1,Very unhealthy
+7,1,0,8.7,Hazardous
+10,1,0,5.5,Hazardous
+14,4,0,8.7,Hazardous
+14,7,0,3.9,Hazardous
+15,9,0,5.5,Very unhealthy
+15,7,0,8.7,Hazardous
+14,10,0,5.5,Hazardous
+11,11,0,3.9,Hazardous
+13,11,0,4,Very unhealthy
+14,8,0,4,Unhealthy
+9,7,0,4,Very unhealthy
+9,4,0,5.5,Hazardous
+9,4,0,7.1,Hazardous
+9,5,0,4,Hazardous
+8,5,0,4,Very unhealthy
+10,3,0,8.7,Hazardous
+8,2,0,8.7,Hazardous
+7,2,0,8.7,Unhealthy
+8,1,0,8.7,Unhealthy for sensitive groups
+10,3,0,4,Unhealthy
+8,7,0,4,Hazardous
+9,6,0,4,Very unhealthy
+4,-1,0,8.7,Hazardous
+7,-1,0,8.7,Hazardous
+7,0,0,8.7,Very unhealthy
+7,0,0,8.7,Hazardous
+9,1,0,7.1,Unhealthy
+10,4,0,7.1,Very unhealthy
+12,3,0,8.7,Hazardous
+11,4,0,5.6,Hazardous
+14,6,0,8.7,Very unhealthy
+20,8,0,5.6,Very unhealthy
+5,2,0,4.1,Hazardous
+7,0,0,8.7,Very unhealthy
+7,2,0,5.6,Unhealthy for sensitive groups
+8,2,0,8.7,Very unhealthy
+11,5,0,4.1,Unhealthy
+12,7,0,4.1,Unhealthy
+10,5,0,8.7,Hazardous
+10,3,0,8.7,Hazardous
+10,2,0,7.2,Hazardous
+6,2,0.1,4.1,Unhealthy for sensitive groups
+5,0,0.1,8.7,Unhealthy
+6,-1,0,8.7,Hazardous
+8,-1,0,8.7,Hazardous
+11,0,0,8.7,Hazardous
+13,2,0,8.7,Hazardous
+15,3,0,8.7,Hazardous
+15,5,0,8.7,Hazardous
+17,8,0,7.2,Hazardous
+11,6,0,4.2,Hazardous
+12,6,0,8.7,Hazardous
+18,6,0,8.7,Unhealthy for sensitive groups
+14,4,0,5.7,Very unhealthy
+9,4,0,4.2,Very unhealthy
+8,3,0,4.2,Unhealthy
+6,1,0,5.7,Hazardous
+9,2,0,8.7,Hazardous
+12,1,0,8.7,Hazardous
+14,5,0,8.7,Hazardous
+14,5,0,8.7,Hazardous
+14,5,0,8.7,Hazardous
+17,5,0,8.7,Hazardous
+9,1,0,8.7,Hazardous
+13,2,0,8.7,Hazardous
+19,5,0,8.7,Hazardous
+12,9,0,5.7,Hazardous
+11,4,0,8.7,Hazardous
+14,2,0,8.7,Very unhealthy
+14,3,0,8.7,Very unhealthy
+17,2,0,8.7,Hazardous
+16,8,0,8.7,Hazardous
+15,8,0,10.2,Hazardous
+13,10,0,6,Hazardous
+10,6,0,6,Very unhealthy
+12,3,0,11.6,Very unhealthy
+13,3,0,11.6,Very unhealthy
+12,7,0,8.8,Very unhealthy
+13,4,0,8.8,Unhealthy
+13,9,0,6,Very unhealthy
+14,9,0,7.5,Very unhealthy
+14,10,0,7.8,Very unhealthy
+15,7,0,12.5,Hazardous
+10,7,0,7.8,Hazardous
+11,6,0,9.2,Unhealthy for sensitive groups
+12,7,0,7.8,Unhealthy
+14,7,0,12.6,Hazardous
+17,6,0,12.6,Hazardous
+18,5,0,12.6,Hazardous
+21,10,0,12.6,Very unhealthy
+15,8,0,11.9,Hazardous
+11,7,0,7.9,Hazardous
+14,7,0,11.9,Very unhealthy
+16,5,0,12.7,Hazardous
+21,7,0,12.7,Hazardous
+21,9,0,12.7,Hazardous
+19,11,0,12.8,Hazardous
+22,15,0,9.3,Very unhealthy
+24,14,0,9.3,Hazardous
+15,12,0,8,Hazardous
+21,11,0,9.3,Hazardous
+13,11,0,8,Very unhealthy
+14,10,0,8,Very unhealthy
+14,9,0,8.1,Hazardous
+18,8,0,12.9,Very unhealthy
+19,7,0,12.9,Unhealthy for sensitive groups
+24,11,0,10.7,Very unhealthy
+28,14,0,13,Very unhealthy
+28,16,0,13,Hazardous
+23,16,0,9.4,Hazardous
+27,14,0,13,Hazardous
+22,13,0,13,Very unhealthy
+25,16,0,13,Hazardous
+21,14,0,8.2,Hazardous
+20,11,0,13.1,Very unhealthy
+21,10,0,13.1,Very unhealthy
+23,12,0,13.1,Very unhealthy
+23,15,0,9.5,Hazardous
+18,13,0,8.2,Unhealthy
+20,10,0,13.2,Unhealthy
+23,10,0,13.2,Hazardous
+28,13,0,13.2,Hazardous
+28,15,0,13.2,Hazardous
+26,16,0,9.5,Very unhealthy
+18,16,0,8.3,Unhealthy for sensitive groups
+21,17,0,9.5,Unhealthy for sensitive groups
+22,17,0,8.3,Unhealthy
+23,16,0,10.8,Hazardous
+24,15,0,12,Hazardous
+26,16,0,13.3,Hazardous
+18,16,0,8.3,Very unhealthy
+21,15,0,12,Very unhealthy
+30,15,0,13.4,Hazardous
+31,19,0,13.4,Hazardous
+19,15,0,10.8,Very unhealthy
+28,15,0,13.4,Hazardous
+27,17,0,13.4,Hazardous
+23,17,0,13.8,Unhealthy
+23,15,0,13.3,Unhealthy for sensitive groups
+26,12,0,13.9,Unhealthy for sensitive groups
+26,16,0,13.9,Unhealthy
+25,18,0,9.8,Unhealthy
+27,19,0,13.9,Unhealthy for sensitive groups
+26,19,0,13.9,Unhealthy for sensitive groups
+28,19,0,13.9,Unhealthy for sensitive groups
+25,21,0,9.9,Unhealthy for sensitive groups
+22,17,0,11,Unhealthy for sensitive groups
+28,15,0,13.3,Very unhealthy
+26,17,0,14,Very unhealthy
+29,16,0,14,Unhealthy
+30,18,0,13.3,Unhealthy
+29,18,0,14,Unhealthy for sensitive groups
+30,20,0,13.4,Unhealthy for sensitive groups
+32,23,0,13.4,Very unhealthy
+30,23,0,14,Hazardous
+29,20,0,14,Very unhealthy
+29,19,0,13.4,Unhealthy for sensitive groups
+27,18,0,14,Unhealthy for sensitive groups
+21,19,0,8.8,Unhealthy for sensitive groups
+29,21,0,8.8,Unhealthy
+28,18,0,13.4,Hazardous
+29,19,0,14.1,Hazardous
+31,21,0,13.4,Hazardous
+28,23,0,9.9,Unhealthy
+28,21,0,13.4,Unhealthy for sensitive groups
+22,20,0,8.8,Unhealthy for sensitive groups
+20,19,0,8.8,Unhealthy for sensitive groups
+25,18,0,14.1,Unhealthy for sensitive groups
+26,16,0,13.4,Very unhealthy
+26,19,0,14.5,Very unhealthy
+28,18,0,14.5,Very unhealthy
+27,19,0,12.3,Unhealthy
+24,22,0,9.1,Unhealthy for sensitive groups
+29,22,0,13.4,Unhealthy for sensitive groups
+25,22,0,11.2,Unhealthy
+24,22,0,9.1,Unhealthy for sensitive groups
+27,21,0,9.1,Very unhealthy
+25,22,0,10.2,Unhealthy
+26,21,0,10.2,Very unhealthy
+28,21,0,14.5,Hazardous
+28,22,0,14.5,Hazardous
+24,21,0,11.2,Very unhealthy
+28,20,0,10.1,Unhealthy for sensitive groups
+31,23,0,13.4,Unhealthy for sensitive groups
+31,24,0,14.5,Unhealthy
+31,25,0,12.3,Unhealthy for sensitive groups
+32,24,0,14.5,Unhealthy for sensitive groups
+31,25,0,14.5,Unhealthy for sensitive groups
+35,25,0,13.4,Unhealthy for sensitive groups
+34,26,0,14.5,Unhealthy for sensitive groups
+35,26,0,12.3,Unhealthy
+34,26,0,13.4,Unhealthy
+32,26,0,12.3,Unhealthy for sensitive groups
+32,25,0,12.3,Unhealthy for sensitive groups
+34,24,0,14.4,Unhealthy
+35,25,0,14.4,Very unhealthy
+36,27,0,14,Very unhealthy
+35,28,0,14,Very unhealthy
+35,27,0,13.6,Very unhealthy
+34,26,0,13.6,Unhealthy for sensitive groups
+33,26,0,13.6,Unhealthy for sensitive groups
+35,26,0,13.6,Very unhealthy
+36,27,0,13.6,Very unhealthy
+38,30,0,13.5,Unhealthy
+39,29,0,13.5,Very unhealthy
+39,29,0,13.5,Hazardous
+40,29,0,13.5,Very unhealthy
+40,30,0,13.5,Very unhealthy
+40,30,0,13.5,Hazardous
+38,30,0,13.5,Very unhealthy
+37,28,0,13.5,Very unhealthy
+35,28,0,13.4,Unhealthy for sensitive groups
+35,28,0,13.4,Unhealthy for sensitive groups
+33,28,0,13.3,Unhealthy for sensitive groups
+34,29,0,13.4,Unhealthy for sensitive groups
+34,28,0,13.3,Unhealthy for sensitive groups
+34,28,0,13.4,Unhealthy for sensitive groups
+36,28,0,13.4,Unhealthy
+37,28,0,13.3,Very unhealthy
+36,28,0,13.3,Hazardous
+37,29,0,12,Hazardous
+38,29,0,13.3,Hazardous
+35,29,0,13.3,Unhealthy
+33,27,0,13.3,Unhealthy
+34,27,0,13.3,Very unhealthy
+36,27,0,13.2,Hazardous
+29,28,0,9.5,Very unhealthy
+35,28,0,13.2,Unhealthy
+33,27,0,13.2,Unhealthy
+33,27,0,13.2,Hazardous
+33,27,0,13.2,Unhealthy
+34,26,0,13.1,Unhealthy for sensitive groups
+34,27,0,13.1,Unhealthy for sensitive groups
+36,27,0,13.1,Very unhealthy
+34,28,0,13.1,Unhealthy for sensitive groups
+34,27,0,13.1,Unhealthy
+34,27,0,13,Unhealthy for sensitive groups
+34,28,0,13,Unhealthy for sensitive groups
+36,28,0,13,Unhealthy for sensitive groups
+36,29,0,13,Unhealthy
+31,27,0,13,Unhealthy for sensitive groups
+33,26,0,13,Unhealthy for sensitive groups
+36,27,0,13,Unhealthy for sensitive groups
+33,26,0,12.9,Unhealthy for sensitive groups
+30,25,0,8.1,Unhealthy for sensitive groups
+28,24,0,10.6,Unhealthy for sensitive groups
+29,23,0,12.9,Unhealthy for sensitive groups
+28,23,0,12.9,Unhealthy for sensitive groups
+29,24,0,12.8,Unhealthy for sensitive groups
+30,25,0,12.8,Unhealthy for sensitive groups
+33,25,0,12.8,Unhealthy
+35,26,0,12.8,Very unhealthy
+32,25,0,12.7,Unhealthy
+30,24,0,7.9,Unhealthy
+29,23,0,12.7,Unhealthy
+29,22,0,12.7,Unhealthy
+29,23,0,12.6,Unhealthy for sensitive groups
+25,24,0,7.9,Unhealthy for sensitive groups
+28,21,0,10.2,Unhealthy for sensitive groups
+30,20,0,10.2,Unhealthy
+31,21,0,11.6,Hazardous
+30,23,0,10.2,Hazardous
+21,20,0,6.1,Unhealthy
+23,21,0,7.4,Unhealthy for sensitive groups
+28,22,0,10.2,Unhealthy
+22,21,0,6,Unhealthy
+24,21,0,6,Unhealthy
+29,23,0,8.8,Unhealthy
+33,25,0,11.6,Very unhealthy
+30,23,0,7.4,Very unhealthy
+23,20,0,7.4,Unhealthy for sensitive groups
+26,19,0,10.2,Unhealthy for sensitive groups
+23,22,0,6,Unhealthy for sensitive groups
+31,24,0,11.6,Unhealthy
+28,23,0,6,Unhealthy for sensitive groups
+25,21,0,7.4,Unhealthy for sensitive groups
+23,19,0,8.8,Unhealthy for sensitive groups
+22,18,0,5.9,Unhealthy
+19,18,0,11.6,Hazardous
+26,18,0,11.6,Hazardous
+27,20,0,10.2,Unhealthy for sensitive groups
+29,21,0,8.7,Unhealthy for sensitive groups
+31,24,0,11.6,Unhealthy for sensitive groups
+23,20,0,5.9,Unhealthy for sensitive groups
+20,18,0,5.9,Unhealthy for sensitive groups
+21,17,0,11.6,Unhealthy for sensitive groups
+22,18,0,8.7,Unhealthy for sensitive groups
+19,18,0,5.8,Unhealthy for sensitive groups
+20,18,0,5.8,Unhealthy for sensitive groups
+20,18,0,7.3,Unhealthy for sensitive groups
+23,18,0,8.7,Unhealthy
+22,18,0,8.6,Unhealthy
+22,17,0,11.2,Unhealthy
+23,17,0,8.7,Very unhealthy
+23,16,0,8.7,Hazardous
+20,15,0,7.2,Very unhealthy
+21,14,0,8.7,Unhealthy
+22,14,0,8.7,Unhealthy
+23,16,0,8.7,Unhealthy
+22,16,0,8.7,Very unhealthy
+23,16,0,8.7,Very unhealthy
+16,12,0,8.7,Very unhealthy
+19,11,0,8.7,Unhealthy for sensitive groups
+22,14,0,8.7,Unhealthy for sensitive groups
+25,15,0,8.7,Very unhealthy
+25,15,0,8.7,Hazardous
+15,12,0,8.7,Hazardous
+17,12,0,4.1,Unhealthy for sensitive groups
+21,14,0,4.1,Unhealthy for sensitive groups
+22,18,0,4.1,Very unhealthy
+23,16,0,8.7,Hazardous
+21,15,0,8.7,Hazardous
+22,16,0,8.7,Unhealthy
+17,13,0,8.7,Very unhealthy
+18,13,0,8.7,Unhealthy for sensitive groups
+20,15,0,3.9,Unhealthy for sensitive groups
+17,16,0,3.9,Unhealthy
+18,15,0,5.5,Very unhealthy
+16,15,0,3.9,Very unhealthy
+18,15,0,3.9,Unhealthy
+12,8,0,3.9,Unhealthy for sensitive groups
+12,6,0,7.1,Unhealthy for sensitive groups
+12,9,0,7.1,Unhealthy
+12,8,0,3.9,Unhealthy
+13,10,0,8.7,Hazardous
+13,8,0,8.7,Hazardous
+15,7,0,5.5,Very unhealthy
+15,11,0,8.7,Hazardous
+18,11,0,8.7,Hazardous
+16,11,0,8.7,Hazardous
+20,15,0,5.5,Very unhealthy
+15,12,0,3.8,Hazardous
+11,9,0,3.8,Hazardous
+12,9,0,8.7,Unhealthy for sensitive groups
+12,8,0,3.8,Very unhealthy
+16,10,0,5.4,Very unhealthy
+14,8,0,8.7,Very unhealthy
+9,5,0,8.7,Hazardous
+11,4,0,8.7,Very unhealthy
+12,7,0,7.1,Hazardous
+8,4,0,7.1,Hazardous
+9,3,0,8.7,Very unhealthy
+14,6,0,8.7,Hazardous
+12,6,0,8.7,Hazardous
+10,7,0,8.7,Hazardous
+11,6,0,7.1,Hazardous
+9,8,0,3.8,Unhealthy for sensitive groups
+9,8,0,3.8,Unhealthy
+8,3,0,8.7,Unhealthy
+5,1,0,8.7,Hazardous
+8,1,0,8.7,Hazardous
+10,3,0,8.7,Hazardous
+11,3,0,8.7,Very unhealthy
+12,4,0,8.7,Very unhealthy
+14,7,0,8.7,Hazardous
+17,10,0,7.1,Hazardous
+13,8,0,8.7,Hazardous
+10,5,0,8.7,Hazardous
+12,6,0,8.7,Hazardous
+11,6,0,8.7,Very unhealthy
+12,10,0,3.9,Very unhealthy
+13,10,0,3.9,Unhealthy for sensitive groups
+11,8,0,3.9,Very unhealthy
+11,5,0,8.7,Hazardous
+11,5,0,8.7,Hazardous
+14,9,0,3.9,Hazardous
+10,6,0,3.9,Unhealthy
+7,6,0,3.9,Unhealthy
+7,4,0,5.5,Unhealthy for sensitive groups
+7,3,0,5.5,Unhealthy
+10,5,0,4,Hazardous
+5,1,0,5.5,Very unhealthy
+6,0,0,8.7,Hazardous
+6,2,0,8.7,Very unhealthy
+6,0,0,8.7,Very unhealthy
+3,-2,0,8.7,Hazardous
+6,-1,0,7.1,Hazardous
+12,4,0,8.7,Hazardous
+15,7,0,8.7,Very unhealthy
+16,10,0,8.7,Hazardous
+13,8,0,8.7,Hazardous
+11,8,0,5.6,Hazardous
+10,8,0,4,Hazardous
+9,7,0,4,Hazardous
+9,7,0,4,Hazardous
+11,6,0,8.7,Very unhealthy
+7,4,0,4,Very unhealthy
+5,2,0,5.6,Hazardous
+3,1,0,4,Unhealthy
+1,0,0.4,4,Unhealthy for sensitive groups
+4,1,0.1,4,Unhealthy for sensitive groups
+5,0,0.3,4,Unhealthy for sensitive groups
+1,-2,0,8.7,Unhealthy
+4,-2,0,8.7,Hazardous
+3,0,0.1,5.6,Hazardous
+7,-1,0,8.7,Hazardous
+8,1,0,8.7,Hazardous
+3,0,0,8.7,Hazardous
+3,-1,0,8.7,Hazardous
+6,-1,0,8.7,Very unhealthy
+5,0,0,8.7,Hazardous
+7,0,0,4.1,Very unhealthy
+8,1,0,8.7,Unhealthy
+10,3,0,4.1,Hazardous
+9,3,0,5.6,Hazardous
+9,1,0,8.7,Hazardous
+8,1,0,8.7,Very unhealthy
+12,2,0,8.7,Very unhealthy
+18,6,0,8.7,Very unhealthy
+9,6,0,4.1,Very unhealthy
+8,5,0,4.2,Very unhealthy
+11,3,0,8.7,Unhealthy for sensitive groups
+12,7,0,4.2,Very unhealthy
+10,7,0,4.2,Unhealthy for sensitive groups
+10,5,0,5.7,Unhealthy for sensitive groups
+9,6,0,4.2,Hazardous
+10,5,0,5.7,Very unhealthy
+13,4,0,8.7,Hazardous
+15,8,0,5.7,Hazardous
+12,7,0,7.2,Very unhealthy
+14,5,0,8.7,Very unhealthy
+16,8,0,8.7,Very unhealthy
+14,9,0,5.7,Very unhealthy
+15,8,0,8.7,Very unhealthy
+10,7,0,4.2,Hazardous
+20,10,0,8.7,Unhealthy
+24,13,0,8.7,Very unhealthy
+12,7,0,5.7,Very unhealthy
+12,6,0,8.7,Unhealthy for sensitive groups
+12,9,0,4.3,Unhealthy for sensitive groups
+10,3,0,5.8,Unhealthy for sensitive groups
+11,1,0,8.7,Very unhealthy
+15,4,0,8.7,Very unhealthy
+18,7,0,11.6,Hazardous
+21,11,0,11.6,Hazardous
+24,12,0,11.6,Hazardous
+24,15,0,11.6,Unhealthy
+20,12,0,6,Hazardous
+12,8,0,7.4,Very unhealthy
+13,8,0,8.8,Unhealthy
+17,10,0,7.4,Unhealthy for sensitive groups
+11,8,0,7.5,Unhealthy
+9,6,0,7.8,Very unhealthy
+8,5,0,9.1,Hazardous
+16,4,0,12.5,Very unhealthy
+20,8,0,12.5,Hazardous
+21,10,0,12.5,Hazardous
+20,13,0,10.5,Hazardous
+22,13,0,12.6,Hazardous
+22,12,0,12.6,Hazardous
+24,12,0,12.6,Hazardous
+24,13,0,11.9,Very unhealthy
+22,14,0,12.7,Unhealthy
+22,12,0,12.7,Very unhealthy
+27,14,0,12.7,Hazardous
+26,16,0,12.7,Hazardous
+26,17,0,12.7,Hazardous
+18,12,0,8,Very unhealthy
+17,8,0,8,Very unhealthy
+17,8,0,12.8,Hazardous
+14,7,0,12.8,Unhealthy
+21,8,0,12.8,Hazardous
+24,12,0,12.8,Hazardous
+27,15,0,12.9,Hazardous
+28,16,0,12.9,Hazardous
+21,15,0,12.9,Very unhealthy
+18,16,0,8.1,Unhealthy
+17,12,0,8.1,Very unhealthy
+20,11,0,13,Hazardous
+16,10,0,11.9,Very unhealthy
+21,9,0,13,Very unhealthy
+24,11,0,13,Hazardous
+26,13,0,13,Very unhealthy
+24,16,0,13,Very unhealthy
+25,18,0,13.1,Very unhealthy
+30,19,0,13.1,Very unhealthy
+26,15,0,9.4,Very unhealthy
+16,13,0,8.2,Unhealthy
+23,12,0,13.1,Hazardous
+24,12,0,13.1,Very unhealthy
+27,16,0,13.2,Hazardous
+27,16,0,13.2,Hazardous
+28,17,0,13.2,Hazardous
+31,21,0,13.2,Hazardous
+31,20,0,13.2,Hazardous
+27,15,0,13.2,Hazardous
+25,14,0,13.3,Very unhealthy
+27,15,0,13.3,Very unhealthy
+21,18,0,8.3,Unhealthy
+27,20,0,10.8,Hazardous
+21,16,0,8.3,Very unhealthy
+24,15,0,13.3,Very unhealthy
+22,13,0,13.3,Very unhealthy
+21,14,0,13.4,Unhealthy
+26,15,0,13.4,Unhealthy
+30,20,0,10.8,Hazardous
+29,20,0,13.4,Hazardous
+30,19,0,13.4,Hazardous
+33,23,0,13.8,Hazardous
+35,25,0,13.8,Very unhealthy
+35,25,0,13.9,Very unhealthy
+33,22,0,13.3,Hazardous
+21,20,0,8.7,Very unhealthy
+21,19,0,8.7,Unhealthy for sensitive groups
+21,19,0,8.7,Unhealthy
+26,20,0,8.7,Very unhealthy
+27,18,0,13.3,Very unhealthy
+27,17,0,13.9,Very unhealthy
+28,21,0,13.3,Unhealthy
+26,21,0,8.7,Very unhealthy
+27,21,0,8.7,Very unhealthy
+30,21,0,13.3,Hazardous
+29,22,0,13.3,Hazardous
+29,22,0,12.2,Hazardous
+21,18,0,9.9,Very unhealthy
+27,17,0,14,Very unhealthy
+27,18,0,14,Very unhealthy
+25,21,0,12.2,Very unhealthy
+28,20,0,11.1,Very unhealthy
+26,21,0,8.8,Hazardous
+28,20,0,13.4,Hazardous
+29,20,0,14.1,Very unhealthy
+26,21,0,11.1,Unhealthy
+26,20,0,11.1,Unhealthy
+26,21,0,12.2,Very unhealthy
+31,20,0,14.1,Hazardous
+32,21,0,14.1,Hazardous
+33,24,0,14.1,Hazardous
+30,23,0,14.1,Hazardous
+30,22,0,14.1,Unhealthy for sensitive groups
+28,21,0,13.4,Unhealthy
+28,21,0,12.3,Unhealthy
+31,23,0,14.5,Unhealthy
+32,24,0,11.2,Unhealthy
+24,22,0,9.1,Unhealthy for sensitive groups
+29,21,0,13.4,Unhealthy for sensitive groups
+22,19,0,9.1,Unhealthy
+26,20,0,11.2,Unhealthy for sensitive groups
+26,21,0,9.1,Unhealthy for sensitive groups
+34,24,0,14.5,Very unhealthy
+37,27,0,14.5,Very unhealthy
+37,28,0,14.5,Very unhealthy
+35,28,0,11.2,Very unhealthy
+31,26,0,14.5,Very unhealthy
+30,26,0,9.1,Unhealthy for sensitive groups
+30,26,0,13.4,Unhealthy for sensitive groups
+32,25,0,14.5,Very unhealthy
+32,25,0,11.2,Unhealthy for sensitive groups
+33,25,0,13.4,Very unhealthy
+30,26,0,10.1,Unhealthy
+30,26,0,12.3,Unhealthy for sensitive groups
+31,26,0,10.1,Unhealthy for sensitive groups
+33,26,0,13.4,Very unhealthy
+33,26,0,14.4,Unhealthy for sensitive groups
+32,26,0,14.4,Unhealthy for sensitive groups
+31,27,0,10.1,Unhealthy for sensitive groups
+33,27,0,12.3,Unhealthy for sensitive groups
+33,26,0,14,Unhealthy for sensitive groups
+32,26,0,14,Unhealthy for sensitive groups
+32,26,0,13.6,Unhealthy for sensitive groups
+32,26,0,13.6,Unhealthy for sensitive groups
+32,26,0,13.6,Moderate
+32,26,0,13.6,Unhealthy for sensitive groups
+33,26,0,13.6,Unhealthy for sensitive groups
+33,26,0,13.5,Unhealthy
+33,26,0,13.3,Unhealthy
+28,27,0,8.4,Unhealthy for sensitive groups
+32,27,0,13.3,Unhealthy for sensitive groups
+34,27,0,13.3,Very unhealthy
+37,28,0,13.5,Very unhealthy
+38,28,0,13.3,Very unhealthy
+36,28,0,13.5,Very unhealthy
+37,28,0,13.4,Hazardous
+37,28,0,13.4,Hazardous
+36,28,0,13.4,Very unhealthy
+35,28,0,13.4,Unhealthy
+34,27,0,13.4,Very unhealthy
+34,28,0,13.4,Unhealthy
+31,27,0,9.6,Unhealthy for sensitive groups
+34,27,0,13.3,Unhealthy
+34,28,0,13.3,Unhealthy
+35,28,0,13.3,Unhealthy
+34,27,0,13.3,Unhealthy for sensitive groups
+34,27,0,13.3,Unhealthy
+34,26,0,13.3,Unhealthy
+36,27,0,13.3,Very unhealthy
+35,28,0,13.2,Unhealthy
+28,27,0,12,Unhealthy for sensitive groups
+32,28,0,12,Unhealthy for sensitive groups
+32,28,0,13.2,Unhealthy for sensitive groups
+33,27,0,13.2,Unhealthy for sensitive groups
+32,27,0,8.2,Unhealthy for sensitive groups
+29,26,0,10.7,Unhealthy for sensitive groups
+31,27,0,13.1,Unhealthy for sensitive groups
+32,27,0,10.7,Unhealthy for sensitive groups
+32,28,0,13.1,Unhealthy for sensitive groups
+32,27,0,13.1,Unhealthy for sensitive groups
+33,26,0,13.1,Unhealthy for sensitive groups
+34,26,0,13,Unhealthy
+33,25,0,13,Very unhealthy
+30,26,0,9.4,Unhealthy
+32,27,0,13,Unhealthy for sensitive groups
+32,27,0,13,Unhealthy for sensitive groups
+32,28,0,13,Unhealthy for sensitive groups
+32,27,0,12.9,Unhealthy for sensitive groups
+33,27,0,12.9,Unhealthy for sensitive groups
+34,27,0,12.9,Unhealthy for sensitive groups
+33,27,0,12.9,Very unhealthy
+33,26,0,12.9,Very unhealthy
+34,27,0,12.8,Hazardous
+33,26,0,12.8,Very unhealthy
+32,24,0,12.8,Hazardous
+33,25,0,12.8,Hazardous
+23,22,0,8,Hazardous
+26,22,0,12.7,Unhealthy for sensitive groups
+28,21,0,12.7,Unhealthy for sensitive groups
+27,21,0,12.7,Unhealthy for sensitive groups
+25,23,0,9.3,Unhealthy for sensitive groups
+28,23,0,12.7,Unhealthy for sensitive groups
+29,23,0,9.2,Unhealthy for sensitive groups
+31,24,0,9.2,Unhealthy for sensitive groups
+31,24,0,12.6,Unhealthy for sensitive groups
+32,25,0,11.6,Unhealthy for sensitive groups
+28,26,0,7.5,Unhealthy for sensitive groups
+33,25,0,10.2,Unhealthy for sensitive groups
+32,26,0,11.6,Very unhealthy
+33,27,0,10.2,Very unhealthy
+28,24,0,6.1,Very unhealthy
+26,23,0,7.4,Unhealthy
+29,23,0,8.8,Hazardous
+28,22,0,11.6,Very unhealthy
+25,21,0,7.4,Hazardous
+26,20,0,10.2,Unhealthy
+27,21,0,11.6,Very unhealthy
+27,20,0,10.2,Unhealthy for sensitive groups
+27,21,0,10.2,Unhealthy for sensitive groups
+28,20,0,11.6,Very unhealthy
+26,19,0,11.6,Unhealthy for sensitive groups
+27,18,0,11.6,Unhealthy
+26,18,0,11.6,Unhealthy
+26,19,0,11.6,Unhealthy for sensitive groups
+22,20,0,5.9,Unhealthy for sensitive groups
+26,19,0,11.6,Unhealthy
+27,18,0,11.6,Very unhealthy
+25,19,0,10.2,Unhealthy for sensitive groups
+26,19,0,10.2,Unhealthy
+21,17,0,7.3,Very unhealthy
+21,15,0,11.6,Hazardous
+21,15,0,7.3,Very unhealthy
+23,16,0,11.6,Unhealthy for sensitive groups
+22,18,0,7.3,Unhealthy for sensitive groups
+22,17,0,11.6,Unhealthy for sensitive groups
+20,17,0,5.8,Unhealthy
+23,15,0,11.6,Very unhealthy
+21,15,0,11.6,Unhealthy
+21,14,0,11.6,Unhealthy for sensitive groups
+21,16,0,8.6,Unhealthy for sensitive groups
+23,18,0,4.2,Unhealthy for sensitive groups
+19,18,0,4.2,Unhealthy for sensitive groups
+23,17,0,7.2,Hazardous
+23,16,0,8.7,Hazardous
+23,17,0,8.7,Very unhealthy
+24,17,0,8.7,Hazardous
+21,14,0,8.7,Very unhealthy
+25,15,0,8.7,Very unhealthy
+24,16,0,8.7,Hazardous
+20,15,0,7.2,Hazardous
+19,15,0,8.7,Unhealthy for sensitive groups
+19,14,0,8.7,Unhealthy for sensitive groups
+21,17,0,5.6,Unhealthy for sensitive groups
+23,17,0,5.6,Very unhealthy
+21,18,0,4.1,Unhealthy
+20,18,0,4.1,Unhealthy
+19,16,0,4.1,Unhealthy for sensitive groups
+14,11,0,7.2,Very unhealthy
+18,10,0,8.7,Unhealthy
+20,12,0,8.7,Hazardous
+22,16,0,5.5,Hazardous
+16,14,0,3.9,Hazardous
+18,13,0,7.1,Unhealthy for sensitive groups
+18,14,0,7.1,Unhealthy
+17,14,0,3.9,Very unhealthy
+17,14,0,3.9,Unhealthy
+17,14,0,5.5,Unhealthy
+13,12,0,3.9,Unhealthy for sensitive groups
+15,10,0,7.1,Unhealthy
+17,11,0,3.9,Hazardous
+15,14,0,3.9,Hazardous
+15,11,0,8.7,Unhealthy for sensitive groups
+16,10,0,8.7,Very unhealthy
+20,13,0,8.7,Very unhealthy
+19,13,0,5.5,Very unhealthy
+20,15,0,8.7,Hazardous
+20,14,0,8.7,Hazardous
+19,13,0,8.7,Hazardous
+19,13,0,8.7,Hazardous
+19,14,0,5.4,Hazardous
+21,16,0,8.7,Hazardous
+22,16,0,7.1,Very unhealthy
+21,17,0,7.1,Very unhealthy
+17,11,0,3.8,Hazardous
+13,12,0,3.8,Very unhealthy
+12,8,0,3.8,Unhealthy for sensitive groups
+8,3,0,3.8,Unhealthy for sensitive groups
+4,3,0.9,3.8,Very unhealthy
+6,1,0,3.8,Very unhealthy
+10,8,0,3.8,Very unhealthy
+10,5,0,3.8,Unhealthy for sensitive groups
+8,2,0,7.1,Unhealthy
+8,3,0,8.7,Hazardous
+11,3,0,7.1,Hazardous
+11,9,0,3.8,Hazardous
+10,7,0,8.7,Unhealthy
+13,6,0,8.7,Hazardous
+16,7,0,8.7,Hazardous
+16,11,0,5.4,Hazardous
+15,11,0,5.4,Hazardous
+16,10,0,3.8,Very unhealthy
+14,13,0,3.8,Hazardous
+13,9,0,8.7,Very unhealthy
+12,8,0,7.1,Very unhealthy
+13,10,0,3.8,Very unhealthy
+11,9,0,3.8,Unhealthy for sensitive groups
+8,5,0,3.9,Unhealthy for sensitive groups
+3,-1,0,8.7,Unhealthy for sensitive groups
+4,-1,0,8.7,Very unhealthy
+3,1,1.7,3.9,Very unhealthy
+6,1,0,3.9,Very unhealthy
+8,5,0,7.1,Very unhealthy
+6,4,0,5.5,Very unhealthy
+9,4,0,3.9,Hazardous
+11,5,0,3.9,Hazardous
+10,8,0,3.9,Unhealthy for sensitive groups
+9,7,0,4,Very unhealthy
+8,7,0,4,Very unhealthy
+9,7,0,4,Very unhealthy
+7,3,0,4,Hazardous
+10,4,0,4,Unhealthy
+10,9,0,4,Unhealthy
+9,7,0,4,Unhealthy
+10,6,0,8.7,Very unhealthy
+10,7,0,5.6,Hazardous
+9,6,0,4,Hazardous
+8,5,0,8.7,Hazardous
+12,6,0,8.7,Very unhealthy
+12,8,0,8.7,Hazardous
+11,9,0,7.1,Hazardous
+9,6,0,8.7,Hazardous
+11,6,0,8.7,Hazardous
+12,6,0,8.7,Hazardous
+17,8,0,8.7,Hazardous
+16,10,0,8.7,Hazardous
+13,8,0,8.7,Hazardous
+6,4,0,4,Very unhealthy
+11,2,0,8.7,Unhealthy for sensitive groups
+11,8,0,5.6,Unhealthy for sensitive groups
+12,8,0,4,Hazardous
+17,10,0,4.1,Very unhealthy
+9,4,0,4.1,Very unhealthy
+13,3,0,8.7,Unhealthy
+14,8,0,7.2,Hazardous
+13,6,0,4.1,Hazardous
+12,4,0,8.7,Hazardous
+14,7,0,7.2,Hazardous
+18,11,0,8.7,Unhealthy
+12,7,0,4.1,Hazardous
+7,5,0,4.1,Very unhealthy
+7,4,0,4.1,Unhealthy for sensitive groups
+4,-1,0,4.1,Unhealthy for sensitive groups
+7,-1,0,8.7,Unhealthy for sensitive groups
+8,5,0,4.1,Very unhealthy
+9,6,0,4.1,Unhealthy
+8,6,0,4.1,Unhealthy
+9,6,0,4.1,Very unhealthy
+6,4,0,4.2,Unhealthy for sensitive groups
+10,3,0,8.7,Hazardous
+9,5,0,4.2,Very unhealthy
+12,5,0,7.2,Unhealthy for sensitive groups
+7,3,0,4.2,Very unhealthy
+9,3,0,4.2,Hazardous
+8,6,0,4.2,Hazardous
+12,5,0,8.7,Hazardous
+14,7,0,8.7,Hazardous
+14,7,0,7.2,Hazardous
+13,9,0,8.7,Hazardous
+11,9,0,4.2,Very unhealthy
+12,8,0,4.2,Very unhealthy
+12,8,0,7.2,Very unhealthy
+9,8,0,4.2,Hazardous
+12,8,0,4.3,Hazardous
+16,7,0,8.7,Hazardous
+11,8,0,4.3,Hazardous
+15,7,0,4.3,Hazardous
+12,6,0,8.7,Hazardous
+12,6,0,7.2,Hazardous
+16,8,0,4.3,Unhealthy
+13,9,0,5.8,Very unhealthy
+19,9,0,8.7,Hazardous
+20,11,0,11.6,Hazardous
+15,9,0,11.6,Hazardous
+13,8,0,8.8,Unhealthy
+20,9,0,11.6,Unhealthy
+18,9,0,8.8,Hazardous
+21,11,0,8.8,Hazardous
+14,11,0,7.4,Hazardous
+19,10,0,12.1,Very unhealthy
+26,9,0,11.8,Very unhealthy
+18,10,0,10.5,Very unhealthy
+12,8,0,11.8,Hazardous
+16,8,0,12.5,Unhealthy
+15,9,0,12.5,Unhealthy
+18,10,0,9.2,Very unhealthy
+20,11,0,12.6,Hazardous
+21,14,0,11.8,Hazardous
+19,14,0,9.2,Hazardous
+19,13,0,12.6,Hazardous
+22,9,0,12.7,Hazardous
+16,8,0,12.7,Unhealthy for sensitive groups
+18,9,0,12.7,Very unhealthy
+17,10,0,9.3,Very unhealthy
+19,13,0,12.7,Hazardous
+15,11,0,10.6,Very unhealthy
+25,10,0,12.8,Hazardous
+25,16,0,12.8,Hazardous
+30,17,0,12.8,Hazardous
+27,18,0,12.8,Hazardous
+29,19,0,11.9,Very unhealthy
+14,11,0,8,Unhealthy
+15,11,0,11.9,Unhealthy
+21,12,0,12.9,Hazardous
+20,13,0,12.9,Unhealthy
+21,15,0,12.9,Hazardous
+20,12,0,12.9,Very unhealthy
+18,11,0,13,Unhealthy for sensitive groups
+25,14,0,13,Hazardous
+28,16,0,13,Hazardous
+22,17,0,8.1,Hazardous
+23,18,0,10.7,Unhealthy for sensitive groups
+25,18,0,8.2,Unhealthy
+21,19,0,8.2,Unhealthy
+29,17,0,10.7,Very unhealthy
+26,21,0,9.5,Hazardous
+25,18,0,8.2,Very unhealthy
+20,8,0,9.5,Unhealthy
+18,8,0,13.2,Unhealthy
+23,11,0,9.5,Very unhealthy
+25,17,0,8.2,Very unhealthy
+20,15,0,9.5,Unhealthy
+24,16,0,10.8,Hazardous
+24,15,0,13.2,Hazardous
+28,19,0,13.3,Very unhealthy
+26,16,0,13.3,Hazardous
+25,17,0,13.3,Very unhealthy
+20,13,0,13.3,Very unhealthy
+20,11,0,13.3,Unhealthy for sensitive groups
+21,15,0,13.3,Unhealthy for sensitive groups
+27,16,0,13.3,Very unhealthy
+26,17,0,13.4,Very unhealthy
+28,18,0,13.4,Hazardous
+27,18,0,12,Very unhealthy
+22,18,0,10.8,Unhealthy
+23,17,0,10.8,Unhealthy
+23,19,0,8.4,Unhealthy
+27,20,0,8.7,Hazardous
+28,21,0,9.8,Unhealthy
+31,23,0,13.9,Very unhealthy
+30,21,0,13.9,Hazardous
+26,22,0,13.9,Very unhealthy
+30,17,0,13.9,Very unhealthy
+33,21,0,13.9,Hazardous
+35,24,0,13.9,Hazardous
+31,24,0,13.9,Very unhealthy
+28,22,0,13.3,Unhealthy
+23,18,0,8.7,Unhealthy
+32,19,0,9.9,Very unhealthy
+26,19,0,14,Unhealthy
+30,19,0,13.3,Very unhealthy
+26,19,0,14,Unhealthy
+27,21,0,12.2,Hazardous
+27,20,0,14,Very unhealthy
+28,20,0,14,Unhealthy
+29,20,0,14,Very unhealthy
+33,22,0,13.4,Very unhealthy
+32,22,0,14,Hazardous
+33,24,0,8.8,Unhealthy
+30,23,0,14.1,Unhealthy for sensitive groups
+29,21,0,14.1,Unhealthy
+31,22,0,14.1,Unhealthy
+30,22,0,12.2,Very unhealthy
+29,23,0,14.1,Very unhealthy
+27,21,0,14.1,Unhealthy for sensitive groups
+22,21,0,8.8,Unhealthy
+28,20,0,14.1,Unhealthy for sensitive groups
+34,23,0,14.1,Hazardous
+32,26,0,14.5,Hazardous
+29,26,0,14.5,Very unhealthy
+23,22,0,9.1,Unhealthy for sensitive groups
+29,19,0,10.1,Very unhealthy
+25,22,0,9.1,Unhealthy
+23,22,0,9.1,Unhealthy for sensitive groups
+29,21,0,14.5,Very unhealthy
+29,22,0,14.5,Very unhealthy
+26,22,0,12.3,Very unhealthy
+26,22,0,10.2,Unhealthy for sensitive groups
+26,21,0,9.1,Unhealthy for sensitive groups
+30,23,0,12.3,Very unhealthy
+34,24,0,14.5,Very unhealthy
+31,28,0,9.1,Very unhealthy
+31,25,0,9.1,Unhealthy
+33,24,0,9.1,Unhealthy for sensitive groups
+26,23,0,9,Unhealthy for sensitive groups
+26,22,0,10.1,Unhealthy
+31,23,0,13.4,Very unhealthy
+31,21,0,11.2,Very unhealthy
+30,25,0,14.5,Very unhealthy
+35,25,0,12.3,Very unhealthy
+33,26,0,13.4,Hazardous
+24,22,0,9,Unhealthy for sensitive groups
+26,18,0,9,Unhealthy for sensitive groups
+30,23,0,13.4,Hazardous
+28,23,0,10.1,Very unhealthy
+24,18,0,8.8,Unhealthy for sensitive groups
+30,23,0,14,Very unhealthy
+31,24,0,14,Unhealthy
+28,24,0,8.5,Unhealthy for sensitive groups
+30,26,0,13.3,Unhealthy
+32,26,0,9.7,Unhealthy for sensitive groups
+32,27,0,8.5,Unhealthy for sensitive groups
+32,26,0,10.9,Unhealthy
+35,28,0,12.1,Very unhealthy
+35,28,0,13.5,Very unhealthy
+35,28,0,13.5,Unhealthy
+36,30,0,10.9,Very unhealthy
+37,31,0,12.1,Very unhealthy
+37,31,0,12.1,Hazardous
+34,31,0,10.8,Very unhealthy
+34,29,0,13.4,Unhealthy
+35,29,0,13.4,Unhealthy for sensitive groups
+36,29,0,13.4,Unhealthy for sensitive groups
+34,29,0,13.4,Unhealthy for sensitive groups
+33,28,0,13.4,Unhealthy for sensitive groups
+33,28,0,13.4,Unhealthy for sensitive groups
+33,28,0,8.3,Unhealthy for sensitive groups
+33,28,0,13.3,Unhealthy for sensitive groups
+33,28,0,13.3,Unhealthy for sensitive groups
+34,27,0,13.3,Unhealthy for sensitive groups
+33,27,0,13.3,Unhealthy
+35,28,0,12,Unhealthy for sensitive groups
+32,25,0,8.3,Unhealthy for sensitive groups
+31,23,0,8.3,Unhealthy for sensitive groups
+31,23,0,9.5,Unhealthy
+34,27,0,13.2,Unhealthy
+35,29,0,8.3,Very unhealthy
+36,28,0,13.2,Very unhealthy
+33,27,0,8.2,Hazardous
+35,29,0,13.2,Hazardous
+37,31,0,13.1,Hazardous
+35,29,0,10.7,Hazardous
+33,27,0,10.7,Unhealthy
+32,26,0,13.1,Unhealthy
+35,26,0,13.1,Very unhealthy
+35,28,0,12,Very unhealthy
+33,28,0,12,Very unhealthy
+33,27,0,9.4,Unhealthy
+33,28,0,8.1,Unhealthy for sensitive groups
+36,29,0,13,Unhealthy for sensitive groups
+36,27,0,13,Very unhealthy
+34,26,0,9.4,Unhealthy
+24,20,0,8.1,Unhealthy
+34,20,0,12.9,Hazardous
+30,25,0,12.9,Very unhealthy
+25,22,0,8.1,Unhealthy for sensitive groups
+26,20,0,8,Unhealthy for sensitive groups
+27,22,0,8,Unhealthy
+30,25,0,9.3,Very unhealthy
+32,24,0,12.8,Unhealthy for sensitive groups
+31,26,0,11.9,Unhealthy for sensitive groups
+32,25,0,12.8,Unhealthy
+33,27,0,12.8,Very unhealthy
+34,25,0,12.7,Unhealthy
+33,27,0,12.7,Very unhealthy
+33,27,0,12.7,Very unhealthy
+32,26,0,11.9,Unhealthy for sensitive groups
+32,25,0,12.7,Unhealthy for sensitive groups
+32,25,0,12.6,Unhealthy for sensitive groups
+29,25,0,9.2,Unhealthy for sensitive groups
+30,24,0,12.6,Unhealthy for sensitive groups
+30,24,0,11.6,Unhealthy
+29,24,0,11.6,Unhealthy for sensitive groups
+27,21,0,11.6,Very unhealthy
+27,22,0,11.6,Unhealthy for sensitive groups
+24,16,0,6.1,Unhealthy for sensitive groups
+22,17,0,6.1,Unhealthy
+27,16,0,7.4,Unhealthy
+29,19,0,11.6,Very unhealthy
+29,22,0,11.6,Hazardous
+28,20,0,11.6,Unhealthy
+29,21,0,11.6,Very unhealthy
+30,22,0,11.6,Very unhealthy
+30,23,0,11.6,Very unhealthy
+28,22,0,6,Very unhealthy
+25,21,0,8.8,Unhealthy for sensitive groups
+28,17,0,6,Unhealthy for sensitive groups
+30,24,0,10.2,Unhealthy
+30,24,0,10.2,Very unhealthy
+27,21,0,8.8,Very unhealthy
+26,20,0,11.6,Unhealthy for sensitive groups
+26,21,0,8.8,Very unhealthy
+24,20,0,8.8,Hazardous
+25,19,0,11.6,Very unhealthy
+26,20,0,11.6,Unhealthy for sensitive groups
+26,21,0,8.7,Very unhealthy
+26,22,0,11.6,Hazardous
+26,21,0,11.6,Unhealthy
+26,19,0,10.2,Unhealthy
+19,17,0,7.3,Unhealthy for sensitive groups
+21,17,0,5.8,Unhealthy for sensitive groups
+22,18,0,5.8,Unhealthy
+23,17,0,11.6,Unhealthy
+25,18,0,11.6,Very unhealthy
+26,19,0,11.2,Hazardous
+24,18,0,8.7,Very unhealthy
+24,18,0,8.7,Very unhealthy
+25,20,0,8.7,Very unhealthy
+23,19,0,7.2,Unhealthy
+24,19,0,7.2,Hazardous
+20,17,0,4.2,Unhealthy
+23,17,0,8.7,Unhealthy
+25,16,0,8.7,Hazardous
+26,18,0,8.7,Hazardous
+26,20,0,8.7,Hazardous
+24,18,0,7.2,Hazardous
+24,17,0,8.7,Hazardous
+25,19,0,8.7,Hazardous
+22,18,0,5.6,Very unhealthy
+22,17,0,8.7,Very unhealthy
+21,16,0,7.2,Unhealthy for sensitive groups
+20,16,0,5.6,Unhealthy for sensitive groups
+20,15,0,8.7,Very unhealthy
+23,17,0,8.7,Unhealthy for sensitive groups
+23,16,0,8.7,Unhealthy for sensitive groups
+26,18,0,8.7,Very unhealthy
+21,16,0,8.7,Hazardous
+19,15,0,5.5,Unhealthy
+20,13,0,8.7,Hazardous
+20,16,0,8.7,Unhealthy for sensitive groups
+22,17,0,8.7,Unhealthy for sensitive groups
+25,18,0,8.7,Unhealthy
+14,10,0,7.1,Unhealthy
+16,9,0,8.7,Hazardous
+17,12,0,8.7,Very unhealthy
+18,8,0,3.9,Unhealthy
+22,16,0,7.1,Unhealthy for sensitive groups
+20,17,0,3.8,Unhealthy
+21,15,0,3.8,Unhealthy for sensitive groups
+11,5,0,5.5,Very unhealthy
+14,4,0,5.5,Unhealthy for sensitive groups
+12,9,0,3.8,Unhealthy for sensitive groups
+12,8,0,7.1,Unhealthy for sensitive groups
+13,7,0,3.8,Unhealthy for sensitive groups
+14,11,0,3.8,Unhealthy for sensitive groups
+12,9,0,3.8,Unhealthy
+13,7,0,8.7,Unhealthy
+15,8,0,8.7,Hazardous
+14,11,0,8.7,Hazardous
+14,9,0,8.7,Hazardous
+12,9,0,7.1,Hazardous
+13,9,0,8.7,Unhealthy for sensitive groups
+16,11,0,8.7,Very unhealthy
+14,10,0,7.1,Hazardous
+18,7,0,8.7,Hazardous
+17,10,0,8.7,Hazardous
+14,9,0,8.7,Hazardous
+17,10,0,8.7,Very unhealthy
+16,10,0,8.7,Very unhealthy
+17,13,0,5.4,Hazardous
+19,15,0,8.7,Unhealthy
+16,14,0,3.8,Very unhealthy
+10,7,0,3.8,Hazardous
+9,7,0,3.8,Very unhealthy
+11,8,0,3.8,Unhealthy
+11,5,0,3.8,Very unhealthy
+12,7,0,3.8,Very unhealthy
+14,10,0,7.1,Unhealthy
+12,7,0,3.8,Very unhealthy
+15,7,0,3.8,Very unhealthy
+12,7,0,3.8,Unhealthy
+13,7,0,8.7,Very unhealthy
+12,6,0,8.7,Hazardous
+12,5,0,3.9,Hazardous
+13,8,0,7.1,Very unhealthy
+9,3,0,8.7,Very unhealthy
+11,5,0,3.9,Unhealthy for sensitive groups
+12,11,0,3.9,Unhealthy for sensitive groups
+10,4,0,3.9,Hazardous
+13,4,0,3.9,Hazardous
+20,9,0,8.7,Very unhealthy
+21,12,0,7.1,Very unhealthy
+10,7,0,7.1,Very unhealthy
+7,3,0,4,Very unhealthy
+10,1,0,4,Very unhealthy
+8,6,0,4,Unhealthy
+12,6,0,8.7,Very unhealthy
+11,6,0,8.7,Hazardous
+10,4,0,5.6,Hazardous
+9,4,0,5.6,Hazardous
+8,3,0,4,Very unhealthy
+9,6,0,4,Unhealthy
+11,5,0,8.7,Very unhealthy
+12,6,0,8.7,Hazardous
+15,6,0,8.7,Hazardous
+12,7,0,5.6,Hazardous
+12,7,0,4,Hazardous
+11,5,0,4,Hazardous
+10,4,0,4,Very unhealthy
+9,5,0,4,Hazardous
+9,7,0,4,Unhealthy for sensitive groups
+8,7,0,4,Unhealthy for sensitive groups
+8,5,0,5.6,Unhealthy
+9,6,0,8.7,Hazardous
+8,5,0,8.7,Hazardous
+12,5,0,8.7,Hazardous
+13,6,0,8.7,Hazardous
+12,7,0,8.7,Unhealthy
+12,9,0,8.7,Unhealthy
+12,7,0,7.2,Hazardous
+10,4,0,7.2,Unhealthy for sensitive groups
+8,6,0,4.1,Unhealthy
+8,4,0,4.1,Unhealthy for sensitive groups
+11,6,0,8.7,Unhealthy for sensitive groups
+15,7,0,8.7,Very unhealthy
+14,7,0,8.7,Hazardous
+11,7,0,4.1,Very unhealthy
+16,5,0,4.1,Unhealthy
+14,11,0,4.1,Very unhealthy
+16,13,0,5.7,Hazardous
+17,6,0,4.1,Unhealthy for sensitive groups
+5,0,0,8.7,Unhealthy for sensitive groups
+7,-1,0,8.7,Unhealthy
+11,4,0,8.7,Unhealthy for sensitive groups
+11,4,0,8.7,Unhealthy for sensitive groups
+15,9,0,8.7,Moderate
+17,9,0,7.2,Unhealthy for sensitive groups
+19,13,0,8.7,Unhealthy for sensitive groups
+13,10,0,8.7,Hazardous
+20,11,0,8.7,Unhealthy
+23,15,0,5.7,Very unhealthy
+12,9,0,4.2,Hazardous
+12,8,0,8.7,Unhealthy for sensitive groups
+12,7,0,4.2,Unhealthy
+12,11,0,4.2,Unhealthy
+15,10,0,4.2,Unhealthy for sensitive groups
+13,8,0,8.7,Unhealthy
+14,8,0,7.2,Unhealthy
+13,8,0,8.7,Unhealthy for sensitive groups
+14,7,0,8.7,Very unhealthy
+12,7,0,7.2,Unhealthy
+20,11,0,7.2,Unhealthy
+14,7,0,5.8,Hazardous
+16,12,0,4.3,Unhealthy for sensitive groups
+13,10,0,4.3,Unhealthy for sensitive groups
+14,8,0,10.2,Very unhealthy
+12,7,0,6,Hazardous
+14,8,0,6,Hazardous
+15,8,0,11.6,Unhealthy
+19,11,0,11.6,Unhealthy for sensitive groups
+14,9,0,11.6,Very unhealthy
+21,8,0,11.6,Unhealthy for sensitive groups
+23,14,0,11.6,Hazardous
+20,16,0,12.5,Hazardous
+17,12,0,12.5,Very unhealthy
+23,13,0,12.5,Unhealthy for sensitive groups
+22,14,0,12.5,Very unhealthy
+19,13,0,12.5,Very unhealthy
+18,12,0,12.6,Unhealthy for sensitive groups
+20,13,0,11.8,Unhealthy
+24,17,0,7.9,Unhealthy
+14,10,0,9.2,Very unhealthy
+9,6,0,7.9,Unhealthy for sensitive groups
+11,6,0,9.2,Unhealthy for sensitive groups
+13,11,0,9.2,Very unhealthy
+16,11,0,10.6,Very unhealthy
+18,12,0,12.7,Unhealthy for sensitive groups
+19,11,0,12.7,Very unhealthy
+21,12,0,12.8,Hazardous
+16,10,0,12.8,Unhealthy for sensitive groups
+17,9,0,12.8,Unhealthy for sensitive groups
+19,9,0,11.9,Unhealthy
+23,13,0,12.8,Very unhealthy
+20,14,0,12.9,Very unhealthy
+19,14,0,12.9,Unhealthy
+15,8,0,8.1,Unhealthy
+18,9,0,12.9,Hazardous
+20,12,0,12.9,Hazardous
+20,12,0,11.9,Hazardous
+22,14,0,13,Hazardous
+23,16,0,13,Very unhealthy
+20,18,0,9.4,Hazardous
+17,13,0,8.1,Hazardous
+18,13,0,8.1,Very unhealthy
+23,14,0,12,Hazardous
+14,12,0,8.2,Unhealthy
+19,11,0,13.1,Unhealthy
+20,13,0,13.1,Unhealthy
+22,13,0,13.1,Very unhealthy
+26,15,0,13.1,Hazardous
+23,16,0,10.7,Very unhealthy
+20,14,0,10.7,Unhealthy for sensitive groups
+22,15,0,13.2,Unhealthy
+23,15,0,13.2,Unhealthy for sensitive groups
+28,19,0,13.2,Very unhealthy
+22,20,0,8.3,Very unhealthy
+27,16,0,8.3,Very unhealthy
+35,22,0,13.3,Hazardous
+32,19,0,13.3,Hazardous
+23,19,0,13.3,Very unhealthy
+26,19,0,13.3,Unhealthy
+24,19,0,13.3,Unhealthy
+25,20,0,8.3,Unhealthy
+28,22,0,9.6,Hazardous
+27,20,0,12,Hazardous
+27,21,0,13.4,Hazardous
+30,21,0,13.4,Unhealthy
+26,19,0,13.3,Unhealthy for sensitive groups
+24,19,0,12.1,Unhealthy
+25,21,0,8.7,Very unhealthy
+29,22,0,11,Hazardous
+35,21,0,13.9,Hazardous
+30,24,0,13.9,Very unhealthy
+30,21,0,13.9,Hazardous
+28,22,0,13.9,Very unhealthy
+25,21,0,13.9,Unhealthy for sensitive groups
+25,17,0,13.9,Unhealthy
+26,20,0,13.9,Unhealthy
+31,21,0,14,Very unhealthy
+30,23,0,11,Hazardous
+22,19,0,8.7,Unhealthy
+28,19,0,14,Very unhealthy
+32,22,0,14,Hazardous
+25,21,0,11.1,Hazardous
+21,18,0,8.8,Unhealthy
+30,14,0,13.4,Hazardous
+32,23,0,14,Hazardous
+33,22,0,14,Unhealthy
+29,25,0,8.8,Unhealthy
+31,22,0,14,Very unhealthy
+25,19,0,8.8,Unhealthy for sensitive groups
+25,22,0,13.4,Unhealthy for sensitive groups
+27,21,0,14.1,Unhealthy for sensitive groups
+27,22,0,9.9,Very unhealthy
+28,24,0,8.8,Unhealthy
+29,25,0,9.9,Unhealthy
+32,25,0,9.9,Hazardous
+34,27,0,13.4,Hazardous
+37,27,0,13.4,Very unhealthy
+31,28,0,12.2,Unhealthy
+28,25,0,8.8,Very unhealthy
+25,21,0,9.1,Very unhealthy
+27,21,0,10.1,Very unhealthy
+33,24,0,12.3,Unhealthy
+27,24,0,9.1,Unhealthy for sensitive groups
+25,21,0,10.2,Very unhealthy
+23,17,0,9.1,Unhealthy for sensitive groups
+27,18,0,9.1,Unhealthy for sensitive groups
+28,24,0,10.1,Unhealthy
+33,22,0,11.2,Very unhealthy
+26,22,0,9.1,Very unhealthy
+32,24,0,13.4,Unhealthy
+29,25,0,10.1,Unhealthy
+26,25,0,11.2,Unhealthy for sensitive groups
+28,22,0,9.1,Unhealthy
+32,24,0,14.5,Unhealthy
+29,23,0,14.5,Unhealthy for sensitive groups
+25,22,0,11.2,Unhealthy
+26,24,0,9,Unhealthy for sensitive groups
+28,24,0,9,Unhealthy for sensitive groups
+29,24,0,9,Unhealthy
+26,22,0,9,Unhealthy
+32,22,0,9,Unhealthy
+33,25,0,10.1,Unhealthy for sensitive groups
+31,25,0,10.1,Unhealthy for sensitive groups
+32,26,0,12.3,Unhealthy for sensitive groups
+27,24,0,9,Unhealthy
+36,22,0,12.2,Very unhealthy
+30,28,0,9.9,Unhealthy
+26,22,0,8.7,Very unhealthy
+22,20,0,8.5,Unhealthy for sensitive groups
+23,22,0,8.5,Unhealthy for sensitive groups
+25,23,0,8.5,Unhealthy
+32,22,0,13.3,Very unhealthy
+36,28,0,13.3,Very unhealthy
+27,26,0,9.7,Unhealthy
+32,26,0,8.5,Hazardous
+36,28,0,13.5,Hazardous
+36,29,0,13.3,Unhealthy
+31,26,0,12.1,Very unhealthy
+31,23,0,13.3,Hazardous
+32,26,0,13.3,Hazardous
+28,26,0,8.4,Very unhealthy
+35,28,0,10.8,Very unhealthy
+33,28,0,10.8,Moderate
+32,28,0,13.4,Moderate
+32,28,0,10.8,Moderate
+33,28,0,13.4,Moderate
+33,28,0,13.4,Unhealthy for sensitive groups
+32,28,0,13.4,Moderate
+31,28,0,8.3,Unhealthy for sensitive groups
+31,28,0,10.8,Unhealthy for sensitive groups
+34,28,0,12,Unhealthy for sensitive groups
+31,29,0,13.3,Very unhealthy
+32,29,0,10.8,Unhealthy
+34,27,0,13.3,Unhealthy
+35,28,0,12,Unhealthy
+36,28,0,13.2,Unhealthy for sensitive groups
+34,28,0,13.2,Unhealthy for sensitive groups
+36,29,0,13.2,Unhealthy
+37,30,0,13.2,Unhealthy
+35,29,0,13.2,Unhealthy for sensitive groups
+35,29,0,13.2,Unhealthy for sensitive groups
+34,29,0,13.1,Unhealthy
+33,28,0,13.1,Very unhealthy
+34,28,0,13.1,Unhealthy
+36,29,0,13.1,Unhealthy
+33,28,0,13.1,Unhealthy
+31,27,0,10.7,Unhealthy
+34,28,0,13,Unhealthy
+35,30,0,13,Unhealthy for sensitive groups
+36,27,0,13,Unhealthy
+32,28,0,9.4,Unhealthy
+32,26,0,11.9,Very unhealthy
+29,26,0,9.4,Unhealthy
+32,25,0,11.9,Unhealthy
+33,28,0,12.9,Unhealthy
+33,27,0,12.9,Unhealthy for sensitive groups
+34,28,0,12.9,Unhealthy for sensitive groups
+33,27,0,11.9,Unhealthy
+32,25,0,12.8,Very unhealthy
+32,27,0,12.8,Very unhealthy
+32,25,0,12.8,Unhealthy for sensitive groups
+30,26,0,12.8,Unhealthy
+32,25,0,12.8,Hazardous
+33,27,0,12.7,Hazardous
+33,25,0,12.7,Unhealthy
+29,26,0,7.9,Unhealthy
+29,23,0,7.9,Unhealthy
+30,25,0,7.9,Unhealthy
+28,24,0,9.2,Unhealthy for sensitive groups
+29,24,0,12.6,Unhealthy
+24,23,0,7.9,Very unhealthy
+29,20,0,11.6,Hazardous
+24,19,0,6.1,Unhealthy
+21,19,0,6.1,Very unhealthy
+22,18,0,7.5,Hazardous
+27,21,0,11.6,Very unhealthy
+25,22,0,11.6,Unhealthy for sensitive groups
+24,19,0,6,Unhealthy
+23,22,0,6,Unhealthy
+27,15,0,11.6,Unhealthy
+27,19,0,8.8,Unhealthy for sensitive groups
+27,22,0,11.6,Unhealthy for sensitive groups
+27,22,0,7.4,Unhealthy for sensitive groups
+26,22,0,10.2,Unhealthy for sensitive groups
+26,21,0,8.8,Unhealthy for sensitive groups
+28,22,0,11.6,Unhealthy for sensitive groups
+27,21,0,11.6,Unhealthy
+27,21,0,11.6,Unhealthy
+27,23,0,5.9,Unhealthy for sensitive groups
+22,13,0,5.9,Unhealthy for sensitive groups
+23,19,0,11.6,Unhealthy for sensitive groups
+23,18,0,10.2,Unhealthy for sensitive groups
+21,20,0,5.9,Unhealthy for sensitive groups
+24,19,0,11.6,Unhealthy for sensitive groups
+25,20,0,11.6,Unhealthy for sensitive groups
+24,16,0,11.6,Unhealthy for sensitive groups
+27,19,0,11.6,Unhealthy for sensitive groups
+25,20,0,11.6,Unhealthy for sensitive groups
+24,19,0,8.7,Unhealthy
+24,20,0,11.6,Unhealthy for sensitive groups
+21,19,0,8.7,Unhealthy for sensitive groups
+17,17,0,5.8,Unhealthy for sensitive groups
+23,11,0,11.6,Unhealthy
+22,18,0,5.8,Unhealthy for sensitive groups
+21,18,0,11.2,Unhealthy for sensitive groups
+23,18,0,8.7,Unhealthy
+20,14,0,4.2,Very unhealthy
+22,12,0,8.7,Hazardous
+20,17,0,8.7,Unhealthy
+21,17,0,8.7,Unhealthy for sensitive groups
+23,14,0,8.7,Unhealthy for sensitive groups
+23,18,0,8.7,Unhealthy for sensitive groups
+22,18,0,8.7,Unhealthy for sensitive groups
+20,18,0,8.7,Unhealthy for sensitive groups
+21,15,0,8.7,Unhealthy for sensitive groups
+23,13,0,8.7,Unhealthy for sensitive groups
+23,18,0,8.7,Unhealthy
+22,18,0,8.7,Very unhealthy
+18,12,0,8.7,Hazardous
+19,11,0,8.7,Unhealthy
+19,15,0,4.1,Unhealthy for sensitive groups
+25,18,0,8.7,Unhealthy
+24,19,0,8.7,Very unhealthy
+22,19,0,8.7,Hazardous
+20,17,0,8.7,Hazardous
+21,17,0,8.7,Unhealthy for sensitive groups
+21,16,0,8.7,Unhealthy for sensitive groups
+22,15,0,8.7,Unhealthy for sensitive groups
+21,13,0,8.7,Unhealthy for sensitive groups
+22,16,0,8.7,Unhealthy for sensitive groups
+22,17,0,5.5,Unhealthy
+23,19,0,5.5,Very unhealthy
+24,20,0,8.7,Unhealthy for sensitive groups
+26,21,0,8.7,Unhealthy for sensitive groups
+24,19,0,5.5,Very unhealthy
+18,15,0,3.9,Very unhealthy
+18,14,0,3.9,Very unhealthy
+17,13,0,3.9,Unhealthy for sensitive groups
+14,12,0,3.8,Unhealthy for sensitive groups
+14,10,0,3.8,Unhealthy for sensitive groups
+16,13,0,3.8,Unhealthy for sensitive groups
+16,14,0,3.8,Unhealthy
+14,12,0,3.8,Unhealthy for sensitive groups
+12,10,0,5.5,Unhealthy
+13,9,0,5.4,Unhealthy
+12,6,0,5.4,Unhealthy
+13,11,0,7.1,Hazardous
+13,11,0,3.8,Unhealthy
+10,9,0,3.8,Unhealthy
+10,7,0,8.7,Hazardous
+12,7,0,8.7,Very unhealthy
+14,10,0,5.4,Unhealthy
+13,11,0,3.8,Unhealthy
+12,8,0,3.8,Very unhealthy
+14,10,0,3.8,Hazardous
+16,12,0,3.8,Unhealthy
+12,8,0,3.8,Hazardous
+16,10,0,8.7,Hazardous
+13,7,0,8.7,Hazardous
+6,4,0.1,3.8,Hazardous
+8,4,0,8.7,Unhealthy
+9,3,0,8.7,Unhealthy
+9,6,0,7.1,Hazardous
+7,4,0,3.8,Very unhealthy
+8,4,0,7.1,Hazardous
+12,5,0,8.7,Very unhealthy
+15,7,0,8.7,Unhealthy
+14,7,0,8.7,Very unhealthy
+15,9,0,8.7,Hazardous
+13,9,0,8.7,Hazardous
+12,8,0,8.7,Hazardous
+13,7,0,3.8,Very unhealthy
+15,8,0,5.5,Very unhealthy
+16,11,0,7.1,Hazardous
+15,3,0,5.5,Hazardous
+-2,-4,0,8.7,Unhealthy for sensitive groups
+3,-4,0,8.7,Unhealthy
+9,2,0,8.7,Very unhealthy
+9,1,0,8.7,Very unhealthy
+9,2,0,3.9,Hazardous
+12,8,0,3.9,Very unhealthy
+9,5,0,3.9,Unhealthy
+7,4,0,4,Very unhealthy
+-3,-5,0,7.1,Very unhealthy
+1,-6,0,8.7,Unhealthy
+6,-4,0,8.7,Unhealthy
+7,-2,0,8.7,Very unhealthy
+6,0,0,8.7,Hazardous
+11,1,0,8.7,Hazardous
+16,7,0,8.7,Very unhealthy
+14,8,0,7.1,Hazardous
+18,7,0,8.7,Hazardous
+7,4,0,7.1,Hazardous
+8,1,0,8.7,Very unhealthy
+14,1,0,8.7,Very unhealthy
+10,6,0,8.7,Hazardous
+14,9,0,5.6,Very unhealthy
+20,12,0,4,Unhealthy
+12,10,0,4,Very unhealthy
+9,7,0,4,Very unhealthy
+12,6,0,5.6,Hazardous
+14,9,0,7.1,Hazardous
+12,10,0,4,Very unhealthy
+11,7,0,8.7,Unhealthy
+10,4,0,8.7,Hazardous
+9,6,0,8.7,Hazardous
+13,5,0,8.7,Unhealthy

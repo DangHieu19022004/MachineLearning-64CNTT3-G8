@@ -1,0 +1,5 @@
+đọc ít slide hơn
+1. dữ lieu - phân tích bang biểu đồ phân bổ dữ lieu
+2. mô hình - trình bày rõ tham số sử dung
+3. đánh giá: 
+	loss funct: cần ns chi tiết trong 1 phần code đánh giá như nào ý nghĩa của các tham số sử dụng
