@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự báo thời tiết</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dự báo thời tiết</h1>
+        </div>
+
+        <div class="content">
+            <div class="formWeather">
+                <form id="weather-form">
+                    <label for="precipitation">Precipitation:</label>
+                    <input type="number" id="precipitation" name="precipitation" step="any"><br>
+
+                    <label for="temp_max">Temp Max:</label>
+                    <input type="number" id="temp_max" name="temp_max" step="any"><br>
+
+                    <label for="temp_min">Temp Min:</label>
+                    <input type="number" id="temp_min" name="temp_min" step="any"><br>
+
+                    <label for="wind">Wind:</label>
+                    <input type="number" id="wind" name="wind" step="any"><br>
+
+
+                    <button class="btn-submit" type="submit">Dự đoán</button>
+                </form>
+            </div>
+            <div class="resultAlgorithm">
+                <h3> Chọn thuật toán: </h3>
+                <select id="algorithm">
+                    <option value="perceptron">Perceptron</option>
+                    <option value="decision_tree">ID3</option>
+                    <option value="neural_network">Neural Network</option>
+                </select>
+
+                <h3>Kết quả:</h3>
+
+                <p id="result"></p>
+
+                <div id="report_validation"></div>
+                <div id="report_trainning_set"></div>
+                <div id="report_test_set"></div>
+
+
+
+
+                <img class="image" id="confusion-matrix" src="" alt="Confusion Matrix" />
+
+
+                <img class="image" id="learning_curve_url" src="" alt="learning curve diagram" />
+            </div>
+
+        </div>
+
+
+    </div>
+    <script src="../static/FormControl.js"></script>
+</body>
+</html>
