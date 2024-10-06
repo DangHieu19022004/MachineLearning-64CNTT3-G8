@@ -37,7 +37,7 @@ X_valid, X_test, y_valid, y_test = train_test_split(X_temp, y_temp, test_size=0.
 #test set - test model
 
 #trainning the model
-dt_model = DecisionTreeClassifier(criterion='entropy', max_depth=6, random_state=42)
+dt_model = DecisionTreeClassifier(criterion='entropy', max_depth=3, random_state=42)
 
 #fit trainnign data into model
 dt_model.fit(X_train, y_train)
