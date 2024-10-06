@@ -68,176 +68,141 @@ print("giá trị nhiều nhất")
 print(df.mode())
 
 
-# X_train, X_temp, y_train, y_temp = train_test_split(X, y, train_size=0.7, test_size=0.3, random_state=42)
-# X_valid, X_test, y_valid, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)
+X_train, X_temp, y_train, y_temp = train_test_split(X, y, train_size=0.7, test_size=0.3, random_state=42)
+X_valid, X_test, y_valid, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)
 
-# # Khởi tạo scaler
-# scaler = StandardScaler()
+# Khởi tạo scaler
+scaler = StandardScaler()
 
-# # Chuẩn hóa tập huấn luyện (fit_transform chỉ trên tập huấn luyện)
-# X_train_scaled = scaler.fit_transform(X_train)
+# Chuẩn hóa tập huấn luyện (fit_transform chỉ trên tập huấn luyện)
+X_train_scaled = scaler.fit_transform(X_train)
 
-# # Chuẩn hóa tập validation và test (chỉ transform, không fit lại)
-# X_valid_scaled = scaler.transform(X_valid)
-# X_test_scaled = scaler.transform(X_test)
+# Chuẩn hóa tập validation và test (chỉ transform, không fit lại)
+X_valid_scaled = scaler.transform(X_valid)
+X_test_scaled = scaler.transform(X_test)
 
-# #trainning the model
-# dt_model = DecisionTreeClassifier(criterion='entropy', max_depth=3, random_state=42, min_samples_split=5, min_samples_leaf=3)
+#trainning the model
+dt_model = DecisionTreeClassifier(criterion='entropy', max_depth=3, random_state=42, min_samples_split=5, min_samples_leaf=3)
 
-# #fit trainnign data into model
-# dt_model.fit(X_train_scaled, y_train)
+#fit trainnign data into model
+dt_model.fit(X_train_scaled, y_train)
 
-# #predict the model on test data
-# y_train_pred = dt_model.predict(X_train_scaled)
-# y_valid_pred = dt_model.predict(X_valid_scaled)
-# y_test_pred = dt_model.predict(X_test_scaled)
+#predict the model on test data
+y_train_pred = dt_model.predict(X_train_scaled)
+y_valid_pred = dt_model.predict(X_valid_scaled)
+y_test_pred = dt_model.predict(X_test_scaled)
 
-# print(df['weather'].value_counts())
-
-
-# #vẽ roc và aug
-# from sklearn.metrics import auc, roc_curve
-
-# # Tính toán TPR và FPR
-# y_prob = dt_model.predict_proba(X_valid_scaled)[:, 1]
-# fpr, tpr, thresholds = roc_curve(y_valid, y_prob, pos_label=1)
-# roc_auc = auc(fpr, tpr)
-
-# # Vẽ biểu đồ ROC
-# plt.figure()
-# plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
-# plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
-# plt.xlim([0.0, 1.0])
-# plt.ylim([0.0, 1.05])
-# plt.xlabel('False Positive Rate')
-# plt.ylabel('True Positive Rate')
-# plt.title('Receiver Operating Characteristic')
-# plt.legend(loc="lower right")
-# plt.show()
+print(df['weather'].value_counts())
 
 
+#vẽ roc và aug
+from sklearn.metrics import auc, roc_curve
 
-# # In báo cáo phân loại (precision, recall, F1-score cho từng lớp)
-# # 3.1. report training set
-# report_trainning_set = classification_report(y_train, y_train_pred,  target_names=dt_model.classes_, zero_division=0)
-# # 3.2. report validation set
-# report_validation = classification_report(y_valid, y_valid_pred, target_names=dt_model.classes_, zero_division=0)
-# # 3.3. report test set
-# report_test_set = classification_report(y_test, y_test_pred, target_names=dt_model.classes_, zero_division=0)
+# Tính toán TPR và FPR
+y_prob = dt_model.predict_proba(X_valid_scaled)[:, 1]
+fpr, tpr, thresholds = roc_curve(y_valid, y_prob, pos_label=1)
+roc_auc = auc(fpr, tpr)
 
-# print("trainning")
-# print(report_trainning_set)
-# print("vali")
-# print(report_validation)
-# print("test")
-# print(report_test_set)
-
-# # 2. Lưu ma trận nhầm lẫn
-# cm = confusion_matrix(y_test, y_test_pred)
-# disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=dt_model.classes_)
-# fig, ax = plt.subplots(figsize=(10, 7))
-# disp.plot(cmap=plt.cm.Blues, ax=ax)
-# plt.ylabel('True label')
-# plt.xlabel('Predicted label')
-# plt.title("Confusion Matrix")
-# plt.show()
-
-# # 4. Vẽ sơ đồ learning curve
-# train_sizes, train_scores, valid_scores = learning_curve(dt_model,  X_train_scaled, y_train,  train_sizes=np.linspace(0.1, 1.0, 10), cv=5, scoring='accuracy')
-# # Tính giá trị trung bình và độ lệch chuẩn của các điểm số
-# train_scores_mean = np.mean(train_scores, axis=1)
-# train_scores_std = np.std(train_scores, axis=1)
-# valid_scores_mean = np.mean(valid_scores, axis=1)
-# valid_scores_std = np.std(valid_scores, axis=1)
-# # Vẽ biểu đồ learning curve
-# plt.figure(figsize=(10, 6))
-# plt.plot(train_sizes, train_scores_mean, 'o-', color="r", label="Training score")
-# plt.plot(train_sizes, valid_scores_mean, 'o-', color="g", label="Validation score")
-# plt.fill_between(train_sizes, train_scores_mean - train_scores_std,
-#                  train_scores_mean + train_scores_std, alpha=0.1, color="r")
-# plt.fill_between(train_sizes, valid_scores_mean - valid_scores_std,
-#                  valid_scores_mean + valid_scores_std, alpha=0.1, color="g")
-# plt.title("Learning Curve")
-# plt.xlabel("Training Examples")
-# plt.ylabel("Score")
-# plt.legend(loc="best")
-# plt.grid(True)
-# plt.show()
-
-# #####
-# import matplotlib.pyplot as plt
-# import numpy as np
-# from sklearn.metrics import log_loss
-# from sklearn.model_selection import train_test_split
-# from sklearn.tree import DecisionTreeClassifier
-
-# train_sizes = np.linspace(0.1, 0.9, 10)  # Thay đổi kích thước tập huấn luyện
-# train_entropy = []
-# valid_entropy = []
-
-# for size in train_sizes:
-#     X_train_subset, X_valid_subset, y_train_subset, y_valid_subset = train_test_split(X, y, train_size=size, random_state=42)
-
-#     # Huấn luyện mô hình
-#     dt_model = DecisionTreeClassifier(criterion='entropy', max_depth=3, random_state=42, min_samples_split=5, min_samples_leaf=3)
-
-#     # Khởi tạo scaler
-#     scaler = StandardScaler()
-#     X_train_scaled_subset = scaler.fit_transform(X_train_subset)
-#     X_valid_scaled_subset = scaler.transform(X_valid_subset)
-
-#     dt_model.fit(X_train_scaled_subset, y_train_subset)
-
-#     # Dự đoán trên tập huấn luyện và tập validation
-#     y_train_probs = dt_model.predict_proba(X_train_scaled_subset)
-#     y_valid_probs = dt_model.predict_proba(X_valid_scaled_subset)
-
-#     # Tính toán log loss (entropy)
-#     train_entropy.append(log_loss(y_train_subset, y_train_probs))
-#     valid_entropy.append(log_loss(y_valid_subset, y_valid_probs))
-
-# # Vẽ biểu đồ
-# plt.figure(figsize=(10, 6))
-# plt.plot(train_sizes, train_entropy, 'o-', color="r", label="Training Entropy")
-# plt.plot(train_sizes, valid_entropy, 'o-', color="g", label="Validation Entropy")
-# plt.title("Entropy (Log Loss) Curve")
-# plt.xlabel("Training Examples")
-# plt.ylabel("Entropy (Log Loss)")
-# plt.legend(loc="best")
-# plt.grid(True)
-# plt.show()
+# Vẽ biểu đồ ROC
+plt.figure()
+plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
+plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic')
+plt.legend(loc="lower right")
+plt.show()
 
 
-# # Theo dõi số lượng lỗi
-# train_errors = []
-# valid_errors = []
-# for size in train_sizes:
-#     X_train_subset, X_valid_subset, y_train_subset, y_valid_subset = train_test_split(X, y, train_size=size, random_state=42)
 
-#     # Huấn luyện mô hình
-#     dt_model = DecisionTreeClassifier(criterion='entropy', max_depth=3, random_state=42, min_samples_split=5, min_samples_leaf=3)
+# In báo cáo phân loại (precision, recall, F1-score cho từng lớp)
+# 3.1. report training set
+report_trainning_set = classification_report(y_train, y_train_pred,  target_names=dt_model.classes_, zero_division=0)
+# 3.2. report validation set
+report_validation = classification_report(y_valid, y_valid_pred, target_names=dt_model.classes_, zero_division=0)
+# 3.3. report test set
+report_test_set = classification_report(y_test, y_test_pred, target_names=dt_model.classes_, zero_division=0)
 
-#     # Khởi tạo scaler
-#     scaler = StandardScaler()
-#     X_train_scaled_subset = scaler.fit_transform(X_train_subset)
-#     X_valid_scaled_subset = scaler.transform(X_valid_subset)
+print("trainning")
+print(report_trainning_set)
+print("vali")
+print(report_validation)
+print("test")
+print(report_test_set)
 
-#     dt_model.fit(X_train_scaled_subset, y_train_subset)
+# 2. Lưu ma trận nhầm lẫn
+cm = confusion_matrix(y_test, y_test_pred)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=dt_model.classes_)
+fig, ax = plt.subplots(figsize=(10, 7))
+disp.plot(cmap=plt.cm.Blues, ax=ax)
+plt.ylabel('True label')
+plt.xlabel('Predicted label')
+plt.title("Confusion Matrix on test set")
+plt.show()
 
-#     # Dự đoán trên tập huấn luyện và tập validation
-#     y_train_pred = dt_model.predict(X_train_scaled_subset)
-#     y_valid_pred = dt_model.predict(X_valid_scaled_subset)
+# 4. Vẽ sơ đồ learning curve
+train_sizes, train_scores, valid_scores = learning_curve(dt_model,  X_train_scaled, y_train,  train_sizes=np.linspace(0.1, 1.0, 10), cv=5, scoring='accuracy')
+# Tính giá trị trung bình và độ lệch chuẩn của các điểm số
+train_scores_mean = np.mean(train_scores, axis=1)
+train_scores_std = np.std(train_scores, axis=1)
+valid_scores_mean = np.mean(valid_scores, axis=1)
+valid_scores_std = np.std(valid_scores, axis=1)
+# Vẽ biểu đồ learning curve
+plt.figure(figsize=(10, 6))
+plt.plot(train_sizes, train_scores_mean, 'o-', color="r", label="Training score")
+plt.plot(train_sizes, valid_scores_mean, 'o-', color="g", label="Validation score")
+plt.fill_between(train_sizes, train_scores_mean - train_scores_std,
+                 train_scores_mean + train_scores_std, alpha=0.1, color="r")
+plt.fill_between(train_sizes, valid_scores_mean - valid_scores_std,
+                 valid_scores_mean + valid_scores_std, alpha=0.1, color="g")
+plt.title("Learning Curve")
+plt.xlabel("Training Examples")
+plt.ylabel("Score")
+plt.legend(loc="best")
+plt.grid(True)
+plt.show()
 
-#     # Tính số lượng lỗi
-#     train_errors.append(np.sum(y_train_subset != y_train_pred))  # So sánh với y_train_subset
-#     valid_errors.append(np.sum(y_valid_subset != y_valid_pred))  # So sánh với y_valid_subset
+#####
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.metrics import log_loss
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
 
-# # Vẽ biểu đồ
-# plt.plot(train_sizes, train_errors, label='Training Errors')
-# plt.plot(train_sizes, valid_errors, label='Validation Errors')
-# plt.xlabel('Training Examples')
-# plt.ylabel('Number of Errors')
-# plt.title('Number of Errors over Training Examples')
-# plt.legend()
-# plt.show()
+train_sizes = np.linspace(0.1, 0.9, 10)  # Thay đổi kích thước tập huấn luyện
+train_entropy = []
+valid_entropy = []
 
+for size in train_sizes:
+    X_train_subset, X_valid_subset, y_train_subset, y_valid_subset = train_test_split(X, y, train_size=size, random_state=42)
+
+    # Huấn luyện mô hình
+    dt_model = DecisionTreeClassifier(criterion='entropy', max_depth=3, random_state=42, min_samples_split=5, min_samples_leaf=3)
+
+    # Khởi tạo scaler
+    scaler = StandardScaler()
+    X_train_scaled_subset = scaler.fit_transform(X_train_subset)
+    X_valid_scaled_subset = scaler.transform(X_valid_subset)
+
+    dt_model.fit(X_train_scaled_subset, y_train_subset)
+
+    # Dự đoán trên tập huấn luyện và tập validation
+    y_train_probs = dt_model.predict_proba(X_train_scaled_subset)
+    y_valid_probs = dt_model.predict_proba(X_valid_scaled_subset)
+
+    # Tính toán log loss (entropy)
+    train_entropy.append(log_loss(y_train_subset, y_train_probs))
+    valid_entropy.append(log_loss(y_valid_subset, y_valid_probs))
+
+# Vẽ biểu đồ
+plt.figure(figsize=(10, 6))
+plt.plot(train_sizes, train_entropy, 'o-', color="r", label="Training Entropy")
+plt.plot(train_sizes, valid_entropy, 'o-', color="g", label="Validation Entropy")
+plt.title("Entropy (Log Loss) Curve")
+plt.xlabel("Training Examples")
+plt.ylabel("Entropy (Log Loss)")
+plt.legend(loc="best")
+plt.grid(True)
+plt.show()
