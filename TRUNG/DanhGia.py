@@ -32,7 +32,7 @@ for hidden_layer_sizes in hidden_layer_sizes_options:
     clf = MLPClassifier(hidden_layer_sizes=hidden_layer_sizes, max_iter=500, activation='relu', solver='adam',
                         random_state=42, early_stopping=True, learning_rate_init=0.01)
     cv_scores = cross_val_score(clf, X_train, y_train, cv=5)
-    mean_cv_score = np.mean(cv_scores)
+    mean_cv_score = round(np.mean(cv_scores), 4)  # Làm tròn đến 4 chữ số thập phân
     results.append((hidden_layer_sizes, mean_cv_score))
     print(f"Hidden layer sizes: {hidden_layer_sizes}, Cross-validation score: {mean_cv_score}")
 
@@ -41,15 +41,6 @@ results_df = pd.DataFrame(results, columns=['Hidden Layer Sizes', 'Mean Cross-va
 
 # Đảm bảo rằng các giá trị trong 'Hidden Layer Sizes' là chuỗi
 results_df['Hidden Layer Sizes'] = results_df['Hidden Layer Sizes'].astype(str)
-
-# Vẽ biểu đồ cho kết quả
-plt.figure(figsize=(10, 5))
-sns.barplot(x='Hidden Layer Sizes', y='Mean Cross-validation Score', data=results_df)
-plt.title('Ảnh hưởng của số lượng neuron trong lớp ẩn đến độ chính xác của mô hình')
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.savefig('hidden_layer_effect_on_score.png')
-plt.show()
 
 # Huấn luyện mô hình với cấu hình tốt nhất
 best_hidden_layer_sizes = results_df.loc[results_df['Mean Cross-validation Score'].idxmax(), 'Hidden Layer Sizes']
@@ -76,11 +67,8 @@ def save_plot_confusion_matrix(y_true, y_pred, filename):
     plt.ylabel('True label')
     plt.title('Confusion Matrix')
     plt.tight_layout()
-    plt.savefig(filename)
     plt.close()
 
-# Lưu ma trận nhầm lẫn cho mô hình tốt nhất
-save_plot_confusion_matrix(y_test, best_clf.predict(X_test), 'confusion_matrix_test_best.png')
 
 # Hàm vẽ Learning Curve
 def save_plot_learning_curve(estimator, X, y, cv, filename):
@@ -98,17 +86,14 @@ def save_plot_learning_curve(estimator, X, y, cv, filename):
     plt.plot(train_sizes, np.mean(val_scores, axis=1), 'o-', color="g", label="Cross-validation score")
     plt.legend(loc="best")
     plt.tight_layout()
-    plt.savefig(filename)
     plt.close()
 
-# Lưu Learning Curve cho mô hình tốt nhất
-save_plot_learning_curve(best_clf, X_train, y_train, cv=5, filename='learning_curve_best.png')
 
 # Vẽ sơ đồ phân tán trước khi chuẩn hóa
 sns.pairplot(df[['precipitation', 'temp_max', 'temp_min', 'wind', 'weather']], hue='weather')
 plt.suptitle("Sơ đồ phân tán trước khi chuẩn hóa", y=1.02)
 plt.tight_layout()
-plt.savefig("scatter_plot_before_scaling.png")  # Lưu biểu đồ
+
 plt.show()
 
 # Vẽ sơ đồ phân tán sau khi chuẩn hóa
@@ -117,5 +102,5 @@ df_scaled['weather'] = df['weather']
 sns.pairplot(df_scaled, hue='weather')
 plt.suptitle("Sơ đồ phân tán sau khi chuẩn hóa", y=1.02)
 plt.tight_layout()
-plt.savefig("scatter_plot_after_scaling.png")  # Lưu biểu đồ
 plt.show()
+
