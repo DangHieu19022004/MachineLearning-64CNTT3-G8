@@ -49,50 +49,50 @@ print(f"Cross-validation scores (before processing): {cv_scores_before}")
 print(f"Mean cross-validation score (before processing): {np.mean(cv_scores_before):.4f}\n")
 
 # Bước 8: Đồ thị phân tán chưa chuẩn hóa
-plt.figure(figsize=(12, 6))  # Adjust the figure size
+plt.figure(figsize=(12, 6)) 
 
 # Đồ thị phân tán dữ liệu gốc cho Nhiệt độ Tối Đa và Nhiệt độ Tối Thiểu
-plt.subplot(1, 2, 1)  # Chỉ cần 2 cột
-plt.scatter(df['temp_max'], df['temp_min'], c=df['weather_encoded'], cmap='viridis', alpha=0.7, s=50)  # Increased marker size
-plt.title('Nhiệt độ Max vs Nhiệt độ Min', fontsize=16)  # Enhanced title font size
-plt.xlabel('Nhiệt độ Tối Đa', fontsize=14)  # Enhanced label font size
-plt.ylabel('Nhiệt độ Tối Thiểu', fontsize=14)  # Enhanced label font size
+plt.subplot(1, 2, 1)  
+plt.scatter(df['temp_max'], df['temp_min'], c=df['weather_encoded'], cmap='viridis', alpha=0.7, s=50)  
+plt.title('Nhiệt độ Max vs Nhiệt độ Min', fontsize=16)  
+plt.xlabel('Nhiệt độ Tối Đa', fontsize=14)  
+plt.ylabel('Nhiệt độ Tối Thiểu', fontsize=14)  
 plt.colorbar(label='Lớp Thời Tiết')
-plt.grid(True)  # Add grid for better readability
+plt.grid(True)  
 
 # Đồ thị phân tán dữ liệu gốc cho Lượng Mưa và Gió
-plt.subplot(1, 2, 2)  # Chỉ cần 2 cột
-plt.scatter(df['precipitation'], df['wind'], c=df['weather_encoded'], cmap='viridis', alpha=0.7, s=50)  # Increased marker size
-plt.title('Lượng Mưa vs Gió', fontsize=16)  # Enhanced title font size
-plt.xlabel('Lượng Mưa', fontsize=14)  # Enhanced label font size
-plt.ylabel('Gió', fontsize=14)  # Enhanced label font size
+plt.subplot(1, 2, 2) 
+plt.scatter(df['precipitation'], df['wind'], c=df['weather_encoded'], cmap='viridis', alpha=0.7, s=50) 
+plt.title('Lượng Mưa vs Gió', fontsize=16)  
+plt.xlabel('Lượng Mưa', fontsize=14)  
+plt.ylabel('Gió', fontsize=14)  
 plt.colorbar(label='Lớp Thời Tiết')
-plt.grid(True)  # Add grid for better readability
+plt.grid(True) 
 
 plt.tight_layout()
 plt.show()
 plt.close()
 
 # Bước 9: Đồ thị phân tán đã chuẩn hóa
-plt.figure(figsize=(12, 6))  # Adjust the figure size
+plt.figure(figsize=(12, 6)) 
 
 # Đồ thị phân tán dữ liệu đã chuẩn hóa cho Nhiệt độ Tối Đa và Nhiệt độ Tối Thiểu
 plt.subplot(1, 2, 1)  # Chỉ cần 2 cột
-plt.scatter(X_data[:, 1], X_data[:, 2], c=y_data, cmap='viridis', alpha=0.7, s=50)  # Increased marker size
-plt.title('Đã Chuẩn Hóa: Nhiệt độ Max vs Nhiệt độ Tối Thiểu', fontsize=16)  # Enhanced title font size
-plt.xlabel('Nhiệt độ Tối Đa (Chuẩn Hóa)', fontsize=14)  # Enhanced label font size
-plt.ylabel('Nhiệt độ Tối Thiểu (Chuẩn Hóa)', fontsize=14)  # Enhanced label font size
+plt.scatter(X_data[:, 1], X_data[:, 2], c=y_data, cmap='viridis', alpha=0.7, s=50)  
+plt.title('Đã Chuẩn Hóa: Nhiệt độ Max vs Nhiệt độ Tối Thiểu', fontsize=16) 
+plt.xlabel('Nhiệt độ Tối Đa (Chuẩn Hóa)', fontsize=14)  
+plt.ylabel('Nhiệt độ Tối Thiểu (Chuẩn Hóa)', fontsize=14)  
 plt.colorbar(label='Lớp Thời Tiết')
-plt.grid(True)  # Add grid for better readability
+plt.grid(True) 
 
 # Đồ thị phân tán dữ liệu đã chuẩn hóa cho Lượng Mưa và Gió
 plt.subplot(1, 2, 2)  # Chỉ cần 2 cột
-plt.scatter(X_data[:, 0], X_data[:, 3], c=y_data, cmap='viridis', alpha=0.7, s=50)  # Increased marker size
-plt.title('Đã Chuẩn Hóa: Lượng Mưa vs Gió', fontsize=16)  # Enhanced title font size
-plt.xlabel('Lượng Mưa (Chuẩn Hóa)', fontsize=14)  # Enhanced label font size
-plt.ylabel('Gió (Chuẩn Hóa)', fontsize=14)  # Enhanced label font size
+plt.scatter(X_data[:, 0], X_data[:, 3], c=y_data, cmap='viridis', alpha=0.7, s=50)  
+plt.title('Đã Chuẩn Hóa: Lượng Mưa vs Gió', fontsize=16)  
+plt.xlabel('Lượng Mưa (Chuẩn Hóa)', fontsize=14)  
+plt.ylabel('Gió (Chuẩn Hóa)', fontsize=14)  
 plt.colorbar(label='Lớp Thời Tiết')
-plt.grid(True)  # Add grid for better readability
+plt.grid(True)  
 
 plt.tight_layout()
 plt.show()
