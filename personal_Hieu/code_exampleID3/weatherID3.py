@@ -9,9 +9,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn import tree
-from sklearn.metrics import (ConfusionMatrixDisplay, accuracy_score,
-                             classification_report, confusion_matrix)
-from sklearn.model_selection import learning_curve, train_test_split
+from sklearn.metrics import (ConfusionMatrixDisplay, accuracy_score, auc,
+                             classification_report, confusion_matrix,
+                             roc_curve)
+from sklearn.model_selection import (GridSearchCV, KFold, learning_curve,
+                                     train_test_split)
 from sklearn.tree import DecisionTreeClassifier
 
 #get the dataset
@@ -19,14 +21,14 @@ data = pd.read_csv("../weather_app/seattle-weather.csv")
 
 
 #filter data
-data.isnull().sum()
-data = data.dropna(inplace=True)
+data = data.dropna()
 data.drop(['date'], axis=1, inplace=True)
 
-
 #Split the datasets into X and y
-X = data["precipitation", "temp_max", "temp_min", "wind"]
+X = data[["precipitation", "temp_max", "temp_min", "wind"]]
 y = data["weather"]
+
+
 
 #Split the datasets into 70% training, 15% validation, 15% testing
 X_train, X_temp, y_train, y_temp = train_test_split(X, y, train_size=0.7, test_size=0.3, random_state=42)
@@ -35,12 +37,97 @@ X_valid, X_test, y_valid, y_test = train_test_split(X_temp, y_temp, test_size=0.
 #validation set - evaluate model
 #test set - test model
 
+# Define the parameter grid for cross-validation
+param_grid = {
+    'max_depth': [1, 2, 3, 5, 7, 9, None],
+    'min_samples_split': [2, 3, 5, 10],
+    'min_samples_leaf': [1, 2, 3, 4, 5],
+    'max_features': [None, 'sqrt', 'log2'],
+    'class_weight': [None, 'balanced'],
+    'splitter': ['best', 'random'],
+    'max_leaf_nodes': [None, 10, 20, 30, 40, 50],
+    'min_weight_fraction_leaf': [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+}
+
 #trainning the model
-dt_model = DecisionTreeClassifier(criterion='entropy', max_depth=3, random_state=42)
+dt_model = DecisionTreeClassifier(criterion='entropy', random_state=42)
+
+# Define K-Fold Cross-Validation
+kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
+# Use GridSearchCV to find the best hyperparameters
+grid_search = GridSearchCV(estimator=dt_model, param_grid=param_grid, cv=kf, scoring='accuracy', n_jobs=-1)
+
+# Train with cross-validation
+grid_search.fit(X_train, y_train)
+
+# Output the best parameters found
+print(f"Best parameters found: {grid_search.best_params_}")
+print(f"Best cross-validation accuracy: {grid_search.best_score_:.2f}")
+
+# Evaluate on the validation set
+best_model = grid_search.best_estimator_
+y_train_pred = best_model.predict(X_train)
+y_valid_pred = best_model.predict(X_valid)
+y_test_pred = best_model.predict(X_test)
+
+# tính toán độ chính xác mô hình
+accuracy = accuracy_score(y_test, y_valid_pred) * 100
+
+# 2. Lưu ma trận nhầm lẫn
+cm = confusion_matrix(y_test, y_test_pred)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=dt_model.classes_)
+fig, ax = plt.subplots(figsize=(10, 7))
+disp.plot(cmap=plt.cm.Blues, ax=ax)
+plt.ylabel('True label')
+plt.xlabel('Predicted label')
+plt.title("Confusion Matrix on test set")
+
+# In báo cáo phân loại (precision, recall, F1-score cho từng lớp)
+# 3.1. report training set
+report_trainning_set = classification_report(y_train, y_train_pred, target_names=dt_model.classes_, zero_division=0)
+# 3.2. report validation set
+report_validation = classification_report(y_valid, y_valid_pred, target_names=dt_model.classes_, zero_division=0)
+# 3.3. report test set
+report_test_set = classification_report(y_test, y_test_pred, target_names=dt_model.classes_, zero_division=0)
+
+print("trainning")
+print(report_trainning_set)
+print("vali")
+print(report_validation)
+print("test")
+print(report_test_set)
+
+#  4. Vẽ sơ đồ learning curve
+
+#  5. vẽ biểu đồ roc và aug
+# Tính toán TPR và FPR
+y_prob = best_model.predict_proba(X_valid)[:, 1]
+fpr, tpr, thresholds = roc_curve(y_valid, y_prob, pos_label=1)
+roc_auc = auc(fpr, tpr)
+# Vẽ biểu đồ ROC
+plt.figure()
+plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
+plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic')
+plt.legend(loc="lower right")
+plt.show()
 
 
+# # Print accuracy and classification report on the validation set
+# print(f"Validation Accuracy: {accuracy_score(y_valid, y_pred_valid):.2f}")
 
+# # Sử dụng tham số zero_division trong hàm classification_report
+# report = classification_report(y_valid, y_pred_valid, zero_division=0)
+# print("Classification Report:\n", report)
 
+# # Finally, test the best model on the test set
+# y_pred_test = best_model.predict(X_test)
+# print(f"Test Accuracy: {accuracy_score(y_test, y_pred_test):.2f}")
 
 
 
