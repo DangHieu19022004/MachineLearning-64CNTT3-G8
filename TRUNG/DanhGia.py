@@ -29,7 +29,7 @@ param_grid_nn = {
     'hidden_layer_sizes': [(10,), (20,), (30, 15), (40, 20, 10)],
     'activation': ['relu', 'tanh'],
     'solver': ['adam', 'sgd'],
-    'learning_rate_init': [0.01, 0.001],
+    'learning_rate_init': [0.1, 0.01, 0.001, 0.0001],
     'max_iter': [500],
     'early_stopping': [True]
 }
@@ -42,7 +42,7 @@ grid_search_nn = GridSearchCV(estimator=mlp_model, param_grid=param_grid_nn, cv=
 # Bước 6: Huấn luyện mô hình với cross-validation
 grid_search_nn.fit(X_train, y_train)
 
-# Xuất các tham số tốt nhất và độ chính xác với làm tròn
+# Xuất các tham số tốt nhất 
 print(f"Best parameters found for Neural Network: {grid_search_nn.best_params_}")
 print(f"Best cross-validation accuracy for Neural Network: {grid_search_nn.best_score_:.4f}")
 
@@ -144,7 +144,6 @@ plt.ylabel('Tỷ lệ Dương Tính Thực')
 plt.title('Đường cong ROC cho Mạng Nơ-ron')
 plt.legend(loc="lower right")
 plt.show()
-
 
 
 
