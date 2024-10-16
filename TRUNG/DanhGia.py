@@ -147,6 +147,15 @@ plt.show()
 
 
 
+best_model = MLPClassifier(
+    hidden_layer_sizes=(40, 20, 10),
+    activation='relu',
+    solver='adam',
+    learning_rate_init=0.001,
+    max_iter=500,
+    early_stopping=True,
+    random_state=42
+)
 
 
 
