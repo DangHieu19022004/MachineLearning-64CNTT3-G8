@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.metrics import classification_report, accuracy_score, confusion_matrix, ConfusionMatrixDisplay, roc_curve, auc
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix, ConfusionMatrixDisplay
 from sklearn.model_selection import train_test_split, GridSearchCV, KFold, learning_curve
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.neural_network import MLPClassifier
@@ -26,11 +26,14 @@ X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, s
 
 # Bước 5: Định nghĩa mạng nơ-ron và tham số cần tìm kiếm
 param_grid_nn = {
-    'hidden_layer_sizes': [(10,), (20,), (30, 15), (40, 20, 10)],
+    'hidden_layer_sizes': [
+        (10,), (20,), (30,),  
+        (20, 10), (30, 20, 10), 
+        (40, 20, 10), (50, 30, 10)],
     'activation': ['relu', 'tanh'],
     'solver': ['adam', 'sgd'],
     'learning_rate_init': [0.1, 0.01, 0.001, 0.0001],
-    'max_iter': [500],
+    'max_iter': [500, 1000],
     'early_stopping': [True]
 }
 
@@ -52,7 +55,7 @@ y_train_pred_nn = best_nn_model.predict(X_train)
 y_val_pred_nn = best_nn_model.predict(X_val)
 y_test_pred_nn = best_nn_model.predict(X_test)
 
-# Đánh giá độ chính xác với làm tròn
+# Đánh giá độ chính xác
 train_accuracy = round(accuracy_score(y_train, y_train_pred_nn), 4)
 val_accuracy = round(accuracy_score(y_val, y_val_pred_nn), 4)
 test_accuracy = round(accuracy_score(y_test, y_test_pred_nn), 4)
