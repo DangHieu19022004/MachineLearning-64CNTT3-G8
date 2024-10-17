@@ -125,110 +125,16 @@ plt.ylabel("Accuracy Score")
 plt.legend(loc="best")
 plt.grid()
 plt.show()
-# 3. Đường cong ROC và AUC cho đa lớp
-from sklearn.multiclass import OneVsRestClassifier
 
-y_prob_nn = best_nn_model.predict_proba(X_val)
-plt.figure()
+# Huấn luyện lại mô hình để lưu trữ loss curve
+best_nn_model.fit(X_train, y_train)
 
-for i in range(len(le.classes_)):
-    fpr_nn, tpr_nn, _ = roc_curve(y_val == i, y_prob_nn[:, i])  # Tính TPR và FPR cho từng lớp
-    roc_auc_nn = auc(fpr_nn, tpr_nn)
-    plt.plot(fpr_nn, tpr_nn, lw=2, label=f'ROC curve của lớp {le.classes_[i]} (area = {roc_auc_nn:.2f})')
-
-plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')  # Đường chéo
-plt.xlim([0.0, 1.0])
-plt.ylim([0.0, 1.0])
-plt.xlabel('Tỷ lệ Dương Tính Giả')
-plt.ylabel('Tỷ lệ Dương Tính Thực')
-plt.title('Đường cong ROC cho Mạng Nơ-ron')
-plt.legend(loc="lower right")
+# Vẽ biểu đồ hàm mất mát (Loss Curve)
+plt.figure(figsize=(10, 6))
+plt.plot(best_nn_model.loss_curve_, label='Training Loss', color='purple')
+plt.title("Loss Curve for Neural Network")
+plt.xlabel("Iterations")
+plt.ylabel("Loss")
+plt.legend(loc="best")
+plt.grid()
 plt.show()
-
-
-
-best_model = MLPClassifier(
-    hidden_layer_sizes=(40, 20, 10),
-    activation='relu',
-    solver='adam',
-    learning_rate_init=0.001,
-    max_iter=500,
-    early_stopping=True,
-    random_state=42
-)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""
-# Bước 8: Vẽ biểu đồ phân tán cho dữ liệu gốc và dữ liệu chuẩn hóa
-plt.figure(figsize=(12, 6))
-
-# Đồ thị phân tán dữ liệu gốc cho Nhiệt độ Tối Đa và Nhiệt độ Tối Thiểu
-plt.subplot(1, 2, 1)
-plt.scatter(df['temp_max'], df['temp_min'], c=df['weather_encoded'], cmap='viridis', alpha=0.7, s=50)  
-plt.title('Nhiệt độ Max vs Nhiệt độ Min', fontsize=16)
-plt.xlabel('Nhiệt độ Tối Đa', fontsize=14)
-plt.ylabel('Nhiệt độ Tối Thiểu', fontsize=14)
-plt.colorbar(label='Lớp Thời Tiết')
-plt.grid(True)
-
-# Đồ thị phân tán dữ liệu gốc cho Lượng Mưa và Gió
-plt.subplot(1, 2, 2)
-plt.scatter(df['precipitation'], df['wind'], c=df['weather_encoded'], cmap='viridis', alpha=0.7, s=50)  
-plt.title('Lượng Mưa vs Gió', fontsize=16)
-plt.xlabel('Lượng Mưa', fontsize=14)
-plt.ylabel('Gió', fontsize=14)
-plt.colorbar(label='Lớp Thời Tiết')
-plt.grid(True)
-
-plt.tight_layout()
-plt.show()
-
-# Đồ thị phân tán dữ liệu đã chuẩn hóa cho Nhiệt độ Tối Đa và Nhiệt độ Tối Thiểu
-plt.figure(figsize=(12, 6)) 
-
-plt.subplot(1, 2, 1)  
-plt.scatter(X_data[:, 1], X_data[:, 2], c=y_data, cmap='viridis', alpha=0.7, s=50)  
-plt.title('Đã Chuẩn Hóa: Nhiệt độ Max vs Nhiệt độ Min', fontsize=16)
-plt.xlabel('Nhiệt độ Tối Đa (Chuẩn Hóa)', fontsize=14)
-plt.ylabel('Nhiệt độ Tối Thiểu (Chuẩn Hóa)', fontsize=14)
-plt.colorbar(label='Lớp Thời Tiết')
-plt.grid(True)
-
-# Đồ thị phân tán dữ liệu đã chuẩn hóa cho Lượng Mưa và Gió
-plt.subplot(1, 2, 2)  
-plt.scatter(X_data[:, 0], X_data[:, 3], c=y_data, cmap='viridis', alpha=0.7, s=50)  
-plt.title('Đã Chuẩn Hóa: Lượng Mưa vs Gió', fontsize=16)
-plt.xlabel('Lượng Mưa (Chuẩn Hóa)', fontsize=14)
-plt.ylabel('Gió (Chuẩn Hóa)', fontsize=14)
-plt.colorbar(label='Lớp Thời Tiết')
-plt.grid(True)
-
-plt.tight_layout()
-plt.show()
-"""
