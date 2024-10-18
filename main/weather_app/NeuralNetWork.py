@@ -48,7 +48,13 @@ X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, s
 X_train_sample, _, y_train_sample, _ = train_test_split(X_train, y_train, test_size=0.5, random_state=42)
 
 # Xây dựng mô hình MLP (Multilayer Perceptron - Neural Network) với Early Stopping
-clf = MLPClassifier(hidden_layer_sizes=(30, 15), max_iter=500, activation='relu', solver='adam', random_state=42, early_stopping=True, learning_rate_init=0.01)
+clf = MLPClassifier(hidden_layer_sizes=(40, 20, 10),
+    max_iter=500,
+    activation='tanh',
+    solver='adam',
+    random_state=42,
+    early_stopping=True,
+    learning_rate_init=0.01)
 
 # Huấn luyện mô hình
 clf.fit(X_train_sample, y_train_sample)
