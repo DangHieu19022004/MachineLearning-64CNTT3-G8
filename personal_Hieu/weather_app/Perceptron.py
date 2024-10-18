@@ -38,7 +38,7 @@ X_valid, X_test, y_valid, y_test = train_test_split(X_temp, y_temp, test_size=0.
 
 
 # Khởi tạo và huấn luyện mô hình Perceptron
-perceptron_model = Perceptron(random_state=42)
+perceptron_model = Perceptron(max_iter=1000, random_state=42, eta0=0.01)
 perceptron_model.fit(X_train, y_train)
 
 # Dự đoán trên các tập dữ liệu
