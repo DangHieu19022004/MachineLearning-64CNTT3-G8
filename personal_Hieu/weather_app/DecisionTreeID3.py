@@ -205,12 +205,12 @@ print("Entropy URL:", entropy_url)
 
 
 valueSend = {
-    'model': dt_model,
-    'report_validation': report_validation,
-    'report_trainning_set': report_trainning_set,
-    'report_test_set': report_test_set,
-    'plot_url': plot_url,
-    'learning_curve_url': learning_curve_url
+    'model': dt_model
+    # 'report_validation': report_validation,
+    # 'report_trainning_set': report_trainning_set,
+    # 'report_test_set': report_test_set,
+    # 'plot_url': plot_url,
+    # 'learning_curve_url': learning_curve_url
 }
 
 # # Save the model
