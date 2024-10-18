@@ -37,7 +37,15 @@ X_valid, X_test, y_valid, y_test = train_test_split(X_temp, y_temp, test_size=0.
 #test set - test model
 
 #trainning the model
-dt_model = DecisionTreeClassifier(criterion='entropy', max_depth=6, random_state=42)
+dt_model = DecisionTreeClassifier(criterion='entropy', random_state=42,
+                                    class_weight = None,
+                                    max_depth = 3,
+                                    max_features = 'sqrt',
+                                    max_leaf_nodes = None,
+                                    min_samples_leaf = 1
+                                    , min_samples_split = 2,
+                                    min_weight_fraction_leaf = 0.0,
+                                    splitter = 'best')
 
 #fit trainnign data into model
 dt_model.fit(X_train, y_train)
@@ -153,7 +161,7 @@ for i, sample in enumerate(node_samples):
 # entropy_url = base64.b64encode(imgEntropy.getvalue()).decode()
 
 # Xuất kết quả
-print("Entropy URL:", entropy_url)
+# print("Entropy URL:", entropy_url)
 
 # # 4. Vẽ sơ đồ entropy
 # # Function to calculate entropy at each node
@@ -214,4 +222,4 @@ valueSend = {
 }
 
 # # Save the model
-# joblib.dump(valueSend, 'decision_tree.pkl')
+joblib.dump(valueSend, 'decision_tree.pkl')

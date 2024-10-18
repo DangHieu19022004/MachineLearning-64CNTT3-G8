@@ -1,12 +1,11 @@
 import joblib
 import numpy as np
 from flask import Flask, jsonify, render_template, request
+from NeuralNetWork import encode_input
+from Perceptron import predict_weather
 from scipy.stats import entropy
 from sklearn.metrics import (ConfusionMatrixDisplay, accuracy_score,
                              classification_report, confusion_matrix)
-
-from NeuralNetWork import encode_input
-from Perceptron import predict_weather
 
 app = Flask(__name__)
 
@@ -14,7 +13,8 @@ app = Flask(__name__)
 models = {
     'perceptron': joblib.load('perceptron_model.pkl'),
     'decision_tree': joblib.load('decision_tree.pkl'),
-    'neural_network': joblib.load('neural_network_model.pkl')
+    'neural_network': joblib.load('neural_network_model.pkl'),
+    'stacking': joblib.load('stacking_model.pkl')
 }
 
 # Control routes
