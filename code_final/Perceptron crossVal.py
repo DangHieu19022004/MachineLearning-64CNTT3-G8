@@ -1,4 +1,6 @@
-#import libraries
+import base64
+import io
+import joblib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -136,3 +138,8 @@ plt.plot(train_sizes, test_scores, 'o-', color="b", label="Test score")
 plt.legend(loc="best")
 plt.show()
 
+valueSend = {
+    'model': perceptron_model,
+}
+
+joblib.dump(valueSend, 'perceptron_model.pkl')

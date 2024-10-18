@@ -1,3 +1,6 @@
+import base64
+import io
+import joblib
 import numpy as np
 import pandas as pd
 from sklearn import tree
@@ -91,3 +94,8 @@ plt.legend(loc='best')
 plt.grid()
 plt.show()
 
+valueSend = {
+    'model': stacking_model,
+}
+
+joblib.dump(valueSend, 'stacking_model.pkl')

@@ -75,9 +75,6 @@ for epoch in range(n_epochs):
     
     print(f"Epoch {epoch+1}/{n_epochs} - Loss: {current_loss:.4f} - Accuracy: {train_accuracy:.4f}")
 
-# Lưu mô hình để triển khai sau này
-joblib.dump(clf, 'perceptron_model.pkl')
-
 # Sau khi huấn luyện, đánh giá trên tập test
 y_test_pred = clf.predict(X_test)
 
@@ -188,16 +185,7 @@ learning_curve_base64 = plot_learning_curve_v2(clf, X_train, y_train, "Learning 
 
 # Giá trị gửi đi bao gồm các đường dẫn ảnh base64 của ma trận nhầm lẫn, Learning Curve và Loss Curve
 valueSend = {
-    'model': 'perceptron_model.pkl',
-    'report': {
-        'train': train_report,
-        'validation': val_report,
-        'test': test_report,
-    },
-    'images': {
-        'loss_curve': loss_curve_base64,
-        'confusion_matrix': confusion_matrix_base64,
-        'learning_curve': learning_curve_base64,
-    }
+    'model': clf,
 }
 
+joblib.dump(valueSend, 'clf.pkl')
