@@ -47,15 +47,15 @@ base_learners = [
                                     min_samples_leaf = 1
                                     , min_samples_split = 2,
                                     min_weight_fraction_leaf = 0.0,
-                                    splitter = 'best')),  # Tăng độ sâu một chút
-    ('perceptron', Perceptron(max_iter=1000, random_state=42, eta0=0.01)),
+                                    splitter = 'best')),
+    ('perceptron', Perceptron(max_iter=100, random_state=42, eta0=0.01, tol=0.001)),
     ('neural_network', MLPClassifier(hidden_layer_sizes=(40, 20, 10),
-                                    max_iter=500,
-                                    activation='tanh',
-                                    solver='adam',
-                                    random_state=42,
-                                    early_stopping=True,
-                                    learning_rate_init=0.01))  # Giảm số lượng nút trong lớp ẩn và thêm regularization
+                                max_iter=500,
+                                activation='tanh',
+                                solver='adam',
+                                random_state=42,
+                                early_stopping=True,
+                                learning_rate_init=0.01))
 ]
 
 # Khởi tạo mô hình Stacking
@@ -66,49 +66,6 @@ stacking_model.fit(X_train, y_train)
 
 # Dự đoán trên tập kiểm tra
 y_test_pred = stacking_model.predict(X_test)
-
-# Tính toán độ chính xác mô hình
-accuracy = accuracy_score(y_test, y_test_pred) * 100
-print(f"Test accuracy: {accuracy:.2f}%")
-
-# In báo cáo phân loại
-print("\nClassification Report:")
-print(classification_report(y_test, y_test_pred, target_names=le.classes_, zero_division=0))
-
-# Lưu ma trận nhầm lẫn
-cm = confusion_matrix(y_test, y_test_pred)
-disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=le.classes_)
-fig, ax = plt.subplots(figsize=(10, 7))
-disp.plot(cmap=plt.cm.Blues, ax=ax)
-plt.ylabel('True label')
-plt.xlabel('Predicted label')
-plt.title("Confusion Matrix on test set")
-plt.show()
-
-# Vẽ Learning Curve
-train_sizes, train_scores, valid_scores = learning_curve(stacking_model, X_train, y_train, cv=5, n_jobs=-1, train_sizes=np.linspace(0.1, 1.0, 10))
-
-# Tính toán điểm trung bình và độ lệch chuẩn cho training scores và validation scores
-train_scores_mean = np.mean(train_scores, axis=1)
-valid_scores_mean = np.mean(valid_scores, axis=1)
-train_scores_std = np.std(train_scores, axis=1)
-valid_scores_std = np.std(valid_scores, axis=1)
-
-# Vẽ biểu đồ Learning Curve
-plt.figure(figsize=(10, 6))
-plt.plot(train_sizes, train_scores_mean, 'o-', color='r', label='Training score')
-plt.plot(train_sizes, valid_scores_mean, 'o-', color='g', label='Validation score')
-
-# Vẽ độ lệch chuẩn
-plt.fill_between(train_sizes, train_scores_mean - train_scores_std, train_scores_mean + train_scores_std, alpha=0.1, color='r')
-plt.fill_between(train_sizes, valid_scores_mean - valid_scores_std, valid_scores_mean + valid_scores_std, alpha=0.1, color='g')
-
-plt.title('Learning Curve')
-plt.xlabel('Training Size')
-plt.ylabel('Score')
-plt.legend(loc='best')
-plt.grid()
-plt.show()
 
 valueSend = {
     'model': stacking_model,
