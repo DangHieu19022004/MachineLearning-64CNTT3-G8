@@ -20,7 +20,7 @@ from sklearn.tree import DecisionTreeClassifier
 data = pd.read_csv("../weather_app/seattle-weather.csv")
 
 
-#filter data
+# #filter data
 data = data.dropna()
 data.drop(['date'], axis=1, inplace=True)
 
@@ -28,43 +28,10 @@ data.drop(['date'], axis=1, inplace=True)
 X = data[["precipitation", "temp_max", "temp_min", "wind"]]
 y = data["weather"]
 
-
-
 #Split the datasets into 70% training, 15% validation, 15% testing
 X_train, X_temp, y_train, y_temp = train_test_split(X, y, train_size=0.7, test_size=0.3, random_state=42)
 X_valid, X_test, y_valid, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)
 
-
-# # Define the parameter grid for cross-validation
-param_grid = {
-    'max_depth': [1, 2, 3, 5, 7, 9, None],
-    'min_samples_split': [2, 3, 5, 10],
-    'min_samples_leaf': [1, 2, 3, 4, 5],
-    'max_features': [None, 'sqrt', 'log2'],
-    'class_weight': [None, 'balanced'],
-    'splitter': ['best', 'random'],
-    'max_leaf_nodes': [None, 10, 20, 30, 40, 50],
-    'min_weight_fraction_leaf': [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
-}
-
-#trainning the model
-dt_model = DecisionTreeClassifier(criterion='entropy', random_state=42)
-
-# # Define K-Fold Cross-Validation
-kf = KFold(n_splits=5, shuffle=True, random_state=42)
-
-# Use GridSearchCV to find the best hyperparameters
-grid_search = GridSearchCV(estimator=dt_model, param_grid=param_grid, cv=kf, scoring='accuracy', n_jobs=-1)
-
-# Train with cross-validation
-grid_search.fit(X_train, y_train)
-
-# Output the best parameters found
-print(f"Best parameters found: {grid_search.best_params_}")
-print(f"Best cross-validation accuracy: {grid_search.best_score_:.2f}")
-
-# Evaluate on the validation set
-best_model = grid_search.best_estimator_
 
 best_model = DecisionTreeClassifier(criterion='entropy', random_state=42,
                                     class_weight = None,
@@ -109,93 +76,93 @@ print(report_validation)
 print("test")
 print(report_test_set)
 
-# 4. Vẽ sơ đồ learning curve cho cả tập huấn luyện, xác thực và kiểm tra
-train_sizes, train_scores, valid_scores = learning_curve(
-    best_model, X_train, y_train, cv=kf, scoring='accuracy',
-    n_jobs=-1, train_sizes=np.linspace(0.1, 1.0, 5), random_state=42
-)
+# # 4. Vẽ sơ đồ learning curve cho cả tập huấn luyện, xác thực và kiểm tra
+# train_sizes, train_scores, valid_scores = learning_curve(
+#     best_model, X_train, y_train, cv=kf, scoring='accuracy',
+#     n_jobs=-1, train_sizes=np.linspace(0.1, 1.0, 5), random_state=42
+# )
 
-# Tính toán điểm trung bình và khoảng tin cậy
-train_scores_mean = np.mean(train_scores, axis=1)
-train_scores_std = np.std(train_scores, axis=1)
-valid_scores_mean = np.mean(valid_scores, axis=1)
-valid_scores_std = np.std(valid_scores, axis=1)
+# # Tính toán điểm trung bình và khoảng tin cậy
+# train_scores_mean = np.mean(train_scores, axis=1)
+# train_scores_std = np.std(train_scores, axis=1)
+# valid_scores_mean = np.mean(valid_scores, axis=1)
+# valid_scores_std = np.std(valid_scores, axis=1)
 
-# Tính điểm accuracy cho tập test ở từng kích thước của train_sizes
-test_scores = []
-for train_size in train_sizes:
-    # Tạo tập con của dữ liệu huấn luyện
-    X_train_subset, _, y_train_subset, _ = train_test_split(X_train, y_train, train_size=train_size, random_state=42)
-    best_model.fit(X_train_subset, y_train_subset)
-    test_scores.append(accuracy_score(y_test, best_model.predict(X_test)))
+# # Tính điểm accuracy cho tập test ở từng kích thước của train_sizes
+# test_scores = []
+# for train_size in train_sizes:
+#     # Tạo tập con của dữ liệu huấn luyện
+#     X_train_subset, _, y_train_subset, _ = train_test_split(X_train, y_train, train_size=train_size, random_state=42)
+#     best_model.fit(X_train_subset, y_train_subset)
+#     test_scores.append(accuracy_score(y_test, best_model.predict(X_test)))
 
-# Chuyển đổi test_scores sang numpy array
-test_scores = np.array(test_scores)
+# # Chuyển đổi test_scores sang numpy array
+# test_scores = np.array(test_scores)
 
-# Vẽ learning curve
-plt.figure()
-plt.title('Learning Curve (Decision Tree)')
-plt.xlabel('Training examples')
-plt.ylabel('Score')
+# # Vẽ learning curve
+# plt.figure()
+# plt.title('Learning Curve (Decision Tree)')
+# plt.xlabel('Training examples')
+# plt.ylabel('Score')
 
-# Trực quan hóa khoảng tin cậy của tập huấn luyện và xác thực
-plt.grid()
-plt.fill_between(train_sizes, train_scores_mean - train_scores_std,
-                 train_scores_mean + train_scores_std, alpha=0.1, color="r")
-plt.fill_between(train_sizes, valid_scores_mean - valid_scores_std,
-                 valid_scores_mean + valid_scores_std, alpha=0.1, color="g")
+# # Trực quan hóa khoảng tin cậy của tập huấn luyện và xác thực
+# plt.grid()
+# plt.fill_between(train_sizes, train_scores_mean - train_scores_std,
+#                  train_scores_mean + train_scores_std, alpha=0.1, color="r")
+# plt.fill_between(train_sizes, valid_scores_mean - valid_scores_std,
+#                  valid_scores_mean + valid_scores_std, alpha=0.1, color="g")
 
-# Vẽ các đường learning curve
-plt.plot(train_sizes, train_scores_mean, 'o-', color="r", label="Training score")
-plt.plot(train_sizes, valid_scores_mean, 'o-', color="g", label="Validation score")
-plt.plot(train_sizes, test_scores, 'o-', color="b", label="Test score")
+# # Vẽ các đường learning curve
+# plt.plot(train_sizes, train_scores_mean, 'o-', color="r", label="Training score")
+# plt.plot(train_sizes, valid_scores_mean, 'o-', color="g", label="Validation score")
+# plt.plot(train_sizes, test_scores, 'o-', color="b", label="Test score")
 
-# Hiển thị legend và biểu đồ
-plt.legend(loc="best")
-plt.show()
+# # Hiển thị legend và biểu đồ
+# plt.legend(loc="best")
+# plt.show()
 
 
 
-# 5. Vẽ biểu đồ ROC và tính AUC cho phân loại đa lớp
+# # 5. Vẽ biểu đồ ROC và tính AUC cho phân loại đa lớp
 
-# Chuyển đổi nhãn sang định dạng one-hot encoding
-from sklearn.preprocessing import label_binarize
+# # Chuyển đổi nhãn sang định dạng one-hot encoding
+# from sklearn.preprocessing import label_binarize
 
-# Lấy danh sách các lớp
-classes = best_model.classes_
-y_valid_bin = label_binarize(y_valid, classes=classes)
-n_classes = y_valid_bin.shape[1]
+# # Lấy danh sách các lớp
+# classes = best_model.classes_
+# y_valid_bin = label_binarize(y_valid, classes=classes)
+# n_classes = y_valid_bin.shape[1]
 
-# Tính xác suất dự đoán cho mỗi lớp
-y_prob = best_model.predict_proba(X_valid)
+# # Tính xác suất dự đoán cho mỗi lớp
+# y_prob = best_model.predict_proba(X_valid)
 
-# Tính toán ROC curve và AUC cho mỗi lớp
-fpr = dict()
-tpr = dict()
-roc_auc = dict()
+# # Tính toán ROC curve và AUC cho mỗi lớp
+# fpr = dict()
+# tpr = dict()
+# roc_auc = dict()
 
-for i in range(n_classes):
-    fpr[i], tpr[i], _ = roc_curve(y_valid_bin[:, i], y_prob[:, i])
-    roc_auc[i] = auc(fpr[i], tpr[i])
+# for i in range(n_classes):
+#     fpr[i], tpr[i], _ = roc_curve(y_valid_bin[:, i], y_prob[:, i])
+#     roc_auc[i] = auc(fpr[i], tpr[i])
 
-# Vẽ ROC cho từng lớp
-plt.figure()
+# # Vẽ ROC cho từng lớp
+# plt.figure()
 
-colors = plt.cm.get_cmap('tab10', n_classes)(range(n_classes))
+# colors = plt.cm.get_cmap('tab10', n_classes)(range(n_classes))
 
-for i, color in zip(range(n_classes), colors):
-    plt.plot(fpr[i], tpr[i], color=color, lw=2,
-             label='ROC curve of class {0} (area = {1:0.2f})'
-             ''.format(classes[i], roc_auc[i]))
+# for i, color in zip(range(n_classes), colors):
+#     plt.plot(fpr[i], tpr[i], color=color, lw=2,
+#              label='ROC curve of class {0} (area = {1:0.2f})'
+#              ''.format(classes[i], roc_auc[i]))
 
-plt.plot([0, 1], [0, 1], 'k--', lw=2)
-plt.xlim([0.0, 1.0])
-plt.ylim([0.0, 1.05])
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.title('Receiver Operating Characteristic for Multi-Class')
-plt.legend(loc="lower right")
-plt.show()
+# plt.plot([0, 1], [0, 1], 'k--', lw=2)
+# plt.xlim([0.0, 1.0])
+# plt.ylim([0.0, 1.05])
+# plt.xlabel('False Positive Rate')
+# plt.ylabel('True Positive Rate')
+# plt.title('Receiver Operating Characteristic for Multi-Class')
+# plt.legend(loc="lower right")
+# plt.show()
 
 
 

@@ -36,8 +36,8 @@ y_before = df['weather']  # nhãn mục tiêu
 # # Call the function with the appropriate columns
 # plot_boxplot(df, columns_to_check)
 
-# print("mô tả")
-# print(df.describe())
+print("mô tả")
+print(df.describe())
 
 # print("5 hang DL dau tien")
 # print(df.head())
