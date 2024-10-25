@@ -39,22 +39,6 @@ best_model = Perceptron(max_iter=1000, eta0=0.01, penalty='l2', alpha=0, tol=1e-
 # Huấn luyện mô hình tốt nhất trên toàn bộ tập huấn luyện
 best_model.fit(X_train, y_train)
 
-# Dự đoán trên các tập huấn luyện, xác thực và kiểm tra
-y_train_pred = best_model.predict(X_train)
-y_valid_pred = best_model.predict(X_valid)
-y_test_pred = best_model.predict(X_test)
-
-# Đánh giá mô hình trên tập kiểm tra
-accuracy = accuracy_score(y_test, y_test_pred) * 100
-print(f"Độ chính xác trên tập kiểm tra: {accuracy:.2f}%")
-
-# Báo cáo phân loại
-print("Báo cáo tập huấn luyện:")
-print(classification_report(y_train, y_train_pred, zero_division=0))
-print("Báo cáo tập xác thực:")
-print(classification_report(y_valid, y_valid_pred, zero_division=0))
-print("Báo cáo tập kiểm tra:")
-print(classification_report(y_test, y_test_pred, zero_division=0))
 
 # Lưu mô hình sử dụng joblib
 valueSend = {
