@@ -5,9 +5,9 @@ import pandas as pd
 from sklearn.linear_model import Perceptron
 from sklearn.metrics import (ConfusionMatrixDisplay, accuracy_score,
                              classification_report, confusion_matrix, hinge_loss)
-from sklearn.model_selection import GridSearchCV, StratifiedKFold, learning_curve, train_test_split
+from sklearn.model_selection import StratifiedKFold, train_test_split, learning_curve
 from sklearn.preprocessing import StandardScaler
-import joblib
+
 
 # Tải bộ dữ liệu
 data = pd.read_csv('./seattle-weather.csv')
@@ -33,33 +33,12 @@ X_test = scaler.transform(X_test)
 # Xác định k-fold StratifiedKFold để đảm bảo cân bằng lớp
 kf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
-# Khởi tạo mô hình Perceptron
-perceptron_model = Perceptron(max_iter=1000, random_state=42)
-
-# Định nghĩa grid các tham số để tìm kiếm bằng GridSearchCV
-param_grid = {
-    'max_iter': [1000, 2000, 3000],  # Tăng số vòng lặp để đảm bảo hội tụ
-    'tol': [1e-4, 1e-5], 
-    'eta0': [0.1, 0.01],  
-    'penalty': ['l2', 'elasticnet'],  # Thêm điều chuẩn để tránh overfitting
-    'alpha': [0.01, 0.1, 1,0]  # Thêm regularization
-}
-
-# Sử dụng GridSearchCV để tìm các tham số tốt nhất
-grid_search = GridSearchCV(estimator=perceptron_model, param_grid=param_grid, cv=kf, scoring='accuracy', n_jobs=-1)
-
-# Huấn luyện với cross-validation
-grid_search.fit(X_train, y_train)
-
-# Xuất ra các tham số tốt nhất
-print(f"Các tham số tốt nhất tìm thấy: {grid_search.best_params_}")
-print(f"Độ chính xác cross-validation tốt nhất: {grid_search.best_score_:.2f}")
-
-# Lấy mô hình tốt nhất
-best_model = grid_search.best_estimator_
+# Khởi tạo mô hình Perceptron với các tham số đã tìm được
+best_model = Perceptron(max_iter=1000, eta0=0.01, penalty='l2', alpha=0, tol=1e-4, random_state=42)
 
 # Huấn luyện mô hình tốt nhất trên toàn bộ tập huấn luyện
 best_model.fit(X_train, y_train)
+
 
 # Dự đoán trên các tập huấn luyện, xác thực và kiểm tra
 y_train_pred = best_model.predict(X_train)
@@ -148,8 +127,3 @@ plt.grid(True)
 plt.show()
 
 
-valueSend = {
-    'model': best_model,
-}
-
-joblib.dump(valueSend, 'best_model.pkl')

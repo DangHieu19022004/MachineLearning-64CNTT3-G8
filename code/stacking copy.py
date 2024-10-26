@@ -93,3 +93,9 @@ plt.ylabel('Score')
 plt.legend(loc='best')
 plt.grid()
 plt.show()
+
+valueSend = {
+    'model': stacking_model,
+}
+
+joblib.dump(valueSend, 'stacking_model.pkl')
