@@ -7,7 +7,6 @@ from sklearn.metrics import (ConfusionMatrixDisplay, accuracy_score,
                              classification_report, confusion_matrix, hinge_loss)
 from sklearn.model_selection import GridSearchCV, StratifiedKFold, learning_curve, train_test_split
 from sklearn.preprocessing import StandardScaler
-import joblib
 
 # Tải bộ dữ liệu
 data = pd.read_csv('./seattle-weather.csv')
@@ -146,10 +145,3 @@ plt.title('Hinge Loss qua các Epochs (Perceptron)')
 plt.legend()
 plt.grid(True)
 plt.show()
-
-
-valueSend = {
-    'model': best_model,
-}
-
-joblib.dump(valueSend, 'best_model.pkl')
